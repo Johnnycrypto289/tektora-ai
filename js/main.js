@@ -1,5 +1,5 @@
 /* ============================================
-   TEKTORA AI — Main JavaScript
+   TEKTORA AI V2 — Main JavaScript
    Premium Animations & Interactions
    ============================================ */
 
@@ -19,12 +19,11 @@
     });
   });
 
-  // ---- Sticky Navigation with transparent-to-solid transition ----
+  // ---- Sticky Navigation ----
   var nav = document.getElementById('nav');
 
   function handleNavScroll() {
-    var scrollY = window.scrollY;
-    if (scrollY > 60) {
+    if (window.scrollY > 60) {
       nav.classList.add('nav--solid');
     } else {
       nav.classList.remove('nav--solid');
@@ -63,7 +62,7 @@
     }
   });
 
-  // ---- Scroll Reveal (Enhanced Staggered) ----
+  // ---- Scroll Reveal (Staggered) ----
   var revealElements = document.querySelectorAll('.reveal');
 
   if ('IntersectionObserver' in window) {
@@ -95,7 +94,7 @@
     });
   }
 
-  // ---- SVG Scroll-Draw Animation (Section Dividers & Blueprint Lines) ----
+  // ---- SVG Scroll-Draw Animation ----
   var scrollDrawElements = document.querySelectorAll('.scroll-draw');
 
   if (scrollDrawElements.length > 0 && 'IntersectionObserver' in window) {
@@ -143,60 +142,14 @@
     });
   }
 
-  // ---- Blueprint Line Draw Animation ----
-  var blueprintSection = document.getElementById('solution');
-  var blueprintLines = document.querySelectorAll('.blueprint__line');
-  var blueprintDots = document.querySelectorAll('.blueprint__dot');
-  var blueprintPulses = document.querySelectorAll('.blueprint__pulse');
-  var blueprintTexts = document.querySelectorAll('.blueprint__text');
-
-  if (blueprintSection && 'IntersectionObserver' in window) {
-    var blueprintObserver = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            // Stagger the line draws
-            blueprintLines.forEach(function (line, index) {
-              setTimeout(function () {
-                line.classList.add('drawn');
-              }, index * 300);
-            });
-            // Dots appear after lines
-            setTimeout(function () {
-              blueprintDots.forEach(function (dot) {
-                dot.classList.add('drawn');
-              });
-            }, 800);
-            // Pulse rings after dots
-            setTimeout(function () {
-              blueprintPulses.forEach(function (pulse) {
-                pulse.classList.add('drawn');
-              });
-            }, 1200);
-            // Text labels last
-            setTimeout(function () {
-              blueprintTexts.forEach(function (text) {
-                text.classList.add('drawn');
-              });
-            }, 1000);
-            blueprintObserver.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-
-    blueprintObserver.observe(blueprintSection);
-  }
-
-  // ---- Number Counter Animation (Enhanced) ----
+  // ---- Number Counter Animation ----
   function formatNumber(num, format) {
     if (format === 'currency') {
       if (num >= 1000000) {
         return (num / 1000000).toFixed(1) + 'M';
       }
       if (num >= 1000) {
-        return Math.round(num / 1000) + 'K';
+        return Math.round(num / 1000).toLocaleString() + 'K';
       }
       return num.toString();
     }
@@ -206,6 +159,7 @@
   function animateCounter(el) {
     var target = parseInt(el.getAttribute('data-count'), 10);
     var format = el.getAttribute('data-format') || '';
+    var prefix = el.getAttribute('data-prefix') || '';
     var duration = 2500;
     var startTime = null;
 
@@ -220,33 +174,36 @@
       var easedProgress = easeOutExpo(progress);
       var current = Math.round(target * easedProgress);
 
-      el.textContent = formatNumber(current, format);
+      el.textContent = prefix + formatNumber(current, format);
 
       if (progress < 1) {
         requestAnimationFrame(step);
       } else {
-        el.textContent = formatNumber(target, format);
+        el.textContent = prefix + formatNumber(target, format);
       }
     }
 
     requestAnimationFrame(step);
   }
 
-  // Counter elements
-  var statNumbers = document.querySelectorAll('.stat-card__number[data-count]');
-  var counterNumbers = document.querySelectorAll('.counter__number[data-count]');
+  // Gather all countable elements
   var allCounters = [];
-
-  statNumbers.forEach(function (el) { allCounters.push(el); });
-  counterNumbers.forEach(function (el) { allCounters.push(el); });
+  document.querySelectorAll('.counter__number[data-count]').forEach(function (el) {
+    allCounters.push(el);
+  });
+  document.querySelectorAll('.math__amount[data-count]').forEach(function (el) {
+    allCounters.push(el);
+  });
+  document.querySelectorAll('.math__savings-number[data-count]').forEach(function (el) {
+    allCounters.push(el);
+  });
 
   if ('IntersectionObserver' in window) {
     var counterObserver = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
-            // Small stagger for counters in same group
-            var parent = entry.target.closest('.problem__stats, .counters');
+            var parent = entry.target.closest('.counters, .math__comparison, .math__savings');
             if (parent) {
               var siblings = parent.querySelectorAll('[data-count]');
               var idx = Array.prototype.indexOf.call(siblings, entry.target);
@@ -270,7 +227,8 @@
     allCounters.forEach(function (el) {
       var target = parseInt(el.getAttribute('data-count'), 10);
       var format = el.getAttribute('data-format') || '';
-      el.textContent = formatNumber(target, format);
+      var prefix = el.getAttribute('data-prefix') || '';
+      el.textContent = prefix + formatNumber(target, format);
     });
   }
 
@@ -283,13 +241,11 @@
     question.addEventListener('click', function () {
       var isActive = item.classList.contains('active');
 
-      // Close all items
       faqItems.forEach(function (otherItem) {
         otherItem.classList.remove('active');
         otherItem.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
       });
 
-      // Open clicked item if it wasn't active
       if (!isActive) {
         item.classList.add('active');
         question.setAttribute('aria-expanded', 'true');
@@ -349,7 +305,7 @@
     });
   }
 
-  // ---- Parallax-style subtle movement on hero orbs ----
+  // ---- Parallax mouse movement on hero orbs ----
   var heroOrbs = document.querySelectorAll('.hero__orb');
   var heroSection = document.querySelector('.hero');
 
@@ -411,7 +367,6 @@
   ScrollFramePlayer.prototype.init = function () {
     var self = this;
 
-    // Preload first frame immediately for instant display
     var firstImg = new Image();
     firstImg.src = this.getFramePath(0);
     firstImg.onload = function () {
@@ -420,7 +375,6 @@
       self.resizeCanvas();
       self.drawFrame(0);
       self.currentFrame = 0;
-      // Then preload rest of frames
       self.preloadFrames();
     };
 
@@ -431,7 +385,6 @@
       }
     });
 
-    // Bind scroll handler
     window.addEventListener('scroll', function () {
       if (!self.rafId) {
         self.rafId = requestAnimationFrame(function () {
@@ -445,7 +398,7 @@
   ScrollFramePlayer.prototype.preloadFrames = function () {
     var self = this;
     var batchSize = 10;
-    var currentBatch = 1; // frame 0 already loaded
+    var currentBatch = 1;
 
     function loadBatch() {
       var start = currentBatch;
@@ -473,7 +426,6 @@
 
       currentBatch = end;
       if (currentBatch < self.totalFrames) {
-        // Use requestIdleCallback if available, otherwise setTimeout
         if ('requestIdleCallback' in window) {
           requestIdleCallback(loadBatch);
         } else {
@@ -502,7 +454,6 @@
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Cover-fit the image into the canvas
     var imgRatio = img.naturalWidth / img.naturalHeight;
     var canvasRatio = canvas.width / canvas.height;
 
@@ -528,8 +479,6 @@
     var sectionHeight = rect.height;
     var viewportHeight = window.innerHeight;
 
-    // Calculate scroll progress through the section
-    // Progress goes from 0 (section top at viewport bottom) to 1 (section bottom at viewport top)
     var scrollProgress = (viewportHeight - sectionTop) / (sectionHeight + viewportHeight);
     scrollProgress = Math.max(0, Math.min(1, scrollProgress));
 
@@ -549,14 +498,6 @@
     canvasId: 'heroCanvas',
     sectionId: 'hero',
     frameDir: 'assets/frames/',
-    totalFrames: 129
-  });
-
-  // Initialize solution scroll video
-  new ScrollFramePlayer({
-    canvasId: 'solutionCanvas',
-    sectionId: 'solution',
-    frameDir: 'assets/frames2/',
     totalFrames: 129
   });
 })();

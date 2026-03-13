@@ -1,5 +1,6 @@
 /* ============================================
-   TEKTORA AI — Design System & Styles
+   TEKTORA AI V2 — Complete Design System
+   AI Build Shop / Anti-Subscription Positioning
    Premium Polish / $40K Website Treatment
    ============================================ */
 
@@ -15,6 +16,8 @@
   --color-blue: #2563EB;
   --color-teal: #0D9488;
   --color-cyan: #06B6D4;
+  --color-red: #ef4444;
+  --color-green: #22c55e;
 
   --text-primary: #FFFFFF;
   --text-secondary: #A1A1AA;
@@ -64,7 +67,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Skip link for keyboard accessibility */
 .skip-link {
   position: absolute;
   top: -100%;
@@ -110,7 +112,7 @@ input, select, textarea {
   color: inherit;
 }
 
-/* Utility classes */
+/* ---------- Utility Classes ---------- */
 .container {
   max-width: var(--container-max);
   margin: 0 auto;
@@ -155,7 +157,7 @@ input, select, textarea {
 }
 
 
-/* ---------- Reveal Animation (Enhanced Stagger) ---------- */
+/* ---------- Reveal Animation ---------- */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -168,19 +170,19 @@ input, select, textarea {
 }
 
 /* Scale-up variant for cards */
-.stat-card.reveal,
-.blueprint__node.reveal,
+.tool-card.reveal,
 .step.reveal,
 .testimonial.reveal,
-.counter.reveal {
+.counter.reveal,
+.pricing__card.reveal {
   transform: translateY(30px) scale(0.97);
 }
 
-.stat-card.reveal.revealed,
-.blueprint__node.reveal.revealed,
+.tool-card.reveal.revealed,
 .step.reveal.revealed,
 .testimonial.reveal.revealed,
-.counter.reveal.revealed {
+.counter.reveal.revealed,
+.pricing__card.reveal.revealed {
   transform: translateY(0) scale(1);
 }
 
@@ -195,8 +197,6 @@ input, select, textarea {
   .hero__scroll-line,
   .step__glow,
   .pricing__card-glow,
-  .blueprint__line,
-  .blueprint__pulse,
   .status-dot,
   .hero__badge-dot {
     animation: none !important;
@@ -264,10 +264,6 @@ input, select, textarea {
 
 .nav__logo:hover .nav__logo-img {
   transform: scale(1.05);
-}
-
-.nav__logo-icon {
-  color: var(--text-secondary);
 }
 
 .nav__links {
@@ -382,18 +378,11 @@ input, select, textarea {
       radial-gradient(ellipse 50% 40% at 70% 70%, rgba(13, 148, 136, 0.12) 0%, transparent 50%),
       var(--bg-primary);
   }
-  33% {
+  50% {
     background:
       radial-gradient(ellipse 70% 55% at 60% 45%, rgba(107, 33, 168, 0.2) 0%, transparent 60%),
       radial-gradient(ellipse 65% 55% at 40% 55%, rgba(37, 99, 235, 0.2) 0%, transparent 50%),
       radial-gradient(ellipse 55% 45% at 55% 65%, rgba(13, 148, 136, 0.15) 0%, transparent 50%),
-      var(--bg-primary);
-  }
-  66% {
-    background:
-      radial-gradient(ellipse 85% 65% at 45% 50%, rgba(107, 33, 168, 0.18) 0%, transparent 60%),
-      radial-gradient(ellipse 55% 45% at 55% 50%, rgba(37, 99, 235, 0.18) 0%, transparent 50%),
-      radial-gradient(ellipse 60% 50% at 40% 60%, rgba(13, 148, 136, 0.2) 0%, transparent 50%),
       var(--bg-primary);
   }
   100% {
@@ -405,7 +394,7 @@ input, select, textarea {
   }
 }
 
-/* ---- Ambient Floating Gradient Orbs ---- */
+/* Ambient Floating Gradient Orbs */
 .hero__orb {
   position: absolute;
   border-radius: 50%;
@@ -418,7 +407,7 @@ input, select, textarea {
 .hero__orb--1 {
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(107, 33, 168, 0.6) 0%, rgba(107, 33, 168, 0) 70%);
+  background: radial-gradient(circle, rgba(107, 33, 168, 0.6) 0%, transparent 70%);
   top: -20%;
   right: -15%;
   animation: orbFloat1 18s ease-in-out infinite;
@@ -427,7 +416,7 @@ input, select, textarea {
 .hero__orb--2 {
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.5) 0%, rgba(37, 99, 235, 0) 70%);
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.5) 0%, transparent 70%);
   bottom: -15%;
   left: -10%;
   animation: orbFloat2 22s ease-in-out infinite;
@@ -436,7 +425,7 @@ input, select, textarea {
 .hero__orb--3 {
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(13, 148, 136, 0.45) 0%, rgba(13, 148, 136, 0) 70%);
+  background: radial-gradient(circle, rgba(13, 148, 136, 0.45) 0%, transparent 70%);
   top: 35%;
   left: 45%;
   animation: orbFloat3 25s ease-in-out infinite;
@@ -445,7 +434,7 @@ input, select, textarea {
 .hero__orb--4 {
   width: 350px;
   height: 350px;
-  background: radial-gradient(circle, rgba(6, 182, 212, 0.3) 0%, rgba(6, 182, 212, 0) 70%);
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.3) 0%, transparent 70%);
   top: 10%;
   left: 15%;
   animation: orbFloat4 20s ease-in-out infinite;
@@ -462,22 +451,17 @@ input, select, textarea {
 
 @keyframes orbFloat1 {
   0%, 100% { transform: translate(0, 0) scale(1); }
-  25% { transform: translate(-30px, 20px) scale(1.05); }
   50% { transform: translate(-50px, 40px) scale(1.1); }
-  75% { transform: translate(-20px, 10px) scale(1.02); }
 }
 
 @keyframes orbFloat2 {
   0%, 100% { transform: translate(0, 0) scale(1); }
-  25% { transform: translate(20px, -30px) scale(1.08); }
   50% { transform: translate(40px, -50px) scale(1.05); }
-  75% { transform: translate(15px, -20px) scale(1.02); }
 }
 
 @keyframes orbFloat3 {
   0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.25; }
-  33% { transform: translate(-40px, 25px) scale(1.12); opacity: 0.4; }
-  66% { transform: translate(-60px, 15px) scale(1.08); opacity: 0.35; }
+  50% { transform: translate(-60px, 15px) scale(1.08); opacity: 0.35; }
 }
 
 @keyframes orbFloat4 {
@@ -490,7 +474,7 @@ input, select, textarea {
   50% { transform: translate(-25px, 30px) scale(1.2); opacity: 0.4; }
 }
 
-/* ---- Hero Blueprint Grid Lines ---- */
+/* Hero Grid Lines */
 .hero__grid-lines {
   position: absolute;
   inset: 0;
@@ -616,7 +600,7 @@ input, select, textarea {
 
 
 /* ============================================
-   SECTION DIVIDERS (SVG Blueprint Lines)
+   SECTION DIVIDERS
    ============================================ */
 .section-divider {
   position: relative;
@@ -714,11 +698,16 @@ input, select, textarea {
 
 
 /* ============================================
-   PROBLEM SECTION
+   SECTION 2: THE PROBLEM (Subscription Trap)
    ============================================ */
 .problem {
   padding: var(--section-padding) 0;
   position: relative;
+}
+
+.problem__header {
+  text-align: center;
+  margin-bottom: 64px;
 }
 
 .problem__grid {
@@ -728,57 +717,108 @@ input, select, textarea {
   align-items: center;
 }
 
-.problem__stats {
+/* Cost Drain Stack */
+.drain__visual {
+  padding: 32px;
+  border-radius: 20px;
+  background: rgba(239, 68, 68, 0.04);
+  border: 1px solid rgba(239, 68, 68, 0.12);
+}
+
+.drain__stack {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 8px;
+  margin-bottom: 24px;
 }
 
-.stat-card {
-  padding: 32px;
-  border-radius: 16px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  transition: border-color 400ms, background 400ms, transform 400ms, box-shadow 400ms;
+.drain__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-radius: 10px;
+  background: rgba(239, 68, 68, 0.06);
+  border: 1px solid rgba(239, 68, 68, 0.08);
+  transition: transform 300ms var(--ease-out), background 300ms;
 }
 
-.stat-card:hover {
-  border-color: var(--border-light);
-  background: var(--bg-card-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+.drain__item:hover {
+  background: rgba(239, 68, 68, 0.1);
+  transform: translateX(4px);
 }
 
-.stat-card__prefix,
-.stat-card__number {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  background: var(--gradient-brand);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.stat-card__symbol {
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  font-weight: 700;
-  background: var(--gradient-brand);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.stat-card__label {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.9rem;
+.drain__name {
+  font-size: 0.95rem;
   color: var(--text-secondary);
-  line-height: 1.5;
+}
+
+.drain__price {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-red);
+}
+
+.drain__total {
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.15);
+  text-align: center;
+}
+
+.drain__total-label {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: var(--text-tertiary);
+  margin-bottom: 8px;
+}
+
+.drain__total-amount {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-red);
+  line-height: 1;
+}
+
+.drain__total-annual {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-red);
+  opacity: 0.8;
+  margin-top: 4px;
 }
 
 .problem__content {
   position: relative;
+}
+
+.problem__content .section-body strong {
+  color: var(--text-primary);
+}
+
+.problem__callout {
+  margin-top: 24px;
+  padding: 20px 24px;
+  border-radius: 12px;
+  background: rgba(239, 68, 68, 0.04);
+  border-left: 3px solid var(--color-red);
+}
+
+.problem__callout-label {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: var(--color-red);
+  margin-bottom: 8px;
+}
+
+.problem__callout p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
 
 .hand-drawn-arrow {
@@ -788,200 +828,126 @@ input, select, textarea {
 
 
 /* ============================================
-   SOLUTION / BLUEPRINT SECTION
+   SECTION 3: WHAT WE BUILD (Tool Menu)
    ============================================ */
-.solution {
+.tools {
   padding: var(--section-padding) 0;
   position: relative;
-  overflow: hidden;
 }
 
-.solution__header {
+.tools__header {
   text-align: center;
   margin-bottom: 80px;
 }
 
-.solution__header .section-body {
+.tools__header .section-body {
   margin: 0 auto;
 }
 
-/* Blueprint diagram */
-.blueprint {
-  position: relative;
-  padding: 40px 0;
+.tools__category {
+  margin-bottom: 64px;
 }
 
-.blueprint__lines {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
+.tools__category:last-child {
+  margin-bottom: 0;
 }
 
-.blueprint__line {
-  stroke: var(--border-subtle);
-  stroke-width: 1;
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  transition: stroke-dashoffset 2s var(--ease-out);
-}
-
-.blueprint__line.drawn {
-  stroke-dashoffset: 0;
-}
-
-.blueprint__dot {
-  fill: var(--color-cyan);
-  opacity: 0;
-  transition: opacity 600ms var(--ease-out) 0.8s;
-}
-
-.blueprint__dot.drawn {
-  opacity: 0.6;
-}
-
-/* Pulse effect on blueprint dots */
-.blueprint__pulse {
-  fill: none;
-  stroke: var(--color-cyan);
-  stroke-width: 1;
-  opacity: 0;
-  transition: opacity 600ms var(--ease-out) 1.2s;
-}
-
-.blueprint__pulse.drawn {
-  opacity: 1;
-  animation: blueprintPulse 3s ease-out infinite;
-}
-
-@keyframes blueprintPulse {
-  0% { r: 4; opacity: 0.5; stroke-width: 1; }
-  100% { r: 20; opacity: 0; stroke-width: 0.5; }
-}
-
-.blueprint__text {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  fill: var(--text-tertiary);
-  opacity: 0;
-  letter-spacing: 0.1em;
-  transition: opacity 600ms var(--ease-out) 1s;
-}
-
-.blueprint__text.drawn {
-  opacity: 0.4;
-}
-
-.blueprint__nodes {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  position: relative;
-  z-index: 1;
-}
-
-.blueprint__node {
-  padding: 32px;
-  border-radius: 16px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  transition: border-color 400ms, background 400ms, transform 400ms, box-shadow 400ms;
-}
-
-.blueprint__node:hover {
-  border-color: rgba(6, 182, 212, 0.2);
-  background: rgba(255, 255, 255, 0.04);
-  transform: translateY(-6px);
-  box-shadow: 0 12px 48px rgba(6, 182, 212, 0.1), 0 0 0 1px rgba(6, 182, 212, 0.08);
-}
-
-.blueprint__node-header {
+.tools__category-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-subtle);
 }
 
-.blueprint__node-id {
-  font-size: 0.65rem;
-  letter-spacing: 0.15em;
-  color: var(--text-tertiary);
-}
-
-.blueprint__node-status {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-family: var(--font-mono);
-  font-size: 0.6rem;
-  letter-spacing: 0.1em;
-  color: var(--color-teal);
-}
-
-.status-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--color-teal);
-  animation: statusPulse 2s ease-in-out infinite;
-}
-
-@keyframes statusPulse {
-  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.4); }
-  50% { opacity: 0.6; box-shadow: 0 0 0 4px rgba(13, 148, 136, 0); }
-}
-
-.blueprint__node-icon {
-  margin-bottom: 20px;
-  color: var(--text-secondary);
-}
-
-.blueprint__node-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  letter-spacing: -0.01em;
-}
-
-.blueprint__node-desc {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.blueprint__node-specs {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  font-size: 0.65rem;
-  letter-spacing: 0.1em;
-  color: var(--text-tertiary);
-  padding-top: 16px;
-  border-top: 1px solid var(--border-subtle);
-}
-
-.blueprint__hub {
-  text-align: center;
-  margin-top: 40px;
+.tools__category-tag {
   font-size: 0.7rem;
   letter-spacing: 0.15em;
   color: var(--color-cyan);
 }
 
-.blueprint__hub-sub {
-  display: block;
-  margin-top: 4px;
+.tools__category-count {
   font-size: 0.65rem;
+  letter-spacing: 0.1em;
   color: var(--text-tertiary);
-  letter-spacing: 0.08em;
+}
+
+.tools__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.tools__grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Tool Card */
+.tool-card {
+  padding: 28px 24px;
+  border-radius: 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: border-color 400ms, background 400ms, transform 400ms, box-shadow 400ms;
+  position: relative;
+  overflow: hidden;
+}
+
+.tool-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-brand);
+  opacity: 0;
+  transition: opacity 400ms;
+}
+
+.tool-card:hover {
+  border-color: rgba(6, 182, 212, 0.15);
+  background: var(--bg-card-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(6, 182, 212, 0.06);
+}
+
+.tool-card:hover::before {
+  opacity: 1;
+}
+
+.tool-card__icon {
+  margin-bottom: 16px;
+  color: var(--text-secondary);
+}
+
+.tool-card__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.tool-card__desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.tool-card__time {
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  color: var(--text-tertiary);
+  padding-top: 12px;
+  border-top: 1px solid var(--border-subtle);
+  display: block;
 }
 
 
 /* ============================================
-   HOW IT WORKS
+   SECTION 4: HOW IT WORKS
    ============================================ */
 .how-it-works {
   padding: var(--section-padding) 0;
@@ -1069,84 +1035,388 @@ input, select, textarea {
 
 
 /* ============================================
-   RESULTS
+   SECTION 5: THE MATH (Cost Comparison)
+   ============================================ */
+.math {
+  padding: var(--section-padding) 0;
+  text-align: center;
+  position: relative;
+}
+
+.math__comparison {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 32px;
+  align-items: stretch;
+  margin-bottom: 64px;
+}
+
+.math__col {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+  transition: transform 400ms var(--ease-out), box-shadow 400ms;
+}
+
+.math__col:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.math__col-header {
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+}
+
+.math__col-header--red {
+  background: rgba(239, 68, 68, 0.06);
+  color: var(--color-red);
+  border-bottom: 1px solid rgba(239, 68, 68, 0.1);
+}
+
+.math__col-header--green {
+  background: rgba(34, 197, 94, 0.06);
+  color: var(--color-green);
+  border-bottom: 1px solid rgba(34, 197, 94, 0.1);
+}
+
+.math__col-badge {
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+.math__col-badge--red {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--color-red);
+}
+
+.math__col-badge--green {
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--color-green);
+}
+
+.math__col-body {
+  padding: 8px 28px 28px;
+}
+
+.math__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.math__row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.math__row--total {
+  padding-top: 20px;
+  margin-top: 4px;
+  border-top: 2px solid var(--border-subtle);
+  border-bottom: none;
+  font-weight: 700;
+}
+
+.math__amount {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.math__amount--red {
+  color: var(--color-red);
+}
+
+.math__amount--green {
+  color: var(--color-green);
+}
+
+.math__vs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: var(--text-tertiary);
+}
+
+/* Savings Callout */
+.math__savings {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.math__savings-inner {
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(34, 197, 94, 0.04);
+  border: 1px solid rgba(34, 197, 94, 0.15);
+  text-align: center;
+}
+
+.math__savings-label {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--color-green);
+  margin-bottom: 16px;
+}
+
+.math__savings-amount {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.math__savings-dollar {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-green);
+}
+
+.math__savings-number {
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 800;
+  color: var(--color-green);
+  line-height: 1;
+}
+
+.math__savings-desc {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+
+/* ============================================
+   SECTION 6: PRICING
+   ============================================ */
+.pricing {
+  padding: var(--section-padding) 0;
+  text-align: center;
+  position: relative;
+}
+
+.pricing__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 64px;
+}
+
+.pricing__card {
+  padding: 40px 32px;
+  border-radius: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  transition: border-color 600ms, box-shadow 600ms, transform 400ms;
+}
+
+.pricing__card:hover {
+  border-color: rgba(6, 182, 212, 0.12);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  transform: translateY(-4px);
+}
+
+.pricing__card--featured {
+  border-color: rgba(6, 182, 212, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.pricing__card--featured:hover {
+  border-color: rgba(6, 182, 212, 0.3);
+  box-shadow: 0 20px 60px rgba(6, 182, 212, 0.1), 0 0 0 1px rgba(6, 182, 212, 0.1);
+}
+
+.pricing__card-popular {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 8px;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  background: var(--gradient-brand);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.pricing__card--featured .pricing__card-header {
+  padding-top: 16px;
+}
+
+.pricing__card-glow {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(107, 33, 168, 0.1) 0%, rgba(37, 99, 235, 0.05) 40%, transparent 70%);
+  pointer-events: none;
+  animation: cardGlow 6s ease-in-out infinite alternate;
+}
+
+@keyframes cardGlow {
+  0% { opacity: 0.5; transform: translateX(-50%) scale(1); }
+  100% { opacity: 0.8; transform: translateX(-50%) scale(1.1); }
+}
+
+.pricing__card-header {
+  text-align: center;
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.pricing__card-tag {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--color-cyan);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.pricing__card-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.pricing__card-currency {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.pricing__card-amount {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.pricing__card-term {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.pricing__card-divider {
+  height: 1px;
+  background: var(--border-subtle);
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.pricing__card-features {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.pricing__card-features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+}
+
+.pricing__card-features li svg {
+  flex-shrink: 0;
+}
+
+.pricing__card .btn {
+  position: relative;
+  z-index: 1;
+}
+
+/* Add-Ons */
+.pricing__addons {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+}
+
+.pricing__addons-title {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--text-tertiary);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.pricing__addons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.pricing__addon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+  transition: background 300ms, border-color 300ms;
+}
+
+.pricing__addon:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-light);
+}
+
+.pricing__addon-name {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.pricing__addon-price {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-cyan);
+}
+
+
+/* ============================================
+   SECTION 7: SOCIAL PROOF / RESULTS
    ============================================ */
 .results {
   padding: var(--section-padding) 0;
   text-align: center;
   position: relative;
 }
-
-/* Before / After Comparison */
-.comparison {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  gap: 40px;
-  align-items: start;
-  margin: 64px 0;
-  text-align: left;
-}
-
-.comparison__heading {
-  font-size: 0.75rem;
-  letter-spacing: 0.15em;
-  margin-bottom: 24px;
-  color: var(--text-tertiary);
-}
-
-.comparison__col--before .comparison__heading {
-  color: #ef4444;
-}
-
-.comparison__col--after .comparison__heading {
-  color: var(--color-teal);
-}
-
-.comparison__list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.comparison__list li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-}
-
-.comparison__list li svg {
-  flex-shrink: 0;
-}
-
-.comparison__divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 16px;
-  font-size: 0.7rem;
-  letter-spacing: 0.15em;
-  color: var(--text-tertiary);
-  align-self: center;
-}
-
-.comparison__divider::before,
-.comparison__divider::after {
-  content: '';
-  display: block;
-  width: 1px;
-  height: 40px;
-  background: var(--border-subtle);
-  position: absolute;
-}
-
-.comparison__divider {
-  position: relative;
-}
-
-.comparison__divider::before { top: 0; }
-.comparison__divider::after { bottom: 0; }
 
 /* Counters */
 .counters {
@@ -1170,7 +1440,8 @@ input, select, textarea {
   transform: translateY(-2px);
 }
 
-.counter__prefix {
+.counter__prefix,
+.counter__suffix {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   background: var(--gradient-brand);
@@ -1251,157 +1522,7 @@ input, select, textarea {
 
 
 /* ============================================
-   PRICING
-   ============================================ */
-.pricing {
-  padding: var(--section-padding) 0;
-  text-align: center;
-  position: relative;
-}
-
-.pricing__card {
-  max-width: 560px;
-  margin: 48px auto 0;
-  padding: 48px;
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border-subtle);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  position: relative;
-  overflow: hidden;
-  text-align: left;
-  transition: border-color 600ms, box-shadow 600ms;
-}
-
-.pricing__card:hover {
-  border-color: rgba(6, 182, 212, 0.15);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(6, 182, 212, 0.06);
-}
-
-.pricing__card-glow {
-  position: absolute;
-  top: -100px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(107, 33, 168, 0.12) 0%, rgba(37, 99, 235, 0.06) 40%, transparent 70%);
-  pointer-events: none;
-  animation: cardGlow 6s ease-in-out infinite alternate;
-}
-
-@keyframes cardGlow {
-  0% { opacity: 0.6; transform: translateX(-50%) scale(1); }
-  100% { opacity: 1; transform: translateX(-50%) scale(1.1); }
-}
-
-.pricing__card-header {
-  text-align: center;
-  margin-bottom: 32px;
-  position: relative;
-  z-index: 1;
-}
-
-.pricing__card-tag {
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-  color: var(--color-cyan);
-  margin-bottom: 16px;
-  display: block;
-}
-
-.pricing__card-starting {
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  color: var(--text-secondary);
-  display: block;
-  margin-bottom: 4px;
-}
-
-.pricing__card-price {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: 4px;
-  margin-bottom: 8px;
-}
-
-.pricing__card-currency {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--text-secondary);
-}
-
-.pricing__card-amount {
-  font-size: 4rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1;
-}
-
-.pricing__card-term {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-}
-
-.pricing__card-divider {
-  height: 1px;
-  background: var(--border-subtle);
-  margin-bottom: 32px;
-  position: relative;
-  z-index: 1;
-}
-
-.pricing__card-features {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-bottom: 32px;
-  position: relative;
-  z-index: 1;
-}
-
-.pricing__card-features li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-}
-
-.pricing__card-features li svg {
-  flex-shrink: 0;
-}
-
-.pricing__card-emphasis {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 16px 20px;
-  border-radius: 12px;
-  background: rgba(6, 182, 212, 0.06);
-  border: 1px solid rgba(6, 182, 212, 0.12);
-  margin-bottom: 28px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--color-cyan);
-  position: relative;
-  z-index: 1;
-}
-
-.pricing__card-emphasis svg {
-  flex-shrink: 0;
-}
-
-.pricing__card .btn {
-  position: relative;
-  z-index: 1;
-}
-
-
-/* ============================================
-   FAQ
+   SECTION 8: FAQ
    ============================================ */
 .faq {
   padding: var(--section-padding) 0;
@@ -1466,7 +1587,7 @@ input, select, textarea {
 
 
 /* ============================================
-   FINAL CTA
+   SECTION 9: FINAL CTA
    ============================================ */
 .final-cta {
   padding: var(--section-padding) 0;
@@ -1657,15 +1778,6 @@ input, select, textarea {
   display: block;
 }
 
-.scroll-video--solution .scroll-video__canvas {
-  opacity: 0.2;
-}
-
-.solution > .container {
-  position: relative;
-  z-index: 1;
-}
-
 
 /* ============================================
    RESPONSIVE — TABLET (1024px)
@@ -1680,24 +1792,8 @@ input, select, textarea {
     gap: 48px;
   }
 
-  .problem__stats {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .stat-card {
-    flex: 1;
-    min-width: 200px;
-  }
-
-  .blueprint__nodes {
-    grid-template-columns: 1fr;
-    max-width: 480px;
-    margin: 0 auto;
-  }
-
-  .blueprint__lines {
-    display: none;
+  .tools__grid--3 {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   }
 
   .steps {
@@ -1716,13 +1812,23 @@ input, select, textarea {
     margin: 0;
   }
 
-  .comparison {
+  .math__comparison {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 24px;
   }
 
-  .comparison__divider {
-    display: none;
+  .math__vs {
+    padding: 8px 0;
+  }
+
+  .pricing__grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto 64px;
+  }
+
+  .pricing__addons-grid {
+    grid-template-columns: 1fr;
   }
 
   .counters {
@@ -1826,15 +1932,6 @@ input, select, textarea {
     height: 48px;
   }
 
-  /* Problem */
-  .problem__stats {
-    flex-direction: column;
-  }
-
-  .stat-card {
-    min-width: unset;
-  }
-
   /* Counters */
   .counters {
     grid-template-columns: 1fr;
@@ -1855,13 +1952,29 @@ input, select, textarea {
     width: 100%;
   }
 
-  /* Pricing card */
+  /* Pricing */
   .pricing__card {
     padding: 32px 24px;
   }
 
   .pricing__card-amount {
     font-size: 3rem;
+  }
+
+  .pricing__addons {
+    padding: 24px;
+  }
+
+  /* Math */
+  .math__col-body {
+    padding: 8px 20px 20px;
+  }
+
+  .math__col-header {
+    padding: 20px;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
   }
 
   /* Footer */
@@ -1900,15 +2013,6 @@ input, select, textarea {
     font-size: 1.75rem;
   }
 
-  .stat-card {
-    padding: 24px;
-  }
-
-  .stat-card__number,
-  .stat-card__prefix {
-    font-size: 2.2rem;
-  }
-
   .step {
     padding: 28px 20px;
   }
@@ -1917,8 +2021,8 @@ input, select, textarea {
     font-size: 2rem;
   }
 
-  .blueprint__node {
-    padding: 24px;
+  .tool-card {
+    padding: 20px 16px;
   }
 
   .counter {
@@ -1926,7 +2030,8 @@ input, select, textarea {
   }
 
   .counter__number,
-  .counter__prefix {
+  .counter__prefix,
+  .counter__suffix {
     font-size: 2rem;
   }
 
@@ -1967,5 +2072,17 @@ input, select, textarea {
 
   .section-divider {
     height: 32px;
+  }
+
+  .math__savings-number {
+    font-size: 2.5rem;
+  }
+
+  .drain__item {
+    padding: 10px 14px;
+  }
+
+  .drain__visual {
+    padding: 20px;
   }
 }
