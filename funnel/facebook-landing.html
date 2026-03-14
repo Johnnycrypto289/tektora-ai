@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contractors: Stop Paying $1,000/Month For Software You Don't Own — Tektora AI</title>
+    <meta name="description" content="Contractors: Stop paying $1,000+/month for software you don't own. We build custom AI tools — you pay once, you own everything.">
+    <meta property="og:title" content="Contractors: Stop Paying $1,000/Month For Software You Don't Own">
+    <meta property="og:description" content="We build custom AI tools for contractors. Pay once. Own everything. No monthly fees ever.">
+    <meta property="og:image" content="https://tektora.ai/assets/images/tektora-logo-v1.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tektora.ai/funnel/facebook-landing.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contractors: Stop Paying $1,000/Month For Software You Don't Own">
+    <meta name="twitter:description" content="Custom AI tools built for contractors. One payment. Full ownership.">
+    <meta name="twitter:image" content="https://tektora.ai/assets/images/tektora-logo-v1.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      // fbq('init', 'YOUR_PIXEL_ID');
+      // fbq('track', 'PageView');
+    </script>
+    <!-- End Facebook Pixel Code -->
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg-primary: #000000;
+            --bg-secondary: #0a0a0f;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A1A1AA;
+            --text-tertiary: #71717A;
+            --cyan: #06B6D4;
+            --purple: #6B21A8;
+            --blue: #2563EB;
+            --teal: #0D9488;
+            --red: #ef4444;
+            --green: #22c55e;
+            --border-subtle: rgba(255, 255, 255, 0.06);
+            --gradient-brand: linear-gradient(135deg, #6B21A8, #2563EB, #0D9488);
+            --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ─── NAV ─── */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .nav-logo img { height: 32px; width: auto; }
+
+        .nav-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: var(--gradient-brand);
+            color: white;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 24px rgba(6, 182, 212, 0.3);
+        }
+
+        /* ─── HERO ─── */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 24px 80px;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            left: -20%;
+            width: 80%;
+            height: 80%;
+            background: radial-gradient(circle, rgba(239, 68, 68, 0.1) 0%, transparent 60%);
+            animation: drift 16s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            right: -15%;
+            width: 60%;
+            height: 60%;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.08) 0%, transparent 60%);
+            animation: drift 20s ease-in-out infinite reverse;
+        }
+
+        @keyframes drift {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(5%, 5%); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 750px;
+        }
+
+        .urgency-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.25);
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 28px;
+            animation: urgencyPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes urgencyPulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.2); }
+            50% { box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
+        }
+
+        .urgency-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--red);
+            border-radius: 50%;
+            animation: blink 1.5s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 7vw, 4rem);
+            font-weight: 800;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 .cost-strike {
+            text-decoration: line-through;
+            color: var(--red);
+            opacity: 0.8;
+        }
+
+        .hero h1 .gradient-text {
+            background: var(--gradient-brand);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-sub {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 32px;
+            max-width: 580px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 18px 40px;
+            background: var(--gradient-brand);
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+            box-shadow: 0 0 24px rgba(6, 182, 212, 0.2), 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 40px rgba(6, 182, 212, 0.35), 0 8px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .cta-btn svg { width: 20px; height: 20px; }
+
+        .cta-subtext {
+            margin-top: 16px;
+            font-size: 0.82rem;
+            color: var(--text-tertiary);
+        }
+
+        /* ─── COST BREAKDOWN ─── */
+        .cost-section {
+            padding: 80px 24px;
+        }
+
+        .cost-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cost-title {
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            font-weight: 800;
+            text-align: center;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 48px;
+        }
+
+        .cost-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .cost-box {
+            padding: 32px;
+            border-radius: 16px;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .cost-box.renting {
+            background: rgba(239, 68, 68, 0.04);
+            border-color: rgba(239, 68, 68, 0.15);
+        }
+
+        .cost-box.owning {
+            background: rgba(34, 197, 94, 0.04);
+            border-color: rgba(34, 197, 94, 0.15);
+        }
+
+        .cost-box-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .cost-box.renting .cost-box-label { color: var(--red); }
+        .cost-box.owning .cost-box-label { color: var(--green); }
+
+        .cost-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-subtle);
+            font-size: 0.88rem;
+        }
+
+        .cost-line:last-child { border-bottom: none; }
+
+        .cost-line .label { color: var(--text-secondary); }
+
+        .cost-line .price {
+            font-family: 'Inter', monospace;
+            font-weight: 700;
+        }
+
+        .cost-box.renting .price { color: var(--red); }
+        .cost-box.owning .price { color: var(--green); }
+
+        .cost-total {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 2px solid var(--border-subtle);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.1rem;
+            font-weight: 800;
+        }
+
+        .cost-box.renting .cost-total .price { color: var(--red); font-size: 1.3rem; }
+        .cost-box.owning .cost-total .price { color: var(--green); font-size: 1.3rem; }
+
+        /* ─── WHAT YOU GET ─── */
+        .what-you-get {
+            padding: 80px 24px;
+            background: var(--bg-secondary);
+        }
+
+        .wyg-container {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .wyg-title {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 40px;
+        }
+
+        .wyg-list {
+            text-align: left;
+            list-style: none;
+        }
+
+        .wyg-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border-subtle);
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .wyg-list li:last-child { border-bottom: none; }
+
+        .wyg-list li svg {
+            width: 22px;
+            height: 22px;
+            flex-shrink: 0;
+            color: var(--green);
+            margin-top: 2px;
+        }
+
+        .wyg-list li strong { color: var(--text-primary); }
+
+        /* ─── URGENCY CTA ─── */
+        .urgency-cta {
+            padding: 100px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .urgency-cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(107, 33, 168, 0.12) 0%, transparent 60%);
+        }
+
+        .urgency-cta .inner {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .urgency-cta h2 {
+            font-size: clamp(2rem, 6vw, 3rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+
+        .urgency-cta p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+
+        .spots-left {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 20px;
+            padding: 10px 18px;
+            background: rgba(239, 68, 68, 0.08);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--red);
+        }
+
+        .spots-left::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--red);
+            border-radius: 50%;
+            animation: blink 1.5s ease-in-out infinite;
+        }
+
+        /* ─── FOOTER ─── */
+        .footer {
+            padding: 48px 24px;
+            border-top: 1px solid var(--border-subtle);
+            text-align: center;
+        }
+
+        .footer-logo img { height: 28px; margin-bottom: 16px; }
+
+        .footer p {
+            font-size: 0.82rem;
+            color: var(--text-tertiary);
+        }
+
+        /* ─── STICKY MOBILE CTA ─── */
+        .sticky-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 99;
+            padding: 12px 16px;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .sticky-cta .cta-btn {
+            width: 100%;
+            justify-content: center;
+            padding: 14px 24px;
+            font-size: 0.95rem;
+        }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 768px) {
+            .hero { padding: 90px 20px 60px; min-height: auto; }
+            .hero h1 { font-size: clamp(1.8rem, 8vw, 2.5rem); }
+            .cost-comparison { grid-template-columns: 1fr; }
+            .cost-section, .what-you-get, .urgency-cta { padding: 64px 20px; }
+            .sticky-cta { display: block; }
+            body { padding-bottom: 72px; }
+        }
+
+        @media (max-width: 375px) {
+            .hero { padding: 80px 16px 48px; }
+            .cost-section, .what-you-get, .urgency-cta { padding: 48px 16px; }
+            .nav { padding: 12px 16px; }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+        }
+
+        .reveal.revealed { opacity: 1; transform: translateY(0); }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { opacity: 1; transform: none; transition: none; }
+            * { animation-duration: 0s !important; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ─── NAVIGATION ─── -->
+<nav class="nav">
+    <a href="../index.html" class="nav-logo">
+        <img src="../assets/images/tektora-logo-v1.png" alt="Tektora AI">
+    </a>
+    <a href="#claim-spot" class="nav-cta">Book Free Call</a>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="urgency-badge">Stop Overpaying</div>
+        <h1>Contractors: Stop Paying <span class="cost-strike">$1,000/Month</span> For Software <span class="gradient-text">You Don't Own</span></h1>
+        <p class="hero-sub">You're paying $500-$1,500 every single month for CRM, scheduling, and estimating tools. We'll build you custom AI tools for a one-time fee. You own everything. Forever.</p>
+        <a href="#claim-spot" class="cta-btn">
+            Book Your Free Strategy Call
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+        </a>
+        <p class="cta-subtext">Free 30-min call. No obligation. No credit card.</p>
+    </div>
+</section>
+
+<!-- ─── COST BREAKDOWN ─── -->
+<section class="cost-section">
+    <div class="cost-container">
+        <h2 class="cost-title reveal">Here's What Software Subscriptions<br>Are Really Costing You</h2>
+        <div class="cost-comparison reveal">
+            <div class="cost-box renting">
+                <div class="cost-box-label">Renting Software (Monthly)</div>
+                <div class="cost-line"><span class="label">CRM / Lead Management</span><span class="price">$150/mo</span></div>
+                <div class="cost-line"><span class="label">Scheduling / Dispatch</span><span class="price">$200/mo</span></div>
+                <div class="cost-line"><span class="label">Estimating Software</span><span class="price">$300/mo</span></div>
+                <div class="cost-line"><span class="label">Invoicing / Payments</span><span class="price">$100/mo</span></div>
+                <div class="cost-line"><span class="label">Project Management</span><span class="price">$200/mo</span></div>
+                <div class="cost-total"><span>Yearly Total</span><span class="price">$11,400/yr</span></div>
+            </div>
+            <div class="cost-box owning">
+                <div class="cost-box-label">Owning With Tektora (One-Time)</div>
+                <div class="cost-line"><span class="label">Custom AI CRM</span><span class="price">Included</span></div>
+                <div class="cost-line"><span class="label">Smart Scheduling</span><span class="price">Included</span></div>
+                <div class="cost-line"><span class="label">AI Estimating Engine</span><span class="price">Included</span></div>
+                <div class="cost-line"><span class="label">Invoicing Dashboard</span><span class="price">Included</span></div>
+                <div class="cost-line"><span class="label">Full Source Code</span><span class="price">Included</span></div>
+                <div class="cost-total"><span>One-Time Total</span><span class="price">From $4,500</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── WHAT YOU GET ─── -->
+<section class="what-you-get">
+    <div class="wyg-container">
+        <h2 class="wyg-title reveal">What You Get With Tektora</h2>
+        <ul class="wyg-list reveal">
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+                <span><strong>Custom AI tools</strong> built specifically for your contracting business — not a generic template</span>
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+                <span><strong>Full source code ownership</strong> — no vendor lock-in, no licensing fees, ever</span>
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+                <span><strong>Delivered in 2-4 weeks</strong> — not months. See progress along the way</span>
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+                <span><strong>AI that learns your business</strong> — your pricing, your suppliers, your workflow</span>
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+                <span><strong>One-time investment</strong> that pays for itself in 3-6 months</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ─── URGENCY CTA ─── -->
+<section class="urgency-cta" id="claim-spot">
+    <div class="inner">
+        <h2 class="reveal">Every Month You Wait,<br>You Lose Another <span class="gradient-text">$950</span></h2>
+        <p class="reveal">The math is simple. Book a free strategy call and find out exactly how much you can save by switching to custom AI tools you actually own.</p>
+        <a href="thank-you.html" class="cta-btn reveal">
+            Book Your Free Strategy Call
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+        </a>
+        <div class="spots-left reveal">Only 5 spots left this month</div>
+    </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer class="footer">
+    <div class="footer-logo">
+        <img src="../assets/images/tektora-logo-v1.png" alt="Tektora AI">
+    </div>
+    <p>&copy; 2026 Tektora AI. All rights reserved.</p>
+</footer>
+
+<!-- ─── STICKY MOBILE CTA ─── -->
+<div class="sticky-cta">
+    <a href="#claim-spot" class="cta-btn">
+        Claim Your Free Strategy Call
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+    </a>
+</div>
+
+<!-- ─── SCROLL REVEAL ─── -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var reveals = document.querySelectorAll('.reveal');
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry, i) {
+                if (entry.isIntersecting) {
+                    setTimeout(function () { entry.target.classList.add('revealed'); }, i * 80);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        reveals.forEach(function (el) { observer.observe(el); });
+    });
+</script>
+
+</body>
+</html>
