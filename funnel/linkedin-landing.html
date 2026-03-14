@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How Smart Contractors Cut Software Costs 80% — Tektora AI</title>
-    <meta name="description" content="Discover how forward-thinking contractors are cutting software costs by 80% with custom AI tools they own outright. No subscriptions. Full ownership.">
-    <meta property="og:title" content="How Smart Contractors Cut Software Costs 80%">
-    <meta property="og:description" content="The data is clear: contractors who switch to custom-built AI tools save an average of $11,400/year. See the ROI breakdown.">
+    <title>How Smart Contractors Are Cutting Software Costs by 80% — Tektora AI</title>
+    <meta name="description" content="Smart contractors are switching from $1,000/month software subscriptions to custom AI tools they own. Learn how to cut your software costs by 80%.">
+    <meta property="og:title" content="How Smart Contractors Are Cutting Software Costs by 80%">
+    <meta property="og:description" content="The ROI case for custom AI tools vs monthly software subscriptions. One-time investment. Full ownership. 80% cost reduction.">
     <meta property="og:image" content="https://tektora.ai/assets/images/tektora-logo-v1.png">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tektora.ai/funnel/linkedin-landing.html">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="How Smart Contractors Cut Software Costs 80%">
-    <meta name="twitter:description" content="Custom AI tools for contractors. One-time investment. Full ownership. 80% cost reduction.">
+    <meta name="twitter:title" content="How Smart Contractors Are Cutting Software Costs by 80%">
+    <meta name="twitter:description" content="Custom AI tools for contractors. One payment. Full ownership. 80% cost reduction.">
     <meta name="twitter:image" content="https://tektora.ai/assets/images/tektora-logo-v1.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,47 +74,37 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            max-width: 960px;
-            margin: 0 auto;
             background: rgba(0, 0, 0, 0.8);
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
             border-bottom: 1px solid var(--border-subtle);
         }
 
-        .nav-logo {
-            font-size: 1.1rem;
-            font-weight: 800;
-            background: var(--gradient-brand);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-decoration: none;
-        }
+        .nav-logo img { height: 32px; width: auto; }
 
         .nav-cta {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            padding: 9px 18px;
-            border: 1px solid rgba(6, 182, 212, 0.3);
-            border-radius: 8px;
-            color: var(--cyan);
+            gap: 8px;
+            padding: 10px 20px;
+            background: var(--gradient-brand);
+            color: white;
             text-decoration: none;
-            font-size: 0.82rem;
+            font-size: 0.85rem;
             font-weight: 600;
-            transition: all 0.3s var(--ease-out);
+            border-radius: 8px;
+            transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
         }
 
         .nav-cta:hover {
-            background: rgba(6, 182, 212, 0.08);
-            border-color: rgba(6, 182, 212, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 0 24px rgba(6, 182, 212, 0.3);
         }
 
         /* ─── HERO ─── */
         .hero {
             position: relative;
-            padding: 120px 24px 80px;
+            padding: 140px 24px 100px;
             text-align: center;
             overflow: hidden;
         }
@@ -122,35 +112,18 @@
         .hero::before {
             content: '';
             position: absolute;
-            top: -40%;
-            left: -20%;
-            width: 80%;
+            top: -30%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
             height: 80%;
-            background: radial-gradient(circle, rgba(107, 33, 168, 0.12) 0%, transparent 65%);
-            animation: orbFloat 20s ease-in-out infinite;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -30%;
-            right: -15%;
-            width: 60%;
-            height: 60%;
-            background: radial-gradient(circle, rgba(6, 182, 212, 0.08) 0%, transparent 60%);
-            animation: orbFloat 24s ease-in-out infinite reverse;
-        }
-
-        @keyframes orbFloat {
-            0%, 100% { transform: translate(0, 0); }
-            33% { transform: translate(4%, 6%); }
-            66% { transform: translate(-3%, -4%); }
+            background: radial-gradient(ellipse at center, rgba(37, 99, 235, 0.08) 0%, transparent 60%);
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 720px;
+            max-width: 780px;
             margin: 0 auto;
         }
 
@@ -158,11 +131,11 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 7px 16px;
+            padding: 8px 16px;
             background: rgba(6, 182, 212, 0.06);
             border: 1px solid rgba(6, 182, 212, 0.15);
             border-radius: 100px;
-            font-size: 0.7rem;
+            font-size: 0.72rem;
             font-weight: 600;
             letter-spacing: 0.12em;
             text-transform: uppercase;
@@ -171,7 +144,7 @@
         }
 
         .hero h1 {
-            font-size: clamp(2.2rem, 6vw, 3.8rem);
+            font-size: clamp(2.2rem, 6vw, 4rem);
             font-weight: 800;
             line-height: 1.08;
             letter-spacing: -0.03em;
@@ -188,7 +161,7 @@
         .hero-sub {
             font-size: 1.1rem;
             color: var(--text-secondary);
-            line-height: 1.75;
+            line-height: 1.7;
             margin-bottom: 36px;
             max-width: 600px;
             margin-left: auto;
@@ -203,7 +176,7 @@
             background: var(--gradient-brand);
             color: white;
             text-decoration: none;
-            font-size: 1rem;
+            font-size: 1.05rem;
             font-weight: 700;
             border-radius: 12px;
             border: none;
@@ -219,312 +192,273 @@
 
         .cta-btn svg { width: 18px; height: 18px; }
 
-        .cta-subtext {
+        .cta-note {
             margin-top: 14px;
-            font-size: 0.82rem;
+            font-size: 0.8rem;
             color: var(--text-tertiary);
         }
 
-        /* ─── SECTION SHARED ─── */
-        .section {
-            padding: 80px 24px;
-            position: relative;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .section-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 6px 14px;
-            background: rgba(6, 182, 212, 0.06);
-            border: 1px solid rgba(6, 182, 212, 0.12);
-            border-radius: 100px;
-            font-size: 0.68rem;
-            font-weight: 600;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--cyan);
-            margin-bottom: 16px;
-        }
-
-        .section-title {
-            font-size: clamp(1.8rem, 4.5vw, 2.6rem);
-            font-weight: 800;
-            line-height: 1.12;
-            letter-spacing: -0.02em;
-            margin-bottom: 14px;
-        }
-
-        .section-sub {
-            font-size: 1rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-            max-width: 560px;
-        }
-
+        /* ─── DIVIDER ─── */
         .divider {
             width: 100%;
             height: 1px;
             background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.12), rgba(107, 33, 168, 0.12), transparent);
         }
 
-        /* ─── EXECUTIVE SUMMARY ─── */
-        .exec-summary {
-            background: var(--bg-secondary);
-        }
-
-        .summary-card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-subtle);
-            border-radius: 16px;
-            padding: 36px 32px;
-            margin-top: 32px;
-        }
-
-        .summary-card p {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: 16px;
-        }
-
-        .summary-card p:last-child { margin-bottom: 0; }
-        .summary-card strong { color: var(--text-primary); font-weight: 600; }
-
         /* ─── ROI TABLE ─── */
-        .roi-table-wrapper {
-            margin-top: 36px;
-            overflow-x: auto;
+        .roi-section {
+            padding: 100px 24px;
+        }
+
+        .roi-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .roi-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-tag {
+            display: inline-flex;
+            padding: 6px 14px;
+            background: rgba(6, 182, 212, 0.06);
+            border: 1px solid rgba(6, 182, 212, 0.15);
+            border-radius: 100px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--cyan);
+            margin-bottom: 20px;
+        }
+
+        .roi-title {
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
         }
 
         .roi-table {
             width: 100%;
             border-collapse: collapse;
+            margin-bottom: 32px;
         }
 
-        .roi-table th {
+        .roi-table thead th {
+            padding: 16px 20px;
             text-align: left;
             font-size: 0.72rem;
             font-weight: 700;
-            color: var(--text-tertiary);
-            text-transform: uppercase;
             letter-spacing: 0.12em;
-            padding: 12px 16px;
+            text-transform: uppercase;
+            color: var(--text-tertiary);
             border-bottom: 1px solid var(--border-light);
         }
 
-        .roi-table th:nth-child(2),
-        .roi-table th:nth-child(3) { text-align: right; }
+        .roi-table thead th:nth-child(2),
+        .roi-table thead th:nth-child(3) { text-align: center; }
 
-        .roi-table td {
-            padding: 14px 16px;
-            border-bottom: 1px solid var(--border-subtle);
+        .roi-table tbody td {
+            padding: 18px 20px;
             font-size: 0.92rem;
+            border-bottom: 1px solid var(--border-subtle);
         }
 
-        .roi-table td:first-child { color: var(--text-secondary); }
-        .roi-table td:nth-child(2) { text-align: right; color: var(--red); font-weight: 600; }
-        .roi-table td:nth-child(3) { text-align: right; color: var(--green); font-weight: 600; }
+        .roi-table tbody td:first-child { color: var(--text-secondary); }
 
-        .roi-table tr:last-child td {
-            border-bottom: none;
-            font-weight: 700;
-            font-size: 1rem;
-            padding-top: 18px;
-        }
-
-        .roi-table tr:last-child td:first-child { color: var(--text-primary); }
-
-        .table-footnote {
-            margin-top: 12px;
-            font-size: 0.75rem;
-            color: var(--text-tertiary);
+        .roi-table tbody td:nth-child(2),
+        .roi-table tbody td:nth-child(3) {
             text-align: center;
+            font-weight: 600;
         }
 
-        /* ─── ROI METRICS ─── */
-        .roi-metrics {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            margin-top: 36px;
-        }
+        .roi-table tbody td:nth-child(2) { color: var(--red); }
+        .roi-table tbody td:nth-child(3) { color: var(--green); }
 
-        .roi-metric {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-subtle);
-            border-radius: 14px;
-            padding: 28px 16px;
-            text-align: center;
-        }
-
-        .roi-metric-num {
-            font-size: clamp(1.6rem, 4vw, 2.4rem);
+        .roi-table tfoot td {
+            padding: 20px;
+            font-size: 1.1rem;
             font-weight: 800;
-            background: var(--gradient-brand);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1.15;
+            border-top: 2px solid var(--border-light);
         }
 
-        .roi-metric-label {
-            font-size: 0.78rem;
+        .roi-table tfoot td:nth-child(2) { text-align: center; color: var(--red); }
+        .roi-table tfoot td:nth-child(3) { text-align: center; color: var(--green); }
+
+        .roi-savings {
+            text-align: center;
+            padding: 28px;
+            background: rgba(34, 197, 94, 0.05);
+            border: 1px solid rgba(34, 197, 94, 0.15);
+            border-radius: 14px;
+        }
+
+        .roi-savings-num {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            color: var(--green);
+            line-height: 1.1;
+        }
+
+        .roi-savings-label {
+            font-size: 0.88rem;
             color: var(--text-secondary);
             margin-top: 6px;
         }
 
-        /* ─── CAPABILITIES ─── */
-        .capabilities-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-top: 36px;
+        /* ─── CASE STUDIES ─── */
+        .cases-section {
+            padding: 100px 24px;
+            background: var(--bg-secondary);
         }
 
-        .cap-card {
-            padding: 28px 24px;
-            background: rgba(255, 255, 255, 0.02);
+        .cases-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .cases-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .cases-title {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .case-card {
+            padding: 32px;
+            background: rgba(255, 255, 255, 0.03);
             border: 1px solid var(--border-subtle);
-            border-radius: 14px;
+            border-radius: 16px;
             transition: all 0.4s var(--ease-out);
         }
 
-        .cap-card:hover {
-            transform: translateY(-3px);
+        .case-card:hover {
+            transform: translateY(-4px);
             border-color: rgba(6, 182, 212, 0.15);
         }
 
-        .cap-icon {
-            width: 44px;
-            height: 44px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(6, 182, 212, 0.06);
-            border-radius: 10px;
+        .case-industry {
+            display: inline-block;
+            padding: 4px 10px;
+            background: rgba(6, 182, 212, 0.08);
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--cyan);
             margin-bottom: 16px;
-            font-size: 1.3rem;
         }
 
-        .cap-card h3 {
-            font-size: 1rem;
-            font-weight: 700;
+        .case-metric {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--green);
             margin-bottom: 8px;
         }
 
-        .cap-card p {
+        .case-desc {
+            font-size: 0.92rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .case-detail {
             font-size: 0.85rem;
             color: var(--text-secondary);
             line-height: 1.6;
         }
 
-        /* ─── CASE STUDIES ─── */
-        .case-card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-subtle);
-            border-radius: 16px;
-            padding: 32px 28px;
-            margin-top: 20px;
-        }
-
-        .case-meta {
-            font-size: 0.68rem;
-            font-weight: 700;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--purple);
-            margin-bottom: 12px;
-        }
-
-        .case-card h3 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-            line-height: 1.3;
-        }
-
-        .case-card > p {
-            font-size: 0.92rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-            margin-bottom: 20px;
-        }
-
-        .case-results {
+        .case-tools {
             display: flex;
-            gap: 28px;
             flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 16px;
         }
 
-        .case-stat { flex: 1; min-width: 90px; }
-
-        .case-stat-num {
-            font-size: 1.4rem;
-            font-weight: 800;
-            background: var(--gradient-brand);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .case-stat-label {
+        .case-tools span {
+            padding: 4px 10px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-subtle);
+            border-radius: 6px;
             font-size: 0.72rem;
             color: var(--text-tertiary);
-            margin-top: 2px;
         }
 
-        /* ─── PROCESS TIMELINE ─── */
-        .process-steps {
-            position: relative;
-            margin-top: 36px;
+        /* ─── WHY TEKTORA ─── */
+        .why-section {
+            padding: 100px 24px;
         }
 
-        .process-steps::before {
-            content: '';
-            position: absolute;
-            left: 19px;
-            top: 20px;
-            bottom: 20px;
-            width: 2px;
-            background: var(--gradient-brand);
-            border-radius: 2px;
+        .why-container {
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        .proc-step {
-            display: flex;
+        .why-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .why-title {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 20px;
-            align-items: flex-start;
-            padding: 20px 0;
-            position: relative;
         }
 
-        .proc-dot {
-            flex-shrink: 0;
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-            background: var(--gradient-brand);
+        .why-card {
+            padding: 28px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-subtle);
+            border-radius: 14px;
+            transition: all 0.4s var(--ease-out);
+        }
+
+        .why-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(6, 182, 212, 0.12);
+        }
+
+        .why-icon {
+            width: 44px;
+            height: 44px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.9rem;
-            font-weight: 800;
-            z-index: 1;
+            background: rgba(6, 182, 212, 0.08);
+            border-radius: 10px;
+            margin-bottom: 16px;
+            font-size: 1.3rem;
         }
 
-        .proc-step h3 {
+        .why-card h3 {
             font-size: 1rem;
             font-weight: 700;
-            margin-bottom: 4px;
+            margin-bottom: 8px;
         }
 
-        .proc-step p {
+        .why-card p {
             font-size: 0.88rem;
             color: var(--text-secondary);
             line-height: 1.6;
@@ -532,8 +466,8 @@
 
         /* ─── FINAL CTA ─── */
         .final-cta {
+            padding: 120px 24px;
             text-align: center;
-            padding: 100px 24px;
             position: relative;
             overflow: hidden;
         }
@@ -542,18 +476,20 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse at center, rgba(107, 33, 168, 0.1) 0%, transparent 60%);
+            background: radial-gradient(ellipse at center, rgba(37, 99, 235, 0.08) 0%, transparent 55%);
         }
 
-        .final-cta .container {
+        .final-cta .inner {
             position: relative;
             z-index: 2;
+            max-width: 650px;
+            margin: 0 auto;
         }
 
         .final-cta h2 {
-            font-size: clamp(2rem, 5vw, 3rem);
+            font-size: clamp(2rem, 6vw, 3rem);
             font-weight: 800;
-            line-height: 1.12;
+            line-height: 1.1;
             letter-spacing: -0.02em;
             margin-bottom: 16px;
         }
@@ -562,49 +498,55 @@
             font-size: 1.05rem;
             color: var(--text-secondary);
             margin-bottom: 36px;
-            max-width: 520px;
-            margin-left: auto;
-            margin-right: auto;
             line-height: 1.7;
         }
 
-        .guarantee {
-            display: inline-flex;
+        .trust-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            margin-top: 36px;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
             align-items: center;
             gap: 8px;
-            margin-top: 20px;
-            padding: 10px 18px;
-            background: rgba(6, 182, 212, 0.06);
-            border: 1px solid rgba(6, 182, 212, 0.15);
-            border-radius: 8px;
             font-size: 0.82rem;
+            color: var(--text-secondary);
+        }
+
+        .trust-item svg {
+            width: 16px;
+            height: 16px;
             color: var(--cyan);
-            font-weight: 500;
         }
 
         /* ─── FOOTER ─── */
         .footer {
-            padding: 40px 24px;
+            padding: 48px 24px;
             border-top: 1px solid var(--border-subtle);
             text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
         }
 
+        .footer-logo img { height: 28px; margin-bottom: 16px; }
+
         .footer p {
-            font-size: 0.78rem;
+            font-size: 0.82rem;
             color: var(--text-tertiary);
         }
 
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-top: 12px;
+            gap: 24px;
+            margin-top: 16px;
         }
 
         .footer-links a {
-            font-size: 0.78rem;
+            font-size: 0.82rem;
             color: var(--text-tertiary);
             text-decoration: none;
             transition: color 0.3s;
@@ -631,45 +573,40 @@
             width: 100%;
             justify-content: center;
             padding: 14px 24px;
-            font-size: 0.92rem;
+            font-size: 0.95rem;
         }
 
         /* ─── RESPONSIVE ─── */
         @media (max-width: 768px) {
             .hero { padding: 100px 20px 64px; }
-            .hero h1 { font-size: clamp(1.8rem, 7vw, 2.6rem); }
-            .section { padding: 64px 20px; }
-            .capabilities-grid { grid-template-columns: 1fr; }
-            .roi-metrics { grid-template-columns: repeat(3, 1fr); gap: 10px; }
-            .roi-metric { padding: 20px 12px; }
-            .roi-metric-num { font-size: 1.4rem; }
+            .hero h1 { font-size: clamp(1.8rem, 7vw, 2.5rem); }
+            .roi-section, .cases-section, .why-section { padding: 64px 20px; }
+            .roi-table { font-size: 0.85rem; }
+            .roi-table thead th, .roi-table tbody td, .roi-table tfoot td { padding: 12px 10px; }
+            .cases-grid { grid-template-columns: 1fr; }
+            .why-grid { grid-template-columns: 1fr; }
             .sticky-cta { display: block; }
             body { padding-bottom: 72px; }
             .final-cta { padding: 80px 20px; }
+            .trust-row { flex-direction: column; gap: 12px; }
         }
 
         @media (max-width: 375px) {
             .hero { padding: 90px 16px 48px; }
-            .section { padding: 48px 16px; }
+            .roi-section, .cases-section, .why-section { padding: 48px 16px; }
             .nav { padding: 12px 16px; }
-            .roi-metrics { grid-template-columns: 1fr; }
         }
 
-        /* ─── ANIMATIONS ─── */
         .reveal {
             opacity: 0;
-            transform: translateY(28px);
+            transform: translateY(30px);
             transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
         }
 
-        .reveal.revealed {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .reveal.revealed { opacity: 1; transform: translateY(0); }
 
         @media (prefers-reduced-motion: reduce) {
             .reveal { opacity: 1; transform: none; transition: none; }
-            .hero::before, .hero::after { animation: none; }
         }
     </style>
 </head>
@@ -677,143 +614,88 @@
 
 <!-- ─── NAVIGATION ─── -->
 <nav class="nav">
-    <a href="../index.html" class="nav-logo">Tektora AI</a>
-    <a href="#schedule" class="nav-cta">Schedule Strategy Discussion</a>
+    <a href="../index.html" class="nav-logo">
+        <img src="../assets/images/tektora-logo-v1.png" alt="Tektora AI">
+    </a>
+    <a href="#schedule-call" class="nav-cta">Schedule Strategy Call</a>
 </nav>
 
 <!-- ─── HERO ─── -->
 <section class="hero">
     <div class="hero-content">
-        <div class="hero-tag">Industry Analysis</div>
-        <h1>How Smart Contractors Cut Software Costs <span class="gradient-text">80%</span></h1>
-        <p class="hero-sub">The contracting industry spends $4.2B annually on SaaS subscriptions. Forward-thinking contractors are switching to custom-built AI tools they own outright — and redirecting the savings to growth.</p>
-        <a href="#schedule" class="cta-btn">
-            Schedule a Strategy Discussion
+        <div class="hero-tag">Industry Report</div>
+        <h1>How Smart Contractors Are Cutting Software Costs by <span class="gradient-text">80%</span></h1>
+        <p class="hero-sub">The most profitable contractors aren't paying $12,000+/year for software subscriptions. They're investing once in custom AI tools they own — and keeping the difference as profit.</p>
+        <a href="#schedule-call" class="cta-btn">
+            Schedule a Strategy Call
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
         </a>
-        <p class="cta-subtext">Complimentary 15-minute consultation</p>
+        <p class="cta-note">30-minute complimentary consultation</p>
     </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- ─── EXECUTIVE SUMMARY ─── -->
-<section class="section exec-summary">
-    <div class="container">
+<!-- ─── ROI TABLE ─── -->
+<section class="roi-section">
+    <div class="roi-container">
+        <div class="roi-header reveal">
+            <span class="section-tag">The ROI Analysis</span>
+            <h2 class="roi-title">The 3-Year Cost Comparison</h2>
+        </div>
         <div class="reveal">
-            <span class="section-tag">Executive Summary</span>
-            <h2 class="section-title">The SaaS Cost Problem in Contracting</h2>
-        </div>
-        <div class="summary-card reveal">
-            <p>The average contractor spends <strong>$950/month on software subscriptions</strong> — CRM, estimating, scheduling, invoicing, and project management tools. Over five years, that's <strong>$57,000 in recurring costs</strong> with no equity built and no competitive differentiation.</p>
-            <p>Tektora AI offers an alternative model: <strong>custom-built AI tools tailored to your specific trade</strong>, delivered as a one-time investment. You receive full source code ownership, zero recurring fees, and tools designed around your workflow — not the other way around.</p>
-            <p>Our clients report an <strong>average ROI of 580% in year one</strong>, with break-even typically occurring within 4 months of deployment.</p>
-        </div>
-    </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- ─── ROI ANALYSIS ─── -->
-<section class="section">
-    <div class="container">
-        <div class="reveal" style="text-align: center;">
-            <span class="section-tag">Cost Analysis</span>
-            <h2 class="section-title">5-Year Total Cost of Ownership</h2>
-            <p class="section-sub" style="margin: 0 auto;">Traditional SaaS subscriptions vs. custom-built AI tools with full ownership</p>
-        </div>
-        <div class="roi-table-wrapper reveal">
             <table class="roi-table">
                 <thead>
                     <tr>
                         <th>Category</th>
-                        <th>SaaS (5-Year)</th>
-                        <th>Tektora (5-Year)</th>
+                        <th>SaaS Subscriptions</th>
+                        <th>Tektora Custom Build</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Software Licenses</td>
-                        <td>$57,000</td>
+                        <td>Year 1</td>
+                        <td>$11,400</td>
+                        <td>$4,500 - $8,000</td>
+                    </tr>
+                    <tr>
+                        <td>Year 2</td>
+                        <td>$12,540 (+10% increase)</td>
                         <td>$0</td>
                     </tr>
                     <tr>
-                        <td>Per-Seat Fees (5 users)</td>
-                        <td>$18,000</td>
+                        <td>Year 3</td>
+                        <td>$13,794 (+10% increase)</td>
                         <td>$0</td>
                     </tr>
                     <tr>
-                        <td>Annual Price Increases (avg. 8%)</td>
-                        <td>$12,400</td>
-                        <td>$0</td>
+                        <td>Data Ownership</td>
+                        <td>Vendor-controlled</td>
+                        <td>100% yours</td>
                     </tr>
                     <tr>
-                        <td>Custom Build Investment</td>
-                        <td>$0</td>
-                        <td>$8,000*</td>
+                        <td>Customization</td>
+                        <td>Limited to plan tier</td>
+                        <td>Fully tailored</td>
                     </tr>
                     <tr>
-                        <td>Self-Managed Hosting</td>
-                        <td>$0</td>
-                        <td>$1,200</td>
-                    </tr>
-                    <tr>
-                        <td>Total Cost of Ownership</td>
-                        <td>$87,400</td>
-                        <td>$9,200</td>
+                        <td>Vendor Risk</td>
+                        <td>Price increases, shutdowns</td>
+                        <td>None — you own it</td>
                     </tr>
                 </tbody>
+                <tfoot>
+                    <tr>
+                        <td>3-Year Total</td>
+                        <td>$37,734</td>
+                        <td>$4,500 - $8,000</td>
+                    </tr>
+                </tfoot>
             </table>
         </div>
-        <p class="table-footnote reveal">*Average build cost. Actual pricing depends on scope and complexity.</p>
-        <div class="roi-metrics reveal">
-            <div class="roi-metric">
-                <div class="roi-metric-num">89%</div>
-                <div class="roi-metric-label">5-Year Cost Reduction</div>
-            </div>
-            <div class="roi-metric">
-                <div class="roi-metric-num">$78,200</div>
-                <div class="roi-metric-label">5-Year Savings</div>
-            </div>
-            <div class="roi-metric">
-                <div class="roi-metric-num">4 mo</div>
-                <div class="roi-metric-label">Break-Even Point</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- ─── CAPABILITIES ─── -->
-<section class="section" style="background: var(--bg-secondary);">
-    <div class="container">
-        <div class="reveal" style="text-align: center;">
-            <span class="section-tag">Capabilities</span>
-            <h2 class="section-title">Custom AI Solutions for Contractors</h2>
-            <p class="section-sub" style="margin: 0 auto;">Every build is tailored to your trade, your workflow, and your competitive advantages</p>
-        </div>
-        <div class="capabilities-grid reveal">
-            <div class="cap-card">
-                <div class="cap-icon">&#128202;</div>
-                <h3>AI Estimating Engine</h3>
-                <p>Generate accurate material and labor estimates from project specifications. Continuously learns your pricing patterns and supplier costs.</p>
-            </div>
-            <div class="cap-card">
-                <div class="cap-icon">&#128197;</div>
-                <h3>Intelligent Scheduling</h3>
-                <p>Optimized crew dispatch accounting for location, availability, skill requirements, and job priority. Reduce scheduling overhead by 60%.</p>
-            </div>
-            <div class="cap-card">
-                <div class="cap-icon">&#129309;</div>
-                <h3>Client Relationship Management</h3>
-                <p>Full CRM with automated follow-ups, lead scoring, pipeline tracking, and communication history. Purpose-built for contractor workflows.</p>
-            </div>
-            <div class="cap-card">
-                <div class="cap-icon">&#128176;</div>
-                <h3>Invoicing &amp; Accounts Receivable</h3>
-                <p>Automated invoicing tied to job completion, payment processing integration, and AR management. Reduce DSO by an average of 12 days.</p>
-            </div>
+        <div class="roi-savings reveal">
+            <div class="roi-savings-num">Save $29,000 - $33,000+</div>
+            <div class="roi-savings-label">Over 3 years vs. traditional SaaS subscriptions</div>
         </div>
     </div>
 </section>
@@ -821,70 +703,87 @@
 <div class="divider"></div>
 
 <!-- ─── CASE STUDIES ─── -->
-<section class="section">
-    <div class="container">
-        <div class="reveal" style="text-align: center;">
-            <span class="section-tag">Client Outcomes</span>
-            <h2 class="section-title">Verified Results from Tektora Clients</h2>
+<section class="cases-section">
+    <div class="cases-container">
+        <div class="cases-header reveal">
+            <span class="section-tag">Results</span>
+            <h2 class="cases-title">Contractors Who Made the Switch</h2>
         </div>
-
-        <div class="case-card reveal">
-            <div class="case-meta">Case Study — HVAC</div>
-            <h3>Regional HVAC Contractor Eliminates $14,400/Year in Software Costs</h3>
-            <p>A 12-person HVAC company in Phoenix replaced ServiceTitan and Housecall Pro with a unified custom platform. AI-powered estimating reduced bid preparation time by 70%, enabling faster lead response and higher conversion rates.</p>
-            <div class="case-results">
-                <div class="case-stat">
-                    <div class="case-stat-num">$14,400</div>
-                    <div class="case-stat-label">Annual savings</div>
+        <div class="cases-grid">
+            <div class="case-card reveal">
+                <div class="case-industry">Roofing</div>
+                <div class="case-metric">$14,400 saved/yr</div>
+                <div class="case-desc">Replaced 5 SaaS tools with one custom platform</div>
+                <div class="case-detail">15-person roofing crew in Dallas. Was spending $1,200/month across CRM, estimating, scheduling, invoicing, and project management tools.</div>
+                <div class="case-tools">
+                    <span>AI Estimating</span>
+                    <span>Crew Scheduling</span>
+                    <span>CRM</span>
                 </div>
-                <div class="case-stat">
-                    <div class="case-stat-num">70%</div>
-                    <div class="case-stat-label">Faster estimates</div>
+            </div>
+            <div class="case-card reveal">
+                <div class="case-industry">HVAC</div>
+                <div class="case-metric">82% cost reduction</div>
+                <div class="case-desc">Custom dispatch + quoting system</div>
+                <div class="case-detail">HVAC company in Atlanta running 8 service trucks. Custom AI dispatch system reduced scheduling errors by 90% and cut software costs from $800/mo to one-time investment.</div>
+                <div class="case-tools">
+                    <span>Smart Dispatch</span>
+                    <span>AI Quoting</span>
+                    <span>Dashboard</span>
                 </div>
-                <div class="case-stat">
-                    <div class="case-stat-num">3 mo</div>
-                    <div class="case-stat-label">ROI break-even</div>
+            </div>
+            <div class="case-card reveal">
+                <div class="case-industry">General Contractor</div>
+                <div class="case-metric">10+ hrs saved/week</div>
+                <div class="case-desc">AI-powered estimating + lead qualification</div>
+                <div class="case-detail">GC in Phoenix generating 200+ estimates per month. AI estimating engine trained on their historical data now produces accurate quotes in minutes instead of hours.</div>
+                <div class="case-tools">
+                    <span>AI Estimating</span>
+                    <span>Lead Scoring</span>
+                    <span>Auto Follow-Up</span>
                 </div>
             </div>
         </div>
+    </div>
+</section>
 
-        <div class="case-card reveal">
-            <div class="case-meta">Case Study — Roofing</div>
-            <h3>Roofing Company Increases Close Rate 35% with AI-Powered Bids</h3>
-            <p>A Dallas-based roofing contractor deployed custom AI estimating to respond to leads within minutes instead of days. The speed advantage led to a 35% increase in won contracts and eliminated $9,600/year in subscription fees.</p>
-            <div class="case-results">
-                <div class="case-stat">
-                    <div class="case-stat-num">35%</div>
-                    <div class="case-stat-label">Higher close rate</div>
-                </div>
-                <div class="case-stat">
-                    <div class="case-stat-num">$9,600</div>
-                    <div class="case-stat-label">Annual savings</div>
-                </div>
-                <div class="case-stat">
-                    <div class="case-stat-num">85%</div>
-                    <div class="case-stat-label">Faster response</div>
-                </div>
-            </div>
+<!-- ─── WHY TEKTORA ─── -->
+<section class="why-section">
+    <div class="why-container">
+        <div class="why-header reveal">
+            <span class="section-tag">The Tektora Advantage</span>
+            <h2 class="why-title">Why Industry Leaders Choose Us</h2>
         </div>
-
-        <div class="case-card reveal">
-            <div class="case-meta">Case Study — General Contracting</div>
-            <h3>GC Firm Streamlines Operations Across 3 Locations</h3>
-            <p>A multi-location general contracting firm consolidated 6 separate tools into one custom platform. Standardized workflows across offices reduced administrative overhead by 40% and improved project visibility for the leadership team.</p>
-            <div class="case-results">
-                <div class="case-stat">
-                    <div class="case-stat-num">6 → 1</div>
-                    <div class="case-stat-label">Tools consolidated</div>
-                </div>
-                <div class="case-stat">
-                    <div class="case-stat-num">40%</div>
-                    <div class="case-stat-label">Less admin overhead</div>
-                </div>
-                <div class="case-stat">
-                    <div class="case-stat-num">$21,600</div>
-                    <div class="case-stat-label">Annual savings</div>
-                </div>
+        <div class="why-grid">
+            <div class="why-card reveal">
+                <div class="why-icon">&#128272;</div>
+                <h3>Full IP Ownership</h3>
+                <p>You own 100% of the source code, data, and infrastructure. No licensing fees. No vendor dependency.</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-icon">&#129302;</div>
+                <h3>AI-Native Architecture</h3>
+                <p>Every tool is built with AI at its core — not bolted on as an afterthought. Real intelligence, not buzzwords.</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-icon">&#128736;</div>
+                <h3>Contractor-Specific</h3>
+                <p>We only serve the contracting industry. Every solution is built around how contractors actually work in the field.</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-icon">&#128640;</div>
+                <h3>2-4 Week Delivery</h3>
+                <p>Enterprise-quality tools delivered in weeks, not months. You see progress at every stage of development.</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-icon">&#128200;</div>
+                <h3>Proven ROI</h3>
+                <p>Average client pays for their investment in 3-6 months through software cost savings and efficiency gains alone.</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-icon">&#128101;</div>
+                <h3>Competitive Moat</h3>
+                <p>Your competitors can't buy what you own. Custom tools become a strategic advantage that compounds over time.</p>
             </div>
         </div>
     </div>
@@ -892,77 +791,52 @@
 
 <div class="divider"></div>
 
-<!-- ─── ENGAGEMENT PROCESS ─── -->
-<section class="section" style="background: var(--bg-secondary);">
-    <div class="container">
-        <div class="reveal" style="text-align: center;">
-            <span class="section-tag">Process</span>
-            <h2 class="section-title">Engagement Process</h2>
-            <p class="section-sub" style="margin: 0 auto;">From initial consultation to full ownership in 2-6 weeks</p>
-        </div>
-        <div class="process-steps reveal">
-            <div class="proc-step">
-                <div class="proc-dot">1</div>
-                <div>
-                    <h3>Discovery &amp; Strategy Call</h3>
-                    <p>Complimentary 15-minute consultation to understand your current tools, workflows, and pain points. We provide an honest assessment of potential ROI and suitability.</p>
-                </div>
-            </div>
-            <div class="proc-step">
-                <div class="proc-dot">2</div>
-                <div>
-                    <h3>Solution Architecture</h3>
-                    <p>Our team designs a custom AI solution mapped to your specific trade workflows, data requirements, and growth objectives. You review and approve before build begins.</p>
-                </div>
-            </div>
-            <div class="proc-step">
-                <div class="proc-dot">3</div>
-                <div>
-                    <h3>Build &amp; Deploy</h3>
-                    <p>Rapid development and deployment, typically within 2-6 weeks. Weekly progress updates and full testing with your team before launch.</p>
-                </div>
-            </div>
-            <div class="proc-step">
-                <div class="proc-dot">4</div>
-                <div>
-                    <h3>Ownership Transfer</h3>
-                    <p>Complete source code handoff with full documentation. You own everything outright — code, data, infrastructure. No ongoing obligations or fees.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- ─── FINAL CTA ─── -->
-<section class="final-cta" id="schedule">
-    <div class="container">
+<section class="final-cta" id="schedule-call">
+    <div class="inner">
         <div class="reveal">
-            <span class="section-tag">Next Step</span>
-            <h2>Ready to Explore Custom AI <span class="gradient-text">for Your Business?</span></h2>
-            <p>Schedule a complimentary strategy discussion. We'll analyze your current software spend and provide a detailed ROI projection for custom-built alternatives.</p>
+            <span class="section-tag">Next Steps</span>
+            <h2>Ready to See Your <span class="gradient-text">Custom ROI Analysis?</span></h2>
+            <p>Schedule a complimentary 30-minute strategy call. We'll analyze your current software spend and show you exactly how much you can save with custom AI tools.</p>
             <a href="thank-you.html" class="cta-btn">
-                Schedule Strategy Discussion
+                Schedule Your Strategy Call
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
             </a>
-            <div class="guarantee">No obligation &bull; No sales pressure &bull; Professional consultation</div>
+            <div class="trust-row">
+                <div class="trust-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+                    No obligation
+                </div>
+                <div class="trust-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+                    Custom ROI report
+                </div>
+                <div class="trust-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+                    30 minutes
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- ─── FOOTER ─── -->
 <footer class="footer">
+    <div class="footer-logo">
+        <img src="../assets/images/tektora-logo-v1.png" alt="Tektora AI">
+    </div>
     <p>&copy; 2026 Tektora AI. All rights reserved.</p>
     <div class="footer-links">
         <a href="../index.html">Home</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
     </div>
 </footer>
 
 <!-- ─── STICKY MOBILE CTA ─── -->
 <div class="sticky-cta">
-    <a href="#schedule" class="cta-btn">
-        Schedule Strategy Discussion
+    <a href="#schedule-call" class="cta-btn">
+        Schedule Your Strategy Call
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
     </a>
 </div>

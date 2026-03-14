@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Strategy Call Is Booked! — Tektora AI</title>
+    <meta name="description" content="Your free strategy call with Tektora AI is booked. Here's what to expect and how to prepare.">
+    <meta property="og:title" content="Strategy Call Booked — Tektora AI">
+    <meta property="og:description" content="Your free strategy call is confirmed. Custom AI tools for contractors.">
+    <meta property="og:image" content="https://tektora.ai/assets/images/tektora-logo-v1.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tektora.ai/funnel/thank-you.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Strategy Call Booked — Tektora AI">
+    <meta name="twitter:description" content="Your free strategy call is confirmed.">
+    <meta name="twitter:image" content="https://tektora.ai/assets/images/tektora-logo-v1.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      // fbq('init', 'YOUR_PIXEL_ID');
+      // fbq('track', 'Lead');
+      // fbq('track', 'Schedule');
+    </script>
+    <!-- End Facebook Pixel Code -->
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg-primary: #000000;
+            --bg-secondary: #0a0a0f;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A1A1AA;
+            --text-tertiary: #71717A;
+            --cyan: #06B6D4;
+            --purple: #6B21A8;
+            --blue: #2563EB;
+            --teal: #0D9488;
+            --green: #22c55e;
+            --border-subtle: rgba(255, 255, 255, 0.06);
+            --border-light: rgba(255, 255, 255, 0.1);
+            --gradient-brand: linear-gradient(135deg, #6B21A8, #2563EB, #0D9488);
+            --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ─── NAV ─── */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .nav-logo img { height: 32px; width: auto; }
+
+        /* ─── HERO / CONFIRMATION ─── */
+        .confirmation {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 24px 60px;
+            overflow: hidden;
+        }
+
+        .confirmation::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 70%;
+            background: radial-gradient(ellipse at center, rgba(34, 197, 94, 0.08) 0%, transparent 60%);
+        }
+
+        .confirmation-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+        }
+
+        .check-circle {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 28px;
+            background: rgba(34, 197, 94, 0.1);
+            border: 2px solid rgba(34, 197, 94, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: scaleIn 0.6s var(--ease-out);
+        }
+
+        @keyframes scaleIn {
+            from { transform: scale(0); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .check-circle svg {
+            width: 36px;
+            height: 36px;
+            color: var(--green);
+        }
+
+        .confirmation h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+            margin-bottom: 16px;
+            animation: fadeUp 0.8s 0.2s var(--ease-out) both;
+        }
+
+        .confirmation h1 .gradient-text {
+            background: var(--gradient-brand);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .confirmation-sub {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            animation: fadeUp 0.8s 0.4s var(--ease-out) both;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ─── WHAT TO EXPECT ─── */
+        .expect-section {
+            padding: 80px 24px;
+            background: var(--bg-secondary);
+        }
+
+        .expect-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .section-tag {
+            display: inline-flex;
+            padding: 6px 14px;
+            background: rgba(6, 182, 212, 0.06);
+            border: 1px solid rgba(6, 182, 212, 0.15);
+            border-radius: 100px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--cyan);
+            margin-bottom: 20px;
+        }
+
+        .expect-title {
+            font-size: clamp(1.6rem, 5vw, 2.2rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 36px;
+        }
+
+        .expect-list {
+            list-style: none;
+        }
+
+        .expect-item {
+            display: flex;
+            gap: 20px;
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .expect-item:last-child { border-bottom: none; }
+
+        .expect-num {
+            width: 40px;
+            height: 40px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gradient-brand);
+            border-radius: 50%;
+            font-size: 0.9rem;
+            font-weight: 800;
+        }
+
+        .expect-item h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .expect-item p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ─── VIDEO SECTION ─── */
+        .video-section {
+            padding: 80px 24px;
+            text-align: center;
+        }
+
+        .video-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .video-title {
+            font-size: clamp(1.4rem, 4vw, 1.8rem);
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+
+        .video-wrapper {
+            aspect-ratio: 16 / 9;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            color: var(--text-tertiary);
+        }
+
+        .play-btn {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: var(--gradient-brand);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 40px rgba(6, 182, 212, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s var(--ease-out);
+        }
+
+        .play-btn:hover { transform: scale(1.1); }
+
+        .play-btn svg { width: 28px; height: 28px; margin-left: 4px; }
+
+        .video-placeholder span {
+            font-size: 0.82rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* ─── PREPARATION TIPS ─── */
+        .prep-section {
+            padding: 80px 24px;
+            background: var(--bg-secondary);
+        }
+
+        .prep-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .prep-title {
+            font-size: clamp(1.4rem, 4vw, 1.8rem);
+            font-weight: 800;
+            margin-bottom: 28px;
+        }
+
+        .prep-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+
+        .prep-card {
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-subtle);
+            border-radius: 14px;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+
+        .prep-card svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            color: var(--cyan);
+            margin-top: 2px;
+        }
+
+        .prep-card span {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .prep-card strong { color: var(--text-primary); }
+
+        /* ─── SOCIAL / CONNECT ─── */
+        .social-section {
+            padding: 80px 24px;
+            text-align: center;
+        }
+
+        .social-container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .social-title {
+            font-size: clamp(1.4rem, 4vw, 1.8rem);
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .social-sub {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 24px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-size: 0.88rem;
+            font-weight: 600;
+            transition: all 0.3s var(--ease-out);
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            border-color: rgba(6, 182, 212, 0.2);
+            background: rgba(6, 182, 212, 0.04);
+        }
+
+        .social-link svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* ─── FOOTER ─── */
+        .footer {
+            padding: 48px 24px;
+            border-top: 1px solid var(--border-subtle);
+            text-align: center;
+        }
+
+        .footer-logo img { height: 28px; margin-bottom: 16px; }
+
+        .footer p {
+            font-size: 0.82rem;
+            color: var(--text-tertiary);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 16px;
+        }
+
+        .footer-links a {
+            font-size: 0.82rem;
+            color: var(--text-tertiary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover { color: var(--text-primary); }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 768px) {
+            .confirmation { padding: 90px 20px 48px; min-height: auto; }
+            .confirmation h1 { font-size: clamp(1.8rem, 7vw, 2.5rem); }
+            .expect-section, .video-section, .prep-section, .social-section { padding: 64px 20px; }
+            .prep-grid { grid-template-columns: 1fr; }
+            .social-links { flex-direction: column; align-items: center; }
+        }
+
+        @media (max-width: 375px) {
+            .confirmation { padding: 80px 16px 40px; }
+            .expect-section, .video-section, .prep-section, .social-section { padding: 48px 16px; }
+            .nav { padding: 12px 16px; }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+        }
+
+        .reveal.revealed { opacity: 1; transform: translateY(0); }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { opacity: 1; transform: none; transition: none; }
+            .check-circle, .confirmation h1, .confirmation-sub { animation: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ─── NAVIGATION ─── -->
+<nav class="nav">
+    <a href="../index.html" class="nav-logo">
+        <img src="../assets/images/tektora-logo-v1.png" alt="Tektora AI">
+    </a>
+</nav>
+
+<!-- ─── CONFIRMATION HERO ─── -->
+<section class="confirmation">
+    <div class="confirmation-content">
+        <div class="check-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+        </div>
+        <h1>Your Strategy Call<br>Is <span class="gradient-text">Booked!</span></h1>
+        <p class="confirmation-sub">Check your email for the calendar invite and meeting details. We're looking forward to showing you how custom AI tools can transform your contracting business.</p>
+    </div>
+</section>
+
+<!-- ─── WHAT TO EXPECT ─── -->
+<section class="expect-section">
+    <div class="expect-container">
+        <span class="section-tag">What To Expect</span>
+        <h2 class="expect-title reveal">Here's What Happens Next</h2>
+        <ul class="expect-list">
+            <li class="expect-item reveal">
+                <div class="expect-num">1</div>
+                <div>
+                    <h3>Check Your Email</h3>
+                    <p>You'll receive a calendar invite with the meeting link within a few minutes. Check your spam folder if you don't see it.</p>
+                </div>
+            </li>
+            <li class="expect-item reveal">
+                <div class="expect-num">2</div>
+                <div>
+                    <h3>We Learn About Your Business</h3>
+                    <p>During the call, we'll ask about your current tools, workflow, and biggest pain points. This is all about you — no sales pitch.</p>
+                </div>
+            </li>
+            <li class="expect-item reveal">
+                <div class="expect-num">3</div>
+                <div>
+                    <h3>You Get a Custom Game Plan</h3>
+                    <p>We'll map out exactly which AI tools can save you the most time and money, with a clear cost breakdown and timeline.</p>
+                </div>
+            </li>
+            <li class="expect-item reveal">
+                <div class="expect-num">4</div>
+                <div>
+                    <h3>You Decide — No Pressure</h3>
+                    <p>After the call, you'll have everything you need to make an informed decision. No follow-up spam. No pushy sales tactics.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ─── VIDEO ─── -->
+<section class="video-section">
+    <div class="video-container">
+        <h2 class="video-title reveal">Watch: How We Build Custom AI Tools</h2>
+        <div class="video-wrapper reveal">
+            <!-- Replace with actual video embed -->
+            <div class="video-placeholder">
+                <div class="play-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+                <span>Watch the behind-the-scenes</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── PREPARATION TIPS ─── -->
+<section class="prep-section">
+    <div class="prep-container">
+        <h2 class="prep-title reveal">How To Prepare For Your Call</h2>
+        <div class="prep-grid">
+            <div class="prep-card reveal">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z"/></svg>
+                <span><strong>List your current software tools</strong> and what you pay monthly for each one</span>
+            </div>
+            <div class="prep-card reveal">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+                <span><strong>Think about your biggest time wasters</strong> — what tasks eat up hours that shouldn't?</span>
+            </div>
+            <div class="prep-card reveal">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/></svg>
+                <span><strong>Know your team size</strong> — how many people need to use the tools daily?</span>
+            </div>
+            <div class="prep-card reveal">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z"/></svg>
+                <span><strong>Bring your questions</strong> — there are no dumb questions. This call is for you.</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── SOCIAL / CONNECT ─── -->
+<section class="social-section">
+    <div class="social-container">
+        <h2 class="social-title reveal">Stay Connected</h2>
+        <p class="social-sub reveal">Follow us for AI tips, contractor success stories, and behind-the-scenes content.</p>
+        <div class="social-links reveal">
+            <a href="#" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22.46 6c-.85.38-1.78.64-2.73.76 1-.6 1.76-1.54 2.12-2.67-.93.55-1.96.95-3.06 1.17-.88-.94-2.13-1.53-3.51-1.53-2.66 0-4.81 2.16-4.81 4.81 0 .38.04.75.13 1.1-4-.2-7.55-2.12-9.93-5.04-.42.72-.66 1.56-.66 2.46 0 1.68.85 3.16 2.14 4.02-.79-.02-1.53-.24-2.18-.6v.06c0 2.35 1.67 4.31 3.88 4.76-.4.1-.83.16-1.27.16-.31 0-.62-.03-.92-.08.62 1.93 2.41 3.34 4.54 3.38-1.66 1.3-3.76 2.07-6.04 2.07-.39 0-.78-.02-1.17-.07 2.15 1.38 4.71 2.18 7.45 2.18 8.94 0 13.83-7.41 13.83-13.83 0-.21 0-.42-.01-.63.95-.69 1.78-1.54 2.43-2.52Z"/></svg>
+                Twitter / X
+            </a>
+            <a href="#" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                LinkedIn
+            </a>
+            <a href="#" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                Instagram
+            </a>
+            <a href="#" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-1-.08 6.27 6.27 0 0 0-6.27 6.27 6.27 6.27 0 0 0 6.27 6.27 6.27 6.27 0 0 0 6.27-6.27V9.43a8.16 8.16 0 0 0 4.77 1.52V7.56a4.83 4.83 0 0 1-.73-.87z"/></svg>
+                TikTok
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer class="footer">
+    <div class="footer-logo">
+        <img src="../assets/images/tektora-logo-v1.png" alt="Tektora AI">
+    </div>
+    <p>&copy; 2026 Tektora AI. All rights reserved.</p>
+    <div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+    </div>
+</footer>
+
+<!-- ─── SCROLL REVEAL ─── -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var reveals = document.querySelectorAll('.reveal');
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry, i) {
+                if (entry.isIntersecting) {
+                    setTimeout(function () { entry.target.classList.add('revealed'); }, i * 100);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        reveals.forEach(function (el) { observer.observe(el); });
+    });
+</script>
+
+</body>
+</html>
