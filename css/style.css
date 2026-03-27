@@ -2149,17 +2149,15 @@ input, select, textarea {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
-.about-team__avatar {
-  width: 58px;
-  height: 58px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, #2563eb, #06b6d4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  font-size: 1.3rem;
+.about-team__photo {
+  width: 96px;
+  height: 96px;
+  border-radius: 22px;
+  object-fit: cover;
+  display: block;
   margin-bottom: 18px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.22);
 }
 .about-team__meta h3 {
   font-size: 1.25rem;
