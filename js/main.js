@@ -258,20 +258,33 @@
 
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
-      if (contactForm.action.includes('placeholder')) {
-        e.preventDefault();
-        var btn = contactForm.querySelector('button[type="submit"]');
-        var originalHTML = btn.innerHTML;
-        btn.innerHTML = '<span>Message Sent!</span>';
-        btn.style.opacity = '0.7';
-        btn.disabled = true;
-        setTimeout(function () {
-          btn.innerHTML = originalHTML;
+      e.preventDefault();
+      var btn = contactForm.querySelector('button[type="submit"]');
+      var originalHTML = btn.innerHTML;
+      btn.innerHTML = '<span>Sending...</span>';
+      btn.style.opacity = '0.7';
+      btn.disabled = true;
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { Accept: 'application/json' }
+      })
+        .then(function (response) {
+          if (!response.ok) throw new Error('submit failed');
+          btn.innerHTML = '<span>Message Sent!</span>';
+          contactForm.reset();
+          setTimeout(function () {
+            btn.innerHTML = originalHTML;
+            btn.style.opacity = '';
+            btn.disabled = false;
+          }, 2500);
+        })
+        .catch(function () {
+          btn.innerHTML = '<span>Try Again</span>';
           btn.style.opacity = '';
           btn.disabled = false;
-          contactForm.reset();
-        }, 3000);
-      }
+        });
     });
   }
 
