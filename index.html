@@ -738,12 +738,32 @@
   </div>
 
   <!-- ============ SECTION 8: ABOUT / WHY WE STARTED ============ -->
+  <style>
+    .about-section{padding:120px 0;background:linear-gradient(180deg,rgba(9,14,26,.96) 0%,rgba(7,11,21,1) 100%);border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05)}
+    .about-section__header{text-align:center;max-width:980px;margin:0 auto 56px}
+    .about-section__header .section-title{max-width:980px;margin-left:auto;margin-right:auto}
+    .about-section__header .section-body{max-width:860px;margin:0 auto}
+    .about-story{max-width:980px;margin:0 auto 32px;padding:34px;border:1px solid rgba(255,255,255,.08);border-radius:28px;background:linear-gradient(180deg,rgba(15,23,42,.72),rgba(15,23,42,.42));box-shadow:0 20px 60px rgba(0,0,0,.22)}
+    .about-story p{margin:0 0 18px;color:rgba(226,232,240,.92);font-size:1.04rem;line-height:1.85}.about-story p:last-child{margin-bottom:0}
+    .about-values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;max-width:1180px;margin:0 auto 32px}
+    .about-value-card,.about-profile{border:1px solid rgba(255,255,255,.08);border-radius:28px;background:linear-gradient(180deg,rgba(15,23,42,.72),rgba(15,23,42,.48));box-shadow:0 20px 60px rgba(0,0,0,.18)}
+    .about-value-card{padding:28px}.about-value-card__tag,.about-profile__eyebrow{display:inline-block;font-size:.76rem;letter-spacing:.14em;color:#7dd3fc;margin-bottom:14px}
+    .about-value-card h3{font-size:1.18rem;margin-bottom:10px}.about-value-card p,.about-profile__bio{color:rgba(226,232,240,.9);line-height:1.75}
+    .about-team{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:1180px;margin:0 auto}
+    .about-profile{display:grid;grid-template-columns:220px minmax(0,1fr);gap:26px;padding:24px;align-items:start;overflow:hidden}
+    .about-profile__media{margin:0}.about-profile__photo{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;border-radius:22px;border:1px solid rgba(255,255,255,.08)}
+    .about-profile__name{font-size:1.55rem;line-height:1.05;margin:0 0 8px}.about-profile__role{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:#7dd3fc;margin:0 0 18px}
+    .about-profile__bio{margin:0 0 18px}.about-profile__focus{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
+    .about-profile__focus li{padding:9px 12px;border-radius:999px;border:1px solid rgba(125,211,252,.18);background:rgba(37,99,235,.08);font-size:.82rem;color:rgba(226,232,240,.95)}
+    @media (max-width: 980px){.about-values,.about-team{grid-template-columns:1fr}.about-profile{grid-template-columns:1fr}.about-profile__photo{max-width:320px}}
+    @media (max-width: 640px){.about-section{padding:88px 0}.about-story,.about-value-card,.about-profile{padding:22px}.about-section__header{margin-bottom:36px}}
+  </style>
   <section class="about-section" id="about">
     <div class="container">
       <div class="about-section__header">
         <span class="section-tag reveal mono">THE PEOPLE BEHIND THE BUILD</span>
         <h2 class="section-title reveal">We Started Tektora Because We Got Tired of Renting the Systems We Depend On</h2>
-        <p class="section-body reveal" style="margin:0 auto; max-width: 860px;">We didn’t come into this from theory. We came into it from frustration. We’ve owned and operated construction businesses, paid the monthly software bills, relied on outside CRM platforms, and felt firsthand how hard it is to truly control your own systems when someone else owns the rails.</p>
+        <p class="section-body reveal">We didn’t come into this from theory. We came into it from frustration. We’ve owned and operated construction businesses, paid the monthly software bills, relied on outside CRM platforms, and felt firsthand how hard it is to truly control your own systems when someone else owns the rails.</p>
       </div>
 
       <div class="about-story reveal">
@@ -772,23 +792,39 @@
       </div>
 
       <div class="about-team reveal">
-        <div class="about-team__card">
-          <img class="about-team__photo" src="assets/images/team/john.jpg" alt="Portrait of John" loading="lazy" decoding="async">
-          <div class="about-team__meta">
-            <h3>John</h3>
-            <p class="about-team__title mono">AI Systems Engineer</p>
+        <article class="about-profile">
+          <figure class="about-profile__media">
+            <img class="about-profile__photo" src="assets/images/team/john.jpg" alt="Portrait of John" loading="lazy" decoding="async">
+          </figure>
+          <div class="about-profile__content">
+            <span class="about-profile__eyebrow mono">FOUNDER</span>
+            <h3 class="about-profile__name">John</h3>
+            <p class="about-profile__role">AI Systems Engineer</p>
+            <p class="about-profile__bio">John helps design and build custom software, automations, and AI-powered workflows at Tektora AI, translating real contractor pain points into practical systems that improve speed, follow-up, and operational control.</p>
+            <ul class="about-profile__focus">
+              <li>Workflow design</li>
+              <li>AI automation</li>
+              <li>Operations systems</li>
+            </ul>
           </div>
-          <p class="about-team__bio">John helps design and build custom software, automations, and AI-powered workflows at Tektora AI, translating real contractor pain points into practical systems that improve speed, follow-up, and operational control.</p>
-        </div>
+        </article>
 
-        <div class="about-team__card">
-          <img class="about-team__photo" src="assets/images/team/lee.jpg" alt="Portrait of Lee" loading="lazy" decoding="async">
-          <div class="about-team__meta">
-            <h3>Lee</h3>
-            <p class="about-team__title mono">AI Systems Engineer</p>
+        <article class="about-profile">
+          <figure class="about-profile__media">
+            <img class="about-profile__photo" src="assets/images/team/lee.jpg" alt="Portrait of Lee" loading="lazy" decoding="async">
+          </figure>
+          <div class="about-profile__content">
+            <span class="about-profile__eyebrow mono">FOUNDER</span>
+            <h3 class="about-profile__name">Lee</h3>
+            <p class="about-profile__role">AI Systems Engineer</p>
+            <p class="about-profile__bio">Lee helps design and build the custom apps, automations, and AI-powered systems behind Tektora client projects, turning messy workflows into practical tools that are fast, usable, and built to be owned.</p>
+            <ul class="about-profile__focus">
+              <li>Custom apps</li>
+              <li>Client systems</li>
+              <li>Clean execution</li>
+            </ul>
           </div>
-          <p class="about-team__bio">Lee helps design and build the custom apps, automations, and AI-powered systems behind Tektora client projects, turning messy workflows into practical tools that are fast, usable, and built to be owned.</p>
-        </div>
+        </article>
       </div>
     </div>
   </section>
