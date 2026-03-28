@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tektora AI — Stop Renting Software. Start Owning It.</title>
-  <meta name="description" content="Tektora AI builds custom AI tools for businesses that want to own their software. You pay once. You own everything. No subscriptions. No lock-in. Just tools that work.">
+  <title>Tektora AI — Custom AI systems for contractors and home service businesses doing $1M+ per year</title>
+  <meta name="description" content="Custom AI systems for contractors and home service businesses doing $1M+ per year. Replace your bloated SaaS stack with one owned system built for your operations.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -21,9 +21,13 @@
     <div class="nav__inner">
       <a href="#" class="nav__logo" aria-label="Tektora AI Home">
         <img src="assets/images/tektora-logo-v1.png" alt="Tektora AI" class="nav__logo-img" width="36" height="36">
-        <span>Tektora AI</span>
+        <span style="display:flex;flex-direction:column;line-height:1.1;">
+          <span>Tektora AI</span>
+          <span class="mono" style="font-size:0.62rem;letter-spacing:0.06em;color:rgba(226,232,240,0.68);margin-top:4px;">Custom AI systems for contractors &amp; home service</span>
+        </span>
       </a>
       <ul class="nav__links" id="navLinks">
+        <li><a href="#who-its-for">Who It’s For</a></li>
         <li><a href="#problem">The Trap</a></li>
         <li><a href="#tools">What We Build</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
@@ -90,20 +94,42 @@
         Don’t Just Buy Software.<br><span class="gradient-text">Hire a Digital Workforce.</span>
       </h1>
       <p class="hero__sub reveal" data-delay="200">
-        Stop managing isolated tools. We build custom AI teams that answer leads, follow up automatically, handle admin work, and keep your business moving 24/7 — and you own the whole system.
+        We build AI powered tools for contractors and home service companies doing $1M+ per year that replace your bloated SaaS stack and run your operations in one system you own.
       </p>
+      <ul class="hero__bullets reveal" data-delay="260" style="list-style:none;display:grid;gap:10px;margin:0 0 24px;padding:0;max-width:760px;">
+        <li>Cut recurring software costs by consolidating tools into a single owned system.</li>
+        <li>Respond to every lead in minutes with AI reception and follow up.</li>
+        <li>Build in weeks, not months, with AI assisted development.</li>
+      </ul>
       <div class="hero__ctas reveal" data-delay="300">
-        <a href="#tools" class="btn btn--primary">
-          See What We Build
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3v10M3 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <a href="https://cal.com/tektora/strategy-call" target="_blank" rel="noopener" class="btn btn--secondary">Book a Build Call</a>
+        <a href="https://cal.com/tektora/strategy-call" target="_blank" rel="noopener" class="btn btn--primary">Book Your Build Call</a>
+        <a href="#example-builds" class="btn btn--secondary">See Example Systems</a>
       </div>
     </div>
 
     <div class="hero__scroll-hint" aria-hidden="true">
       <span class="hero__scroll-text mono">SCROLL</span>
       <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <style>
+    .who-band__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:18px}
+    .hero__bullets li{position:relative;padding-left:18px;color:rgba(226,232,240,.88)}
+    .hero__bullets li::before{content:'•';position:absolute;left:0;color:#67e8f9}
+    @media (max-width: 900px){.who-band__grid{grid-template-columns:1fr}}
+  </style>
+  <section id="who-its-for" style="padding:28px 0 18px;background:rgba(7,11,21,0.92);border-top:1px solid rgba(255,255,255,0.05);border-bottom:1px solid rgba(255,255,255,0.05);">
+    <div class="container">
+      <div style="max-width:980px;margin:0 auto;text-align:center;">
+        <span class="section-tag reveal mono">WHO IT’S FOR</span>
+        <p class="section-body reveal" style="margin:0 auto 18px;max-width:760px;">For contractors and home service businesses doing $1M+ per year that want fewer subscriptions, faster lead response, and one owned operating system.</p>
+        <div id="example-builds" class="who-band__grid">
+          <div class="tool-card reveal"><h3 class="tool-card__title">Roofing example system</h3><p class="tool-card__desc">AI receptionist + lead follow-up + quoting + payment portal.</p></div>
+          <div class="tool-card reveal" data-delay="80"><h3 class="tool-card__title">HVAC example system</h3><p class="tool-card__desc">Booking + dispatch + service reminders + invoice generation.</p></div>
+          <div class="tool-card reveal" data-delay="160"><h3 class="tool-card__title">Remodeling example system</h3><p class="tool-card__desc">Lead qualification + proposal workflow + client portal + review collection.</p></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -178,6 +204,8 @@
             <span class="problem__callout-label mono">THE WORST PART</span>
             <p>You're paying for features you don't use, dashboards you never open, and "upgrades" that just raise your bill.</p>
           </div>
+          <p class="section-body" style="margin-top:18px;"><strong>For example:</strong> A typical contractor we talk to spends $800 to $1,500 per month across these tools.</p>
+          <p class="section-body" style="margin-top:12px;">On your build call, we will calculate your exact 3 year SaaS cost and what ownership would have saved you.</p>
           <svg class="hand-drawn-arrow" width="120" height="60" viewBox="0 0 120 60" fill="none" aria-hidden="true">
             <path d="M5 45C25 45 45 15 60 15C75 15 85 35 115 20" stroke="#06B6D4" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 4"/>
             <path d="M105 15L115 20L108 28" stroke="#06B6D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -200,17 +228,17 @@
       <div class="tools__header">
         <span class="section-tag reveal mono">WHAT WE BUILD</span>
         <h2 class="section-title reveal">
-          Your Custom AI <span class="gradient-text">Toolkit</span>
+          Systems We Build for <span class="gradient-text">Contractors</span>
         </h2>
         <p class="section-body reveal" style="margin:0 auto;">
-          Every tool built to your specs. Every line of code yours to keep. Pick what you need — we build it.
+          For contractors and home service businesses doing $1M+ per year. Start with core tools, then layer on advanced systems as operations grow.
         </p>
       </div>
 
       <!-- Category: AI Automation -->
       <div class="tools__category reveal">
         <div class="tools__category-header">
-          <span class="tools__category-tag mono">AI AUTOMATION</span>
+          <span class="tools__category-tag mono">PHASE 1 – CORE TOOLS FOR CONTRACTORS</span>
           <span class="tools__category-count mono">5 TOOLS</span>
         </div>
         <div class="tools__grid">
@@ -219,7 +247,7 @@
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="6" width="24" height="20" rx="3" stroke="#06B6D4" stroke-width="1.5"/><circle cx="16" cy="16" r="4" stroke="#06B6D4" stroke-width="1.5"/><path d="M16 12v-2M16 22v-2M20 16h2M10 16h2" stroke="#06B6D4" stroke-width="1" stroke-linecap="round"/></svg>
             </div>
             <h3 class="tool-card__title">AI Estimating Engine</h3>
-            <p class="tool-card__desc">Instant estimates from project photos and descriptions.</p>
+            <p class="tool-card__desc">Instant estimates from project photos and descriptions.<br><strong>Best for:</strong> Roofing, HVAC, plumbing, remodeling.</p>
             <span class="tool-card__time mono">BUILD: 5-7 DAYS</span>
           </div>
           <div class="tool-card reveal" data-delay="80">
@@ -227,7 +255,7 @@
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M8 24V8l8 5 8-5v16l-8-5-8 5z" stroke="#06B6D4" stroke-width="1.5" stroke-linejoin="round"/><circle cx="16" cy="16" r="2" fill="#06B6D4"/></svg>
             </div>
             <h3 class="tool-card__title">Lead Follow-Up Bot</h3>
-            <p class="tool-card__desc">Automated multi-channel follow-up: calls, texts, emails.</p>
+            <p class="tool-card__desc">Automated multi-channel follow-up: calls, texts, emails.<br><strong>Best for:</strong> Roofing, HVAC, plumbing, electrical.</p>
             <span class="tool-card__time mono">BUILD: 3-5 DAYS</span>
           </div>
           <div class="tool-card reveal" data-delay="160">
@@ -235,7 +263,7 @@
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="6" y="4" width="20" height="24" rx="3" stroke="#06B6D4" stroke-width="1.5"/><path d="M12 12h8M12 16h5" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round"/><circle cx="22" cy="22" r="5" stroke="#06B6D4" stroke-width="1.5"/><path d="M22 20v4M20 22h4" stroke="#06B6D4" stroke-width="1" stroke-linecap="round"/></svg>
             </div>
             <h3 class="tool-card__title">AI Website Chatbot</h3>
-            <p class="tool-card__desc">24/7 customer engagement, lead capture, appointment booking.</p>
+            <p class="tool-card__desc">24/7 customer engagement, lead capture, appointment booking.<br><strong>Best for:</strong> Home service businesses with website traffic and missed calls.</p>
             <span class="tool-card__time mono">BUILD: 3-4 DAYS</span>
           </div>
           <div class="tool-card reveal" data-delay="240">
@@ -243,7 +271,7 @@
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 4l4 8h8l-6.5 5 2.5 9L16 21l-8 5 2.5-9L4 12h8l4-8z" stroke="#06B6D4" stroke-width="1.5" stroke-linejoin="round"/></svg>
             </div>
             <h3 class="tool-card__title">Review Collector</h3>
-            <p class="tool-card__desc">Automated review requests after every completed job.</p>
+            <p class="tool-card__desc">Automated review requests after every completed job.<br><strong>Best for:</strong> Roofing, HVAC, plumbing, electrical, remodeling.</p>
             <span class="tool-card__time mono">BUILD: 2-3 DAYS</span>
           </div>
           <div class="tool-card reveal" data-delay="320">
@@ -251,7 +279,7 @@
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="8" y="4" width="16" height="24" rx="3" stroke="#06B6D4" stroke-width="1.5"/><circle cx="16" cy="14" r="4" stroke="#06B6D4" stroke-width="1.5"/><path d="M10 24c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round"/></svg>
             </div>
             <h3 class="tool-card__title">AI Receptionist</h3>
-            <p class="tool-card__desc">Answers calls 24/7, qualifies leads, books appointments.</p>
+            <p class="tool-card__desc">Answers calls 24/7, qualifies leads, books appointments.<br><strong>Best for:</strong> Roofing, HVAC, plumbing, electrical.</p>
             <span class="tool-card__time mono">BUILD: 5-7 DAYS</span>
           </div>
         </div>
@@ -260,7 +288,7 @@
       <!-- Category: Business Apps -->
       <div class="tools__category reveal">
         <div class="tools__category-header">
-          <span class="tools__category-tag mono">CUSTOM BUSINESS APPS</span>
+          <span class="tools__category-tag mono">PHASE 2 – ADVANCED SYSTEMS</span>
           <span class="tools__category-count mono">4 APPS</span>
         </div>
         <div class="tools__grid">
@@ -269,7 +297,7 @@
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="12" cy="10" r="4" stroke="#2563EB" stroke-width="1.5"/><circle cx="22" cy="12" r="3" stroke="#2563EB" stroke-width="1.5"/><path d="M4 24c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"/><path d="M18 22c0-2.2 1.8-4 4-4s4 1.8 4 4" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"/></svg>
             </div>
             <h3 class="tool-card__title">Crew Management App</h3>
-            <p class="tool-card__desc">Scheduling, time tracking, and job assignments in one place.</p>
+            <p class="tool-card__desc">Scheduling, time tracking, and job assignments in one place.<br><strong>Best for:</strong> Field teams managing multiple crews and daily dispatch.</p>
             <span class="tool-card__time mono">BUILD: 7-10 DAYS</span>
           </div>
           <div class="tool-card reveal" data-delay="80">
@@ -277,7 +305,7 @@
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="6" width="24" height="20" rx="3" stroke="#2563EB" stroke-width="1.5"/><path d="M4 12h24" stroke="#2563EB" stroke-width="1.5"/><path d="M12 18h8M12 22h5" stroke="#2563EB" stroke-width="1" stroke-linecap="round"/></svg>
             </div>
             <h3 class="tool-card__title">Client Portal</h3>
-            <p class="tool-card__desc">Project status, invoices, and communication hub for clients.</p>
+            <p class="tool-card__desc">Project status, invoices, and communication hub for clients.<br><strong>Best for:</strong> Remodelers, roofers, and larger-ticket jobs with many touchpoints.</p>
             <span class="tool-card__time mono">BUILD: 7-10 DAYS</span>
           </div>
           <div class="tool-card reveal" data-delay="160">
@@ -285,7 +313,7 @@
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M6 6h20v20H6z" stroke="#2563EB" stroke-width="1.5" stroke-linejoin="round"/><path d="M6 12h20M12 6v20" stroke="#2563EB" stroke-width="1"/><path d="M22 22l4 4" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"/></svg>
             </div>
             <h3 class="tool-card__title">Quoting & Proposal Tool</h3>
-            <p class="tool-card__desc">Branded proposals with e-signatures. Close faster.</p>
+            <p class="tool-card__desc">Branded proposals with e-signatures. Close faster.<br><strong>Best for:</strong> Remodelers, roofers, and contractors selling higher-ticket work.</p>
             <span class="tool-card__time mono">BUILD: 5-7 DAYS</span>
           </div>
           <div class="tool-card reveal" data-delay="240">
@@ -336,7 +364,7 @@
       <!-- Category: Customer-Facing -->
       <div class="tools__category reveal">
         <div class="tools__category-header">
-          <span class="tools__category-tag mono">CUSTOMER-FACING APPS</span>
+          <span class="tools__category-tag mono">PHASE 2 – ADVANCED SYSTEMS</span>
           <span class="tools__category-count mono">3 APPS</span>
         </div>
         <div class="tools__grid tools__grid--3">
@@ -345,7 +373,7 @@
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="6" y="6" width="20" height="20" rx="3" stroke="#6B21A8" stroke-width="1.5"/><path d="M6 12h20" stroke="#6B21A8" stroke-width="1"/><rect x="10" y="16" width="4" height="4" rx="1" stroke="#6B21A8" stroke-width="1"/><rect x="18" y="16" width="4" height="4" rx="1" stroke="#6B21A8" stroke-width="1"/></svg>
             </div>
             <h3 class="tool-card__title">Online Booking System</h3>
-            <p class="tool-card__desc">Let customers schedule estimates directly.</p>
+            <p class="tool-card__desc">Let customers schedule estimates directly.<br><strong>Best for:</strong> HVAC, plumbing, electrical, and service-first businesses.</p>
             <span class="tool-card__time mono">BUILD: 3-5 DAYS</span>
           </div>
           <div class="tool-card reveal" data-delay="80">
@@ -353,7 +381,7 @@
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M8 8h16v18H8z" stroke="#6B21A8" stroke-width="1.5" stroke-linejoin="round"/><path d="M12 14h8M12 18h6M12 22h4" stroke="#6B21A8" stroke-width="1" stroke-linecap="round"/><path d="M20 4v4M12 4v4" stroke="#6B21A8" stroke-width="1.5" stroke-linecap="round"/></svg>
             </div>
             <h3 class="tool-card__title">Payment Portal</h3>
-            <p class="tool-card__desc">Accept payments and track accounts receivable.</p>
+            <p class="tool-card__desc">Accept payments and track accounts receivable.<br><strong>Best for:</strong> Contractors wanting cleaner collections and fewer admin delays.</p>
             <span class="tool-card__time mono">BUILD: 5-7 DAYS</span>
           </div>
           <div class="tool-card reveal" data-delay="160">
@@ -390,7 +418,7 @@
       <div class="tools__grid tools__grid--3" style="margin-bottom: 24px;">
         <div class="tool-card reveal" data-delay="0">
           <h3 class="tool-card__title">What this means for your business</h3>
-          <p class="tool-card__desc">Faster lead response, less admin work, fewer dropped handoffs, lower software overlap, and more capacity without adding office payroll.</p>
+          <p class="tool-card__desc">Faster lead response, less admin work, fewer dropped handoffs, lower software overlap, and more capacity without adding office payroll.<br><strong>Conservatively:</strong> response times can drop from hours to minutes and admin can shrink by hours per week.</p>
         </div>
         <div class="tool-card reveal" data-delay="80">
           <h3 class="tool-card__title">What we actually build</h3>
@@ -410,61 +438,27 @@
         <div class="tools__grid">
           <div class="tool-card reveal" data-delay="0">
             <h3 class="tool-card__title">Inbound Qualification Agent</h3>
-            <p class="tool-card__desc">Responds to new leads instantly, asks the right questions, filters out bad fits, and books qualified prospects onto your calendar.</p>
+            <p class="tool-card__desc">Responds to new leads instantly, asks the right questions, filters out bad fits, and books qualified prospects onto your calendar.<br><strong>Target outcome:</strong> more qualified booked appointments each week.</p>
           </div>
           <div class="tool-card reveal" data-delay="80">
             <h3 class="tool-card__title">Dispatch & Logistics Agent</h3>
-            <p class="tool-card__desc">Routes jobs, coordinates scheduling, keeps crews organized, and updates customers automatically when plans change.</p>
+            <p class="tool-card__desc">Routes jobs, coordinates scheduling, keeps crews organized, and updates customers automatically when plans change.<br><strong>Target outcome:</strong> fewer scheduling gaps and fewer customer update calls.</p>
           </div>
           <div class="tool-card reveal" data-delay="160">
             <h3 class="tool-card__title">Invoice & Collections Agent</h3>
-            <p class="tool-card__desc">Generates invoices, tracks payment status, flags issues, and reduces repetitive back-office work after jobs are complete.</p>
+            <p class="tool-card__desc">Generates invoices, tracks payment status, flags issues, and reduces repetitive back-office work after jobs are complete.<br><strong>Target outcome:</strong> faster billing and less back-office drag.</p>
           </div>
           <div class="tool-card reveal" data-delay="240">
             <h3 class="tool-card__title">Follow-Up & Review Agent</h3>
-            <p class="tool-card__desc">Checks in after the job, requests reviews, catches unhappy customers early, and escalates issues before they cost you referrals.</p>
+            <p class="tool-card__desc">Checks in after the job, requests reviews, catches unhappy customers early, and escalates issues before they cost you referrals.<br><strong>Target outcome:</strong> more reviews and fewer unresolved customer issues.</p>
           </div>
           <div class="tool-card reveal" data-delay="320">
             <h3 class="tool-card__title">Internal Ops Agent</h3>
-            <p class="tool-card__desc">Moves information between systems, updates records, and handles the repetitive workflow tasks your human team should not be stuck doing.</p>
+            <p class="tool-card__desc">Moves information between systems, updates records, and handles the repetitive workflow tasks your human team should not be stuck doing.<br><strong>Target outcome:</strong> hours back each week for higher-value work.</p>
           </div>
         </div>
       </div>
 
-      <div class="tools__category reveal">
-        <div class="tools__category-header">
-          <span class="tools__category-tag mono">HOW WE BUILD IT</span>
-          <span class="tools__category-count mono">4 STEPS</span>
-        </div>
-        <div class="tools__grid workforce-steps">
-          <div class="tool-card reveal" data-delay="0">
-            <span class="tool-card__time mono" style="margin-bottom:10px; display:inline-block;">STEP 01</span>
-            <h3 class="tool-card__title">We map your standards</h3>
-            <p class="tool-card__desc">We learn how your business operates and define what “done right” looks like in your company.</p>
-          </div>
-          <div class="tool-card reveal" data-delay="80">
-            <span class="tool-card__time mono" style="margin-bottom:10px; display:inline-block;">STEP 02</span>
-            <h3 class="tool-card__title">We assign roles</h3>
-            <p class="tool-card__desc">Each digital employee gets a clear responsibility — lead handling, scheduling, dispatch, invoicing, follow-up, and more.</p>
-          </div>
-          <div class="tool-card reveal" data-delay="160">
-            <span class="tool-card__time mono" style="margin-bottom:10px; display:inline-block;">STEP 03</span>
-            <h3 class="tool-card__title">We connect the workflow</h3>
-            <p class="tool-card__desc">Your AI team works together inside one system, handing tasks off and keeping work moving without constant babysitting.</p>
-          </div>
-          <div class="tool-card reveal" data-delay="240">
-            <span class="tool-card__time mono" style="margin-bottom:10px; display:inline-block;">STEP 04</span>
-            <h3 class="tool-card__title">We deploy what you own</h3>
-            <p class="tool-card__desc">Once it is live, your business controls the system. No per-seat SaaS trap. No renting the backbone of your operations forever.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="pricing__addons reveal" style="margin-top: 32px; text-align:center;">
-        <span class="pricing__addons-title mono">PREMIUM OFFER</span>
-        <p class="section-body" style="margin: 14px auto 20px; max-width: 760px;">Let’s identify the first 3 digital employees your business actually needs — and build them into a system you own.</p>
-        <a href="https://cal.com/tektora/strategy-call" target="_blank" rel="noopener" class="btn btn--primary btn--large">Build My Digital Workforce</a>
-      </div>
     </div>
   </section>
 
@@ -488,7 +482,7 @@
           <div class="step__number mono">01</div>
           <div class="step__glow" aria-hidden="true"></div>
           <h3 class="step__title">We Talk</h3>
-          <p class="step__desc">30-minute call to understand your business, your pain points, and exactly what you need. No sales pitch. Just figuring out what to build.</p>
+          <p class="step__desc">We map your standards, your workflow, and what “done right” looks like in your business. This is where we identify the tools, roles, and outcomes that matter most.</p>
         </div>
         <div class="step__connector" aria-hidden="true">
           <svg width="60" height="2" viewBox="0 0 60 2"><line x1="0" y1="1" x2="60" y2="1" stroke="rgba(255,255,255,0.1)" stroke-width="1" stroke-dasharray="4 4"/></svg>
@@ -497,7 +491,7 @@
           <div class="step__number mono">02</div>
           <div class="step__glow" aria-hidden="true"></div>
           <h3 class="step__title">We Build</h3>
-          <p class="step__desc">Our AI-powered dev team builds your custom tools in days, not months. Everything configured for your business, your workflows, your market.</p>
+          <p class="step__desc">We build and connect your digital employees, systems, and automations so lead handling, scheduling, admin, and customer handoffs work together in one operating layer.</p>
         </div>
         <div class="step__connector" aria-hidden="true">
           <svg width="60" height="2" viewBox="0 0 60 2"><line x1="0" y1="1" x2="60" y2="1" stroke="rgba(255,255,255,0.1)" stroke-width="1" stroke-dasharray="4 4"/></svg>
@@ -506,9 +500,10 @@
           <div class="step__number mono">03</div>
           <div class="step__glow" aria-hidden="true"></div>
           <h3 class="step__title">You Own It</h3>
-          <p class="step__desc">We hand over everything: code, hosting, accounts. It's yours forever. No monthly fees. No lock-in. Modify it, resell it, do whatever you want.</p>
+          <p class="step__desc">We deploy the system, hand over everything, and make sure you own the code, accounts, and operating setup. No lock-in. No platform dependency. It is yours.</p>
         </div>
       </div>
+      <p class="section-body reveal" style="text-align:center;margin:28px auto 0;max-width:760px;">Typical build: 2–3 weeks from kickoff to handoff for Growth and Digital Workforce tiers.</p>
     </div>
   </section>
 
@@ -618,7 +613,7 @@
         One Price. <span class="gradient-text">Total Ownership.</span>
       </h2>
       <p class="section-body reveal" style="text-align:center;margin:0 auto 64px;">
-        You own everything. No monthly fees. No lock-in. Pick your tier and let's build.
+        For contractors and home service businesses doing $1M+ per year. Choose the level of system your business needs now, then add support or expansion only if you want it.
       </p>
 
       <div class="pricing__grid">
@@ -996,7 +991,7 @@
           Ready to Own<br><span class="gradient-text">Your Tools?</span>
         </h2>
         <p class="final-cta__sub reveal">
-          Stop paying rent on your software. Build once. Own forever.
+          For contractors and home service businesses doing $1M+ per year. Tell us where software is slowing you down and we’ll map the right build tier.
         </p>
         <div class="final-cta__actions reveal">
           <a href="https://cal.com/tektora/strategy-call" target="_blank" rel="noopener" class="btn btn--primary btn--large">Book Your Build Call</a>
@@ -1006,6 +1001,7 @@
           </a>
         </div>
 
+        <p class="section-body reveal" style="margin:0 auto 24px;max-width:760px;">This is built for contractors and home service businesses doing $1M+ per year that want to replace bloated subscriptions with one owned system.</p>
         <form class="contact-form reveal" id="contact-form" action="https://formsubmit.co/ajax/tessa@tektora.ai" method="POST">
           <div class="contact-form__grid">
             <div class="contact-form__field">
@@ -1053,7 +1049,7 @@
             <img src="assets/images/tektora-logo-v1.png" alt="Tektora AI" class="nav__logo-img footer__logo-img" width="28" height="28">
             <span>Tektora AI</span>
           </a>
-          <p class="footer__tagline">We Build It. You Own It.</p>
+          <p class="footer__tagline">Custom AI systems for contractors and home service businesses doing $1M+ per year.</p>
         </div>
         <div class="footer__links">
           <a href="privacy.html">Privacy Policy</a>
