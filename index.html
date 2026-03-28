@@ -370,6 +370,11 @@
   </section>
 
   <!-- ============ SECTION 4: DIGITAL WORKFORCE ============ -->
+  <style>
+    .workforce-steps{grid-template-columns:repeat(4,minmax(0,1fr))}
+    @media (max-width: 980px){.workforce-steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width: 640px){.workforce-steps{grid-template-columns:1fr}}
+  </style>
   <section class="tools" id="digital-workforce" style="padding-top:0;">
     <div class="container">
       <div class="tools__header">
@@ -431,7 +436,7 @@
           <span class="tools__category-tag mono">HOW WE BUILD IT</span>
           <span class="tools__category-count mono">4 STEPS</span>
         </div>
-        <div class="tools__grid" style="grid-template-columns: repeat(4, minmax(0, 1fr));">
+        <div class="tools__grid workforce-steps">
           <div class="tool-card reveal" data-delay="0">
             <span class="tool-card__time mono" style="margin-bottom:10px; display:inline-block;">STEP 01</span>
             <h3 class="tool-card__title">We map your standards</h3>
