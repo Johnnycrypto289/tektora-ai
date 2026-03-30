@@ -312,7 +312,9 @@
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
             var id = entry.target.getAttribute('id');
-            var navLink = document.querySelector('.nav__links a[href="#' + id + '"]');
+            var navLink = document.querySelector(
+              '.nav__links a[href="#' + id + '"], .nav__links a[href="/#' + id + '"]'
+            );
             if (navLink) {
               document.querySelectorAll('.nav__links a').forEach(function (a) {
                 a.style.color = '';
