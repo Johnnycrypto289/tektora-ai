@@ -813,6 +813,7 @@ input, select, textarea {
 .problem {
   padding: var(--section-padding) 0;
   position: relative;
+  --problem-progress: 0;
 }
 
 .problem__header {
@@ -833,6 +834,18 @@ input, select, textarea {
   border-radius: 20px;
   background: rgba(239, 68, 68, 0.04);
   border: 1px solid rgba(239, 68, 68, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+.drain__visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(239,68,68,0.08), transparent 40%),
+    radial-gradient(circle at 85% 15%, rgba(248, 113, 113, 0.12), transparent 28%);
+  pointer-events: none;
 }
 
 .drain__stack {
@@ -850,7 +863,18 @@ input, select, textarea {
   border-radius: 10px;
   background: rgba(239, 68, 68, 0.06);
   border: 1px solid rgba(239, 68, 68, 0.08);
-  transition: transform 300ms var(--ease-out), background 300ms;
+  transition: transform 300ms var(--ease-out), background 300ms, opacity 300ms var(--ease-out);
+  transform-origin: center;
+}
+
+.drain__item:nth-child(1) { transform: translate(calc(var(--problem-progress) * 26px), calc(var(--problem-progress) * 4px)) scale(calc(1 - var(--problem-progress) * 0.04)); }
+.drain__item:nth-child(2) { transform: translate(calc(var(--problem-progress) * 18px), calc(var(--problem-progress) * 2px)) scale(calc(1 - var(--problem-progress) * 0.06)); }
+.drain__item:nth-child(3) { transform: translate(calc(var(--problem-progress) * 10px), 0px) scale(calc(1 - var(--problem-progress) * 0.08)); }
+.drain__item:nth-child(4) { transform: translate(calc(var(--problem-progress) * 2px), calc(var(--problem-progress) * -2px)) scale(calc(1 - var(--problem-progress) * 0.1)); }
+.drain__item:nth-child(5) { transform: translate(calc(var(--problem-progress) * -6px), calc(var(--problem-progress) * -4px)) scale(calc(1 - var(--problem-progress) * 0.12)); }
+
+.problem.is-in-view .drain__item {
+  opacity: calc(1 - var(--problem-progress) * 0.24);
 }
 
 .drain__item:hover {
@@ -929,6 +953,75 @@ input, select, textarea {
   font-size: 0.95rem;
   color: var(--text-secondary);
   line-height: 1.6;
+}
+
+.problem__system {
+  position: relative;
+  margin-top: 24px;
+  padding: 22px;
+  border-radius: 18px;
+  border: 1px solid rgba(34, 211, 238, 0.16);
+  background: linear-gradient(180deg, rgba(6, 18, 31, 0.92), rgba(4, 11, 22, 0.82));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 18px 42px rgba(2,8,23,0.24);
+  overflow: hidden;
+  opacity: calc(0.52 + var(--problem-progress) * 0.48);
+  transform: translateY(calc(18px - var(--problem-progress) * 18px)) scale(calc(0.96 + var(--problem-progress) * 0.04));
+  transition: opacity 300ms ease, transform 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
+}
+
+.problem__system::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.06), transparent),
+    radial-gradient(circle at 82% 18%, rgba(34, 211, 238, 0.14), transparent 28%);
+  pointer-events: none;
+}
+
+.problem.is-in-view .problem__system {
+  border-color: rgba(34, 211, 238, calc(0.16 + var(--problem-progress) * 0.18));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 24px 56px rgba(2,8,23,0.28);
+}
+
+.problem__system-header {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.problem__system-tag {
+  font-size: 0.66rem;
+  letter-spacing: 0.18em;
+  color: rgba(125, 211, 252, 0.92);
+}
+
+.problem__system-header strong {
+  color: #f8fafc;
+  font-size: 1.02rem;
+}
+
+.problem__system-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.problem__system-node {
+  padding: 12px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(125, 211, 252, 0.12);
+  background: rgba(15, 23, 42, 0.6);
+  color: rgba(226, 232, 240, 0.86);
+  text-align: center;
+  font-size: 0.84rem;
+  transform: translateY(calc((1 - var(--problem-progress)) * 12px));
+  opacity: calc(0.45 + var(--problem-progress) * 0.55);
+  transition: transform 300ms ease, opacity 300ms ease, border-color 300ms ease;
+}
+
+.problem.is-in-view .problem__system-node {
+  border-color: rgba(125, 211, 252, calc(0.12 + var(--problem-progress) * 0.16));
 }
 
 .hand-drawn-arrow {
@@ -1937,6 +2030,10 @@ input, select, textarea {
   .problem__grid {
     grid-template-columns: 1fr;
     gap: 48px;
+  }
+
+  .problem__system-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .tools__grid--3 {
