@@ -394,37 +394,6 @@
     });
   }
 
-  var problemSection = document.getElementById('problem');
-
-  function updateProblemStory() {
-    if (!problemSection) return;
-    var rect = problemSection.getBoundingClientRect();
-    var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-    var progress = (viewportHeight - rect.top) / (rect.height + viewportHeight * 0.35);
-    progress = Math.max(0, Math.min(1, progress));
-    problemSection.style.setProperty('--problem-progress', progress.toFixed(3));
-  }
-
-  if (problemSection) {
-    if ('IntersectionObserver' in window) {
-      var problemObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            problemSection.classList.add('is-in-view');
-          } else {
-            problemSection.classList.remove('is-in-view');
-          }
-        });
-      }, { threshold: 0.15 });
-
-      problemObserver.observe(problemSection);
-    }
-
-    window.addEventListener('scroll', updateProblemStory, { passive: true });
-    window.addEventListener('resize', updateProblemStory);
-    updateProblemStory();
-  }
-
   // ============================================
   // SCROLL-DRIVEN FRAME ANIMATION
   // Apple-style scroll-to-video technique
