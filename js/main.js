@@ -63,21 +63,6 @@
   });
 
   // ---- Scroll Reveal (Staggered) ----
-  document.querySelectorAll('.section-title, .final-cta__title').forEach(function (heading) {
-    if (heading.getAttribute('data-split-ready') === 'true') return;
-    if (heading.querySelector('.title-word')) return;
-
-    var html = heading.innerHTML;
-    var parts = html.split(/(<[^>]+>|\s+)/g).filter(Boolean);
-    var rebuilt = parts.map(function (part) {
-      if (part.match(/^<[^>]+>$/) || part.trim() === '') return part;
-      return '<span class="title-word">' + part + '</span>';
-    }).join('');
-
-    heading.innerHTML = rebuilt;
-    heading.setAttribute('data-split-ready', 'true');
-  });
-
   var revealElements = document.querySelectorAll('.reveal');
 
   if ('IntersectionObserver' in window) {
