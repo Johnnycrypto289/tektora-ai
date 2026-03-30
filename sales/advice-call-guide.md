@@ -180,7 +180,8 @@ As they talk, fill in this table:
 - [ ] Log all notes in CRM
 - [ ] Calculate their total monthly/annual software spend
 - [ ] Identify which tools we'd replace and with what
-- [ ] Determine proposal tier (Starter / Growth / Full Stack)
+- [ ] Determine proposal tier (Starter / Business Update / Full Build / Custom)
+- [ ] Apply the tier boundary before sending the proposal: one workflow = Business Update, connected handoffs = Full Build, broader architecture = Custom
 - [ ] Send proposal within 48 hours (or simplified math if "maybe")
 - [ ] Book proposal review call
 - [ ] Add to appropriate follow-up sequence
@@ -192,6 +193,7 @@ As they talk, fill in this table:
 
 1. **Listen more than you talk.** This is about THEM, not you.
 2. **Never badmouth their current tools.** Just highlight the cost and the model.
-3. **Let the math do the selling.** When they see $12,000/year vs. a one-time $5,000 build, it sells itself.
-4. **Don't push.** If they're not ready, respect it. The follow-up sequence does the work.
-5. **Always end with a next step.** Never hang up without a clear next action.
+3. **Let the math do the selling.** When they see the annual software spend against the right one-time build tier, the tradeoff gets clearer without you forcing it.
+4. **Use the tier boundary, not softer package language.** One workflow stays in Business Update. Full Build starts when the handoff between workflows is what keeps breaking.
+5. **Don't push.** If they're not ready, respect it. The follow-up sequence does the work.
+6. **Always end with a next step.** Never hang up without a clear next action.

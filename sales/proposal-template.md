@@ -42,7 +42,7 @@ You're currently spending **$[Annual Total]** per year on software — and here'
 
 ## 3. Our Solution
 
-We'll build you a custom suite of AI-powered tools that replaces your entire stack. Built specifically for your business, owned by you, forever.
+We'll build the right owned system for your current stage, whether that means a stronger front-end, one custom workflow, or a broader operating layer. Built specifically for your business, owned by you, forever.
 
 ### Tools We'll Build:
 
@@ -62,7 +62,7 @@ We'll build you a custom suite of AI-powered tools that replaces your entire sta
 - **Client Portal** — Clients can view estimates, approve jobs, and pay invoices online
 - **Dashboard** — Real-time view of jobs, revenue, crew status, and client pipeline
 
-*Tools customized based on your specific needs.*
+*The exact product mix depends on the build tier and the workflow that actually needs attention first.*
 
 ---
 
@@ -79,8 +79,8 @@ We'll build you a custom suite of AI-powered tools that replaces your entire sta
 
 ### Support
 
-- **30-day support period** — We fix bugs, answer questions, and make adjustments at no extra cost.
-- **Optional ongoing support** — After 30 days, support available at $[X]/month (still less than one of your current subscriptions).
+- **Support period based on tier** — Starter includes 14 days, Business Update includes 30 days, Full Build includes 60 days, and Custom is scoped to the project.
+- **Optional ongoing support** — After the included support window, support is available at $[X]/month (still less than one of your current subscriptions).
 
 ### Ownership
 
@@ -95,19 +95,24 @@ We'll build you a custom suite of AI-powered tools that replaces your entire sta
 
 ### Pricing Tiers
 
-| | Starter | Growth | Full Stack |
-|--|---------|--------|-----------|
-| **Best For** | Solo operators | Small crews (2-10) | Growing businesses (10+) |
-| **Custom Tools** | 2-3 core tools | 4-6 tools | Full suite (7+) |
-| **AI Receptionist** | Basic (voicemail + text) | Full (calls + booking) | Advanced (multi-line + routing) |
-| **Automations** | Review requests | Reviews + follow-ups + reminders | Full workflow automation |
-| **Client Portal** | — | Basic | Full-featured |
-| **Dashboard** | Basic | Advanced | Custom executive dashboard |
-| **Training** | 1 session (30 min) | 2 sessions (60 min each) | Unlimited for 30 days |
-| **Support Period** | 14 days | 30 days | 60 days |
-| **Investment** | **$2,500** | **$5,000** | **$8,500** |
+| | Starter | Business Update | Full Build | Custom |
+|--|---------|-----------------|------------|--------|
+| **Best For** | First serious upgrade | One broken workflow that needs a real system | Teams that need multiple workflows connected | Broader scope, deeper integrations, or specialized architecture |
+| **Core Scope** | Website refresh + light automations | One custom workflow system | Broader operating layer across the business | Architecture shaped around the real requirements |
+| **AI Coverage** | Automation-focused | 1 AI role | 2 AI roles | Flexible by project |
+| **Website / Front-End** | Central part of scope | Supporting layer if needed | Included where needed | Defined by scope |
+| **Integrations** | Basic stack cleanup | Workflow-specific integrations | Deeper cross-workflow integrations | Advanced or edge-case integrations |
+| **Training** | 1 session (30 min) | 2 sessions (60 min each) | Unlimited for 30 days | Scoped to rollout |
+| **Support Period** | 14 days | 30 days | 60 days | Scoped to project |
+| **Investment** | **$3,500+** | **$7,500+** | **$12,000+** | **Custom scope** |
 
-> **Our Recommendation:** Based on your business size and current stack, we recommend the **[Recommended Tier]** package. Here's why: [1-2 sentence justification].
+**Tier sorting rule**
+
+- Keep the recommendation in **Business Update** when one workflow still explains most of the pain.
+- Move the recommendation to **Full Build** when the handoff between workflows is the real problem.
+- Move the recommendation to **Custom** only when broader scope, deeper integrations, or special operating rules make the standard tier box too small.
+
+> **Our Recommendation:** Based on your business size, current stack, and where the real bottleneck sits, we recommend the **[Recommended Tier]** build tier. Here's why: [1-2 sentence justification].
 
 *Payment plans available. Ask us about 50/50 split (50% to start, 50% on delivery).*
 
@@ -155,7 +160,7 @@ We'll build you a custom suite of AI-powered tools that replaces your entire sta
 
 **Estimated delivery: 2 weeks from deposit.**
 
-*Complex builds (Full Stack tier) may take up to 3 weeks. We'll confirm exact timeline before starting.*
+*Complex builds in Full Build or Custom may take up to 3 weeks or more. We'll confirm exact timeline before starting.*
 
 ---
 
@@ -189,7 +194,9 @@ Sign below to confirm you'd like to move forward.
 
 **Date:** ___________________________
 
-**Selected Tier:** [ ] Starter ($2,500) — [ ] Growth ($5,000) — [ ] Full Stack ($8,500)
+**Selected Tier:** [ ] Starter ($3,500+) — [ ] Business Update ($7,500+) — [ ] Full Build ($12,000+) — [ ] Custom Scope
+
+**Boundary note:** one workflow stays in Business Update. Connected handoffs across sales, scheduling, install coordination, and customer updates move to Full Build.
 
 ### Step 2: Pay 50% Deposit
 
