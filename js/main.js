@@ -318,36 +318,58 @@
     });
   }
 
-  // ---- Parallax mouse movement on hero orbs ----
-  var heroOrbs = document.querySelectorAll('.hero__orb');
-  var heroSection = document.querySelector('.hero');
+  // ---- Premium micro-interactions ----
+  var magneticButtons = document.querySelectorAll('.btn--primary, .nav__cta');
+  magneticButtons.forEach(function (button) {
+    button.addEventListener('mousemove', function (e) {
+      var rect = button.getBoundingClientRect();
+      var x = ((e.clientX - rect.left) / rect.width - 0.5) * 12;
+      var y = ((e.clientY - rect.top) / rect.height - 0.5) * 10;
+      button.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+    });
+    button.addEventListener('mouseleave', function () {
+      button.style.transform = '';
+    });
+  });
 
-  if (heroOrbs.length > 0 && heroSection && window.matchMedia('(min-width: 769px)').matches) {
-    var ticking = false;
+  var tiltCards = document.querySelectorAll('.pricing__card, .tool-card, .step');
+  tiltCards.forEach(function (card) {
+    card.addEventListener('mousemove', function (e) {
+      var rect = card.getBoundingClientRect();
+      var x = (e.clientX - rect.left) / rect.width;
+      var y = (e.clientY - rect.top) / rect.height;
+      var rotateY = (x - 0.5) * 10;
+      var rotateX = (0.5 - y) * 8;
+      card.style.transform = 'perspective(1200px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) translateY(-6px)';
+      card.style.boxShadow = '0 28px 60px rgba(2, 8, 23, 0.35)';
+    });
+    card.addEventListener('mouseleave', function () {
+      card.style.transform = '';
+      card.style.boxShadow = '';
+    });
+  });
 
-    window.addEventListener('mousemove', function (e) {
-      if (ticking) return;
-      ticking = true;
-
-      requestAnimationFrame(function () {
-        var rect = heroSection.getBoundingClientRect();
-        if (rect.bottom < 0 || rect.top > window.innerHeight) {
-          ticking = false;
-          return;
-        }
-
-        var x = (e.clientX / window.innerWidth - 0.5) * 2;
-        var y = (e.clientY / window.innerHeight - 0.5) * 2;
-
-        heroOrbs.forEach(function (orb, i) {
-          var factor = (i + 1) * 8;
-          orb.style.transform = 'translate(' + (x * factor) + 'px, ' + (y * factor) + 'px)';
-        });
-
-        ticking = false;
-      });
-    }, { passive: true });
-  }
+  var scrambleKeywords = document.querySelectorAll('[data-scramble]');
+  scrambleKeywords.forEach(function (el) {
+    var finalText = el.getAttribute('data-scramble') || el.textContent;
+    var chars = '01SYSTEMBUILDOWN';
+    var frame = 0;
+    var totalFrames = 12;
+    function tick() {
+      var output = '';
+      for (var i = 0; i < finalText.length; i++) {
+        output += i < frame ? finalText[i] : chars[Math.floor(Math.random() * chars.length)];
+      }
+      el.textContent = output;
+      frame++;
+      if (frame <= totalFrames) {
+        requestAnimationFrame(tick);
+      } else {
+        el.textContent = finalText;
+      }
+    }
+    setTimeout(tick, 400);
+  });
 
   // ============================================
   // SCROLL-DRIVEN FRAME ANIMATION
