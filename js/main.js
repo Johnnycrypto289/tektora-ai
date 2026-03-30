@@ -6,6 +6,18 @@
 (function () {
   'use strict';
 
+  function injectSiteStatusBanner() {
+    var banner = document.createElement('div');
+    banner.className = 'site-status-banner';
+    banner.setAttribute('role', 'status');
+    banner.setAttribute('aria-live', 'polite');
+    banner.innerHTML = '<span class="site-status-banner__label mono">Build Mode</span><span class="site-status-banner__text">The site is currently in build mode and will be back up within the next 24 hours.</span>';
+    document.body.classList.add('has-site-status-banner');
+    document.body.prepend(banner);
+  }
+
+  injectSiteStatusBanner();
+
   // ---- Smooth scroll for anchor links ----
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
