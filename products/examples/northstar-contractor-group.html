@@ -17,6 +17,10 @@
     .module{border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:18px;background:rgba(15,23,42,.72)}
     .module strong{display:block;color:#7dd3fc;margin-bottom:8px}
     .module span{display:block;color:#e2e8f0;line-height:1.7}
+    .fit-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}
+    .fit-card{border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:18px;background:rgba(2,8,23,.5)}
+    .fit-card strong{display:block;color:#f8fafc;margin-bottom:8px}
+    .fit-card span{display:block;color:#e2e8f0;line-height:1.7}
     .mock{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:stretch}
     .screen{border:1px solid rgba(255,255,255,.08);border-radius:24px;background:rgba(2,8,23,.86);padding:20px;min-height:360px}
     .screen-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
@@ -26,7 +30,7 @@
     .tile span{display:block;color:#e2e8f0;line-height:1.6}
     .aside{display:grid;gap:14px}
     .mono-tag{display:inline-flex;padding:7px 12px;border:1px solid rgba(125,211,252,.2);border-radius:999px;color:#cbd5e1;background:rgba(37,99,235,.08);font-size:.78rem}
-    @media (max-width:860px){.modules,.screen-grid,.mock{grid-template-columns:1fr}.demo{padding:120px 0 60px}}
+    @media (max-width:860px){.modules,.fit-grid,.screen-grid,.mock{grid-template-columns:1fr}.demo{padding:120px 0 60px}}
   </style>
 </head>
 <body>
@@ -50,18 +54,33 @@
     <div class="container demo-wrap">
       <section class="hero-card">
         <span class="mono-tag">Custom example</span>
-        <h1 class="section-title" style="margin-top:16px;max-width:820px;">Custom plan example for a larger contractor group</h1>
+        <h1 class="section-title" style="margin-top:16px;max-width:820px;">Custom example for a larger contractor group</h1>
         <p>A broader, multi-system build shaped around the company’s exact requirements.</p>
-        <div class="hero__ctas" style="margin-top:22px;"><a href="../index.html" class="btn btn--secondary">Back to Packages</a><a href="https://cal.com/tektora/strategy-call" target="_blank" rel="noopener" class="btn btn--primary">Book This Plan</a></div>
+        <p>Northstar sits in Custom because the scope has already moved past a standard Full Build. Extra integrations, broader business coverage, and specialized operating rules are shaping the project.</p>
+        <div class="fit-grid">
+          <div class="fit-card"><strong>Best fit</strong><span>You need broader architecture across departments, more integrations, or special logic that does not fit cleanly inside the standard tiers.</span></div>
+          <div class="fit-card"><strong>Not for you if</strong><span>Your scope still fits honestly inside Starter, Business Update, or a multi-workflow Full Build.</span></div>
+        </div>
+        <div class="hero__ctas" style="margin-top:22px;"><a href="../index.html" class="btn btn--secondary">Back to Products</a><a href="https://cal.com/tektora/strategy-call" target="_blank" rel="noopener" class="btn btn--primary">Book This Build</a></div>
+      </section>
+      <section class="panel">
+        <span class="mono-tag">Tier boundary</span>
+        <p style="margin-top:14px;">Northstar is the Custom reference because the project has already outgrown the standard tier box. The honest move is scoping the architecture around the real business instead of squeezing it into Full Build.</p>
+        <div class="modules">
+          <div class="module"><strong>Why it is not Business Update</strong><span>This is not one workflow needing a better system. Several departments and operating needs are already in play.</span></div>
+          <div class="module"><strong>Why it is not Full Build</strong><span>The scope includes deeper integrations, broader business coverage, and special operating rules that push past one standard connected layer.</span></div>
+          <div class="module"><strong>Why it stays in Custom</strong><span>The build needs room for architecture decisions that should be made in discovery, not forced into preset tier boundaries.</span></div>
+          <div class="module"><strong>Move down only if</strong><span>The scope becomes narrow enough to fit one connected operating layer without extra departments, edge-case logic, or specialized integrations.</span></div>
+        </div>
       </section>
       <section class="mock">
         <div class="screen">
           <div class="screen-top"><div><div style="font-size:1.25rem;font-weight:800;color:#f8fafc;">Northstar Contractor Group</div><div style="font-size:.9rem;color:rgba(226,232,240,.65);">Interactive example preview</div></div><span class="mono-tag">Demo system</span></div>
-          <div class="screen-grid"><div class='module'><strong>Multi-system architecture</strong><span>Sales, ops, reporting, and customer systems tied together</span></div><div class='module'><strong>Advanced integrations</strong><span>Deeper logic with existing tools and special workflows</span></div><div class='module'><strong>Flexible AI roles</strong><span>As many agents and automations as the project needs</span></div><div class='module'><strong>Leadership dashboard</strong><span>High-level visibility across the business</span></div></div>
+          <div class="screen-grid"><div class='module'><strong>Multi-system architecture</strong><span>Sales, ops, reporting, and customer systems tied together</span></div><div class='module'><strong>Advanced integrations</strong><span>Deeper logic with existing tools and special workflows</span></div><div class='module'><strong>Flexible AI roles</strong><span>As many AI roles and automations as the project needs</span></div><div class='module'><strong>Leadership dashboard</strong><span>High-level visibility across the business</span></div></div>
         </div>
         <div class="aside">
-          <div class="panel"><span class="mono-tag">What this demo shows</span><p style="margin-top:14px;">This is a visual example a client can click through to understand the feel of the plan before they ever get on a call.</p></div>
-          <div class="panel"><span class="mono-tag">How to use it</span><p style="margin-top:14px;">Look at the modules, the layout, and the flow. The point is not the exact business name. The point is helping a prospect understand what this plan could look like in their world.</p></div>
+          <div class="panel"><span class="mono-tag">What this demo shows</span><p style="margin-top:14px;">This is a visual example a client can click through to understand the feel of the build before they ever get on a call.</p></div>
+          <div class="panel"><span class="mono-tag">How to use it</span><p style="margin-top:14px;">Look at the modules, the layout, and the flow. The point is not the exact business name. The point is helping a prospect understand what this build could look like in their world.</p></div>
         </div>
       </section>
     </div>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tektora Packages — Custom AI Systems for Contractors</title>
-  <meta name="description" content="Compare Tektora's Starter, Business Update, Full Build, and Custom plans with plain-English explanations, visual examples, and clickable demos.">
+  <title>Tektora Build Tiers — Custom AI Systems for Contractors</title>
+  <meta name="description" content="Compare Tektora's Starter, Business Update, Full Build, and Custom build tiers with plain-English explanations, visual examples, and clickable demos.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -21,20 +21,35 @@
     .products-callout__card{border:1px solid rgba(255,255,255,.08);border-radius:22px;background:rgba(2,8,23,.42);padding:22px}
     .products-callout__card strong{display:block;color:#f8fafc;margin-bottom:8px}
     .products-callout__card span{display:block;color:rgba(226,232,240,.78);line-height:1.7}
-    .package-stack{display:grid;gap:28px;max-width:1180px;margin:0 auto}
-    .package-shell{border:1px solid rgba(255,255,255,.08);border-radius:32px;background:linear-gradient(180deg,rgba(15,23,42,.76),rgba(15,23,42,.5));padding:32px;box-shadow:0 24px 80px rgba(0,0,0,.24)}
-    .package-shell--featured{border-color:rgba(56,189,248,.36);box-shadow:0 30px 100px rgba(37,99,235,.18)}
-    .package-top{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
-    .package-label{display:inline-flex;align-items:center;gap:10px;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:#7dd3fc}
-    .package-price{display:flex;align-items:flex-end;gap:10px;margin:16px 0 10px}
-    .package-price__amount{font-size:3rem;line-height:1;font-weight:800;color:#f8fafc}
-    .package-price__term{font-size:.92rem;color:rgba(226,232,240,.66);padding-bottom:8px}
-    .package-copy p{color:rgba(226,232,240,.78);line-height:1.82;margin:0 0 14px}
-    .package-points{display:grid;gap:10px;margin-top:18px}
-    .package-points div{display:flex;gap:10px;align-items:flex-start;color:#e2e8f0;line-height:1.7}
-    .package-points strong{color:#7dd3fc}
-    .package-thumb{position:relative;border:1px solid rgba(255,255,255,.08);border-radius:24px;background:radial-gradient(circle at top,rgba(56,189,248,.16),rgba(15,23,42,.92) 62%);padding:22px;overflow:hidden;min-height:260px}
-    .package-thumb::after{content:"";position:absolute;inset:auto -10% -50px auto;width:180px;height:180px;background:radial-gradient(circle,rgba(59,130,246,.24),transparent 68%);pointer-events:none}
+    .products-matrix-note{margin-top:16px;color:rgba(226,232,240,.72);line-height:1.75}
+    .matrix-link{color:#7dd3fc;text-decoration:none;border-bottom:1px solid rgba(125,211,252,.25)}
+    .matrix-link:hover{color:#f8fafc;border-bottom-color:rgba(248,250,252,.45)}
+    .decision-rail{margin-top:22px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .decision-rail__card{border:1px solid rgba(255,255,255,.08);border-radius:22px;background:rgba(2,8,23,.42);padding:22px}
+    .decision-rail__card strong{display:block;color:#f8fafc;margin-bottom:10px}
+    .decision-rail__card p{margin:0;color:rgba(226,232,240,.78);line-height:1.72}
+    .boundary-split{margin-top:18px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .boundary-card{border:1px solid rgba(255,255,255,.08);border-radius:24px;background:linear-gradient(180deg,rgba(15,23,42,.6),rgba(2,8,23,.5));padding:24px}
+    .boundary-card p{margin:14px 0 0;color:rgba(226,232,240,.8);line-height:1.75}
+    .luxe-boundary-grid{margin-top:18px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .luxe-boundary-card{border:1px solid rgba(255,255,255,.08);border-radius:24px;background:linear-gradient(180deg,rgba(15,23,42,.68),rgba(2,8,23,.52));padding:24px}
+    .luxe-boundary-card strong{display:block;color:#f8fafc;margin-bottom:10px}
+    .luxe-boundary-card p{margin:0;color:rgba(226,232,240,.78);line-height:1.75}
+    .luxe-boundary-card p + p{margin-top:12px}
+    .tier-stack{display:grid;gap:28px;max-width:1180px;margin:0 auto}
+    .tier-shell{border:1px solid rgba(255,255,255,.08);border-radius:32px;background:linear-gradient(180deg,rgba(15,23,42,.76),rgba(15,23,42,.5));padding:32px;box-shadow:0 24px 80px rgba(0,0,0,.24)}
+    .tier-shell--featured{border-color:rgba(56,189,248,.36);box-shadow:0 30px 100px rgba(37,99,235,.18)}
+    .tier-top{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+    .tier-label{display:inline-flex;align-items:center;gap:10px;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:#7dd3fc}
+    .tier-price{display:flex;align-items:flex-end;gap:10px;margin:16px 0 10px}
+    .tier-price__amount{font-size:3rem;line-height:1;font-weight:800;color:#f8fafc}
+    .tier-price__term{font-size:.92rem;color:rgba(226,232,240,.66);padding-bottom:8px}
+    .tier-copy p{color:rgba(226,232,240,.78);line-height:1.82;margin:0 0 14px}
+    .tier-points{display:grid;gap:10px;margin-top:18px}
+    .tier-points div{display:flex;gap:10px;align-items:flex-start;color:#e2e8f0;line-height:1.7}
+    .tier-points strong{color:#7dd3fc}
+    .tier-thumb{position:relative;border:1px solid rgba(255,255,255,.08);border-radius:24px;background:radial-gradient(circle at top,rgba(56,189,248,.16),rgba(15,23,42,.92) 62%);padding:22px;overflow:hidden;min-height:260px}
+    .tier-thumb::after{content:"";position:absolute;inset:auto -10% -50px auto;width:180px;height:180px;background:radial-gradient(circle,rgba(59,130,246,.24),transparent 68%);pointer-events:none}
     .thumb-badge{display:inline-flex;padding:7px 12px;border-radius:999px;background:rgba(15,23,42,.7);border:1px solid rgba(125,211,252,.18);font-size:.76rem;color:#cbd5e1}
     .thumb-frame{margin-top:18px;border:1px solid rgba(255,255,255,.08);border-radius:18px;background:rgba(2,8,23,.78);padding:16px}
     .thumb-frame__top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
@@ -44,10 +59,10 @@
     .thumb-card{border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:14px;background:rgba(15,23,42,.72)}
     .thumb-card strong{display:block;color:#7dd3fc;font-size:.8rem;margin-bottom:6px;text-transform:uppercase;letter-spacing:.08em}
     .thumb-card span{color:#e2e8f0;font-size:.93rem;line-height:1.5}
-    .package-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px}
-    .package-actions .btn{min-width:180px}
-    .package-graph{margin-top:28px;padding-top:28px;border-top:1px solid rgba(255,255,255,.08)}
-    .package-graph__title{font-size:.84rem;letter-spacing:.16em;text-transform:uppercase;color:#7dd3fc;margin-bottom:18px}
+    .tier-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px}
+    .tier-actions .btn{min-width:180px}
+    .tier-graph{margin-top:28px;padding-top:28px;border-top:1px solid rgba(255,255,255,.08)}
+    .tier-graph__title{font-size:.84rem;letter-spacing:.16em;text-transform:uppercase;color:#7dd3fc;margin-bottom:18px}
     .flow-core{display:flex;justify-content:center;margin-bottom:18px}
     .flow-core__node{padding:16px 18px;border-radius:18px;border:1px solid rgba(125,211,252,.26);background:linear-gradient(180deg,rgba(14,116,144,.2),rgba(15,23,42,.92));font-weight:700;color:#f8fafc;min-width:240px;text-align:center;box-shadow:0 0 0 1px rgba(125,211,252,.08) inset}
     .flow-branches{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;position:relative}
@@ -60,12 +75,13 @@
     .fit-card{border:1px solid rgba(255,255,255,.08);border-radius:18px;background:rgba(2,8,23,.42);padding:16px}
     .fit-card strong{display:block;color:#f8fafc;margin-bottom:6px}
     .fit-card span{display:block;color:rgba(226,232,240,.76);line-height:1.65}
-    .comparison-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;max-width:1180px;margin:0 auto}
-    .comparison-card{border:1px solid rgba(255,255,255,.08);border-radius:22px;background:rgba(15,23,42,.62);padding:22px}
-    .comparison-card strong{display:block;color:#f8fafc;margin-bottom:8px}
-    .comparison-card span{display:block;color:rgba(226,232,240,.74);line-height:1.7}
-    @media (max-width:1040px){.package-top,.products-callout{grid-template-columns:1fr}.flow-branches,.comparison-row,.fit-grid{grid-template-columns:1fr 1fr}}
-    @media (max-width:700px){.products-hero{padding:120px 0 56px}.package-shell,.products-note,.products-cta{padding:24px}.flow-branches,.comparison-row,.thumb-grid,.fit-grid{grid-template-columns:1fr}.package-price__amount{font-size:2.35rem}}
+    .threshold-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;max-width:1180px;margin:18px auto 0}
+    .threshold-card{border:1px solid rgba(255,255,255,.08);border-radius:24px;background:linear-gradient(180deg,rgba(15,23,42,.68),rgba(2,8,23,.52));padding:24px}
+    .threshold-card strong{display:block;color:#f8fafc;margin-bottom:10px}
+    .threshold-card p{margin:0;color:rgba(226,232,240,.76);line-height:1.75}
+    .threshold-card p + p{margin-top:12px}
+    @media (max-width:1040px){.tier-top,.products-callout,.boundary-split,.decision-rail{grid-template-columns:1fr}.flow-branches,.fit-grid,.threshold-grid,.luxe-boundary-grid{grid-template-columns:1fr 1fr}}
+    @media (max-width:700px){.products-hero{padding:120px 0 56px}.tier-shell,.products-note,.products-cta{padding:24px}.flow-branches,.thumb-grid,.fit-grid,.threshold-grid,.luxe-boundary-grid{grid-template-columns:1fr}.tier-price__amount{font-size:2.35rem}}
   </style>
 </head>
 <body>
@@ -88,12 +104,12 @@
   </nav>
 
   <main id="main">
-    <!-- Lovable unblock proof-of-control: package naming, tier boundaries, and Luxe Home example mapping are owned in-repo here. -->
+    <!-- Lovable unblock proof-of-control: tier naming, tier boundaries, and Luxe Home example mapping are owned in-repo here. -->
     <section class="products-hero">
       <div class="container products-hero__inner">
-        <span class="section-tag reveal mono">TEKTORA PACKAGES</span>
+        <span class="section-tag reveal mono">TEKTORA BUILD TIERS</span>
         <h1 class="section-title reveal" style="max-width:960px;margin:0 auto;">Pick the Build That Fits <span class="gradient-text">Your Business Right Now</span></h1>
-        <p class="products-hero__sub reveal">This page is built to make the package boundaries obvious. Starter upgrades the front end. Business Update fixes one core workflow with custom software. Full Build connects multiple workflows into a stronger operating layer. Custom covers the projects that are too broad or specialized for a standard package.</p>
+        <p class="products-hero__sub reveal">This page is built to make the tier boundaries obvious. Starter upgrades the front end. Business Update fixes one core workflow with custom software. Full Build connects multiple workflows into a stronger operating layer. Custom covers the projects that are too broad or specialized for a standard tier.</p>
         <div class="hero__ctas reveal" style="justify-content:center;margin-top:28px;"><a href="https://cal.com/tektora/strategy-call" target="_blank" rel="noopener" class="btn btn--primary">Book Your Build Call</a><a href="/#pricing" class="btn btn--secondary">See Pricing</a></div>
       </div>
     </section>
@@ -101,14 +117,18 @@
     <section class="products-section">
       <div class="container">
         <div class="products-note">
+          <!-- Naming cleanup proof: legacy package naming is intentionally removed from this tier flow. -->
           <span class="products-tag">How to use this page</span>
-          <p style="margin-top:14px;"><strong>Do not think in software categories. Think in business outcomes.</strong> Each package below shows what level of system you are buying, what it feels like in plain English, and what a real example could look like.</p>
+          <p style="margin-top:14px;"><strong>Do not think in software categories. Think in business outcomes.</strong> Each tier below shows what level of system you are buying, what it feels like in plain English, what stays out of scope, and what a real example could look like.</p>
+          <p><strong>Naming rule:</strong> keep the tier flow locked to <strong>Starter</strong>, <strong>Business Update</strong>, <strong>Full Build</strong>, and <strong>Custom</strong>. The old package naming is out of this flow because it blurs where one workflow ends and a connected operating layer begins, and there is no separate Growth package inside this decision path.</p>
           <p>If you want a cleaner website and better automations, that is Starter. If one broken process needs its own real system, that is Business Update. If sales, ops, and customer communication all need to connect, that is Full Build. If the scope spills past those limits, that is Custom.</p>
         </div>
 
+        <!-- Lovable unblock proof-of-control: /products keeps Luxe Home pinned to Full Build because multiple workflows and two AI roles share one operating layer. -->
         <div class="products-note" style="margin-top:22px;overflow:auto;">
-          <span class="products-tag">Fast comparison</span>
+          <span class="products-tag">Comparison matrix</span>
           <table style="width:100%;border-collapse:collapse;margin-top:18px;font-size:0.95rem;min-width:780px;">
+            <caption style="caption-side:top;text-align:left;padding-bottom:14px;color:rgba(226,232,240,.7);line-height:1.7;">Read this left to right. The tier should change when the business problem changes shape, not when the wording gets softer. Each column shows the fit, the stopping point, and the boundary test that keeps the decision honest.</caption>
             <thead>
               <tr style="text-align:left;border-bottom:1px solid rgba(255,255,255,.08);">
                 <th style="padding:12px 10px 12px 0;color:#f8fafc;">What changes</th>
@@ -120,43 +140,120 @@
             </thead>
             <tbody style="color:rgba(226,232,240,.8);line-height:1.7;">
               <tr style="border-bottom:1px solid rgba(255,255,255,.06);"><td style="padding:12px 10px 12px 0;">You are buying…</td><td style="padding:12px 10px;">a front-end upgrade</td><td style="padding:12px 10px;">one core workflow system</td><td style="padding:12px 10px;">a connected operating layer</td><td style="padding:12px 0 12px 10px;">advanced architecture</td></tr>
-              <tr style="border-bottom:1px solid rgba(255,255,255,.06);"><td style="padding:12px 10px 12px 0;">Website/front-end</td><td style="padding:12px 10px;">Central part of scope</td><td style="padding:12px 10px;">Supporting layer only</td><td style="padding:12px 10px;">Included where needed</td><td style="padding:12px 0 12px 10px;">Defined by scope</td></tr>
-              <tr style="border-bottom:1px solid rgba(255,255,255,.06);"><td style="padding:12px 10px 12px 0;">Workflow depth</td><td style="padding:12px 10px;">light automations</td><td style="padding:12px 10px;">single workflow</td><td style="padding:12px 10px;">multi-workflow</td><td style="padding:12px 0 12px 10px;">cross-team / advanced</td></tr>
-              <tr style="border-bottom:1px solid rgba(255,255,255,.06);"><td style="padding:12px 10px 12px 0;">AI roles included</td><td style="padding:12px 10px;">automation-focused</td><td style="padding:12px 10px;">1 AI role</td><td style="padding:12px 10px;">2 AI roles</td><td style="padding:12px 0 12px 10px;">flexible by project</td></tr>
-              <tr style="border-bottom:1px solid rgba(255,255,255,.06);"><td style="padding:12px 10px 12px 0;">Typical result</td><td style="padding:12px 10px;">cleaner brand and faster response</td><td style="padding:12px 10px;">one broken handoff finally works</td><td style="padding:12px 10px;">sales, ops, and client updates run together</td><td style="padding:12px 0 12px 10px;">architecture built around edge cases</td></tr>
-              <tr style="border-bottom:1px solid rgba(255,255,255,.06);"><td style="padding:12px 10px 12px 0;">Example company here</td><td style="padding:12px 10px;">BluePeak Heating</td><td style="padding:12px 10px;">Summit Flow Roofing</td><td style="padding:12px 10px;">Luxe Home Services</td><td style="padding:12px 0 12px 10px;">Northstar Contractor Group</td></tr>
-              <tr style="border-bottom:1px solid rgba(255,255,255,.06);"><td style="padding:12px 10px 12px 0;">Best fit</td><td style="padding:12px 10px;">first serious upgrade</td><td style="padding:12px 10px;">one bottleneck needs a real system</td><td style="padding:12px 10px;">several workflows need to run together</td><td style="padding:12px 0 12px 10px;">bigger scope / deeper integration</td></tr>
-              <tr style="border-bottom:1px solid rgba(255,255,255,.06);"><td style="padding:12px 10px 12px 0;">Not for you if…</td><td style="padding:12px 10px;">you already need custom multi-workflow logic</td><td style="padding:12px 10px;">you only need a website refresh or you need several systems at once</td><td style="padding:12px 10px;">you only need one workflow fixed or the scope is enterprise-level</td><td style="padding:12px 0 12px 10px;">a standard package already covers the need</td></tr>
-              <tr><td style="padding:12px 10px 12px 0;">Typical buyer</td><td style="padding:12px 10px;">owner modernizing the front edge</td><td style="padding:12px 10px;">operator replacing a broken process</td><td style="padding:12px 10px;">team connecting sales, ops, and client updates</td><td style="padding:12px 0 12px 10px;">larger / more complex business</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.06);"><td style="padding:12px 10px 12px 0;">Main unlock</td><td style="padding:12px 10px;">cleaner front end and faster response</td><td style="padding:12px 10px;">one broken bottleneck finally runs cleanly</td><td style="padding:12px 10px;">handoffs stop breaking between workflows</td><td style="padding:12px 0 12px 10px;">special logic gets built correctly</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.06);"><td style="padding:12px 10px 12px 0;">Decision rule</td><td style="padding:12px 10px;">the website and response layer are still the main problem</td><td style="padding:12px 10px;">one workflow is clearly the main problem</td><td style="padding:12px 10px;">the pain is the handoff between workflows, not one isolated fix</td><td style="padding:12px 0 12px 10px;">the scope already exceeds the standard box</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.06);"><td style="padding:12px 10px 12px 0;">Sorting question</td><td style="padding:12px 10px;">Would a stronger front end and cleaner response solve most of this?</td><td style="padding:12px 10px;">If one workflow got rebuilt properly, would most of the pain disappear?</td><td style="padding:12px 10px;">If one workflow got fixed, would the handoff between teams still keep breaking?</td><td style="padding:12px 0 12px 10px;">Does the build already need extra departments, special rules, or deeper architecture from day one?</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.06);"><td style="padding:12px 10px 12px 0;">Scope boundary</td><td style="padding:12px 10px;">website + light automation</td><td style="padding:12px 10px;">one workflow with supporting front-end</td><td style="padding:12px 10px;">multiple connected workflows</td><td style="padding:12px 0 12px 10px;">broader org or edge-case scope</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.06);"><td style="padding:12px 10px 12px 0;">Workflow shape</td><td style="padding:12px 10px;">front edge only</td><td style="padding:12px 10px;">one bottleneck rebuilt properly</td><td style="padding:12px 10px;">handoffs across the operation</td><td style="padding:12px 0 12px 10px;">cross-team or specialized architecture</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.06);"><td style="padding:12px 10px 12px 0;">Product layer inside the tier</td><td style="padding:12px 10px;"><a href="./ai-receptionist.html" class="matrix-link">AI Receptionist</a> or <a href="./online-booking-system.html" class="matrix-link">Online Booking</a> supporting the front edge</td><td style="padding:12px 10px;"><a href="./lead-follow-up-system.html" class="matrix-link">Lead Follow-Up</a>, <a href="./quoting-proposal-tool.html" class="matrix-link">Quoting &amp; Proposal</a>, or <a href="./scheduling-dispatch-system.html" class="matrix-link">Scheduling &amp; Dispatch</a> as the one main system</td><td style="padding:12px 10px;">A connected mix like <a href="./ai-receptionist.html" class="matrix-link">AI Receptionist</a> + <a href="./lead-follow-up-system.html" class="matrix-link">Lead Follow-Up</a> + <a href="./scheduling-dispatch-system.html" class="matrix-link">Scheduling &amp; Dispatch</a> under one operating layer</td><td style="padding:12px 0 12px 10px;">Whatever product mix and integrations the real architecture requires</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.06);"><td style="padding:12px 10px 12px 0;">What stays out of scope</td><td style="padding:12px 10px;">deep custom workflow rebuilds</td><td style="padding:12px 10px;">multi-workflow orchestration</td><td style="padding:12px 10px;">enterprise-style sprawl or special-case architecture</td><td style="padding:12px 0 12px 10px;">fixed limits decided before discovery</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.06);"><td style="padding:12px 10px 12px 0;">AI roles included</td><td style="padding:12px 10px;">light automations</td><td style="padding:12px 10px;">1 active AI role in the workflow</td><td style="padding:12px 10px;">2 active AI roles across connected workflows</td><td style="padding:12px 0 12px 10px;">flexible by project</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.06);"><td style="padding:12px 10px 12px 0;">Front-end role</td><td style="padding:12px 10px;">central part of scope</td><td style="padding:12px 10px;">supporting layer only</td><td style="padding:12px 10px;">included where the system needs it</td><td style="padding:12px 0 12px 10px;">defined by scope</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.06);"><td style="padding:12px 10px 12px 0;">Why it is not the next tier</td><td style="padding:12px 10px;">the main issue is still front-end clarity, not workflow rebuild</td><td style="padding:12px 10px;">one workflow is still the honest answer, not full orchestration</td><td style="padding:12px 10px;">the scope still fits inside one connected operating layer</td><td style="padding:12px 0 12px 10px;">there is no smaller standard tier that covers the scope honestly</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.06);"><td style="padding:12px 10px 12px 0;">What pushes it up</td><td style="padding:12px 10px;">the website stops being the main issue</td><td style="padding:12px 10px;">handoffs between sales, scheduling, and customer updates start breaking</td><td style="padding:12px 10px;">extra departments, deeper integrations, or special operating rules appear</td><td style="padding:12px 0 12px 10px;">the build is custom from the start</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.06);"><td style="padding:12px 10px 12px 0;">Named example</td><td style="padding:12px 10px;"><a href="./examples/bluepeak-heating.html" class="matrix-link">BluePeak Heating</a></td><td style="padding:12px 10px;"><a href="./examples/summit-flow-roofing.html" class="matrix-link">Summit Flow Roofing</a></td><td style="padding:12px 10px;"><a href="./examples/luxe-home-services.html" class="matrix-link">Luxe Home Services</a></td><td style="padding:12px 0 12px 10px;"><a href="./examples/northstar-contractor-group.html" class="matrix-link">Northstar Contractor Group</a></td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.06);"><td style="padding:12px 10px 12px 0;">Best fit</td><td style="padding:12px 10px;">first serious upgrade</td><td style="padding:12px 10px;">one bottleneck needs a real system</td><td style="padding:12px 10px;">Luxe Home pattern: sales, scheduling, install coordination, and homeowner updates need one layer</td><td style="padding:12px 0 12px 10px;">bigger scope / deeper integration</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.06);"><td style="padding:12px 10px 12px 0;">Not for you if…</td><td style="padding:12px 10px;">you already need custom multi-workflow logic</td><td style="padding:12px 10px;">you only need a website refresh or you need several systems at once</td><td style="padding:12px 10px;">you can still solve the pain honestly with one workflow, or the scope already needs custom architecture</td><td style="padding:12px 0 12px 10px;">a standard tier already covers the need</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.06);"><td style="padding:12px 10px 12px 0;">Typical buyer</td><td style="padding:12px 10px;">owner modernizing the front edge</td><td style="padding:12px 10px;">operator replacing a broken process</td><td style="padding:12px 10px;">team connecting sales, ops, and client updates</td><td style="padding:12px 0 12px 10px;">larger / more complex business</td></tr>
+              <tr><td style="padding:12px 10px 12px 0;">Move up a tier when…</td><td style="padding:12px 10px;">the front end is no longer the main issue</td><td style="padding:12px 10px;">handoffs between workflows keep breaking, not just one workflow</td><td style="padding:12px 10px;">standard Full Build boundaries get too tight</td><td style="padding:12px 0 12px 10px;">the scope is already custom by nature</td></tr>
             </tbody>
           </table>
+          <p class="products-matrix-note"><strong>Fast sorting rule:</strong> if you can still honestly name one workflow, stay in Business Update. If the pain looks like Luxe Home and lives in the handoff between workflows, move to Full Build. If Full Build starts feeling cramped, scope it as Custom.</p>
+          <p class="products-matrix-note"><strong>Tier logic:</strong> the products are building blocks. The tier decides whether you are buying one product-sized workflow, a connected layer that combines several product systems, or a broader custom architecture.</p>
+          <p class="products-matrix-note"><strong>Naming cleanup:</strong> this flow stays locked to Starter, Business Update, Full Build, and Custom so the scope boundary stays clear from first click to build call. Growth is not a separate package choice anywhere in this tier path.</p>
+        </div>
+
+        <div class="decision-rail">
+          <div class="decision-rail__card">
+            <strong>Stay in Business Update when one workflow still explains the pain</strong>
+            <p>If quoting, lead follow-up, intake, or dispatch is still the one system doing most of the damage, do not move up early. Build that workflow properly first.</p>
+          </div>
+          <div class="decision-rail__card">
+            <strong>Move to Full Build when the handoff becomes the problem</strong>
+            <p>Luxe Home is the model here. The issue is no longer one isolated workflow. Lead handling, schedule movement, install coordination, and homeowner communication all need the same operating layer.</p>
+            <p style="margin-top:10px;">If rebuilding one workflow would still remove most of the pain, stay in Business Update. Move up only when the handoff itself is what keeps breaking.</p>
+          </div>
+          <div class="decision-rail__card">
+            <strong>Move to Custom when Full Build starts hiding real scope</strong>
+            <p>If extra departments, unusual integrations, or special operating rules are shaping the build, the honest answer is Custom rather than stretching a standard tier too far.</p>
+          </div>
         </div>
 
         <div class="products-callout">
           <div class="products-callout__card">
             <strong>Tier boundary to keep in mind</strong>
-            <span>Business Update is the single-workflow tier. Full Build starts when lead handling, scheduling, delivery, and customer updates need to work as one system instead of sitting in separate tools.</span>
+            <span>Business Update is the single-workflow tier. Full Build starts when lead handling, scheduling, install coordination, and customer updates need to work as one system instead of sitting in separate tools.</span>
           </div>
           <div class="products-callout__card">
-            <strong>Why Luxe Home sits in Full Build</strong>
-            <span>Luxe Home Services is intentionally the Full Build example because it depends on multiple connected workflows and two active AI roles, not just one isolated fix.</span>
+            <strong>Why Luxe Home stays in Full Build</strong>
+            <span>Luxe Home Services is intentionally the Full Build example because it depends on multiple connected workflows and two active AI roles, not one isolated workflow that could stay in Business Update.</span>
           </div>
+        </div>
+
+        <div class="boundary-split">
+          <div class="boundary-card">
+            <span class="products-tag">Business Update boundary</span>
+            <p><strong>Pick Business Update when one bottleneck is doing most of the damage.</strong> If quoting, follow-up, scheduling, or intake is the main issue, this tier builds one serious system around that workflow and puts one AI role inside it.</p>
+            <p><strong>Boundary question:</strong> if one workflow got rebuilt properly, would most of the pain disappear?</p>
+            <div class="fit-grid">
+              <div class="fit-card"><strong>Best fit</strong><span>You can still point to one main workflow problem and solve it honestly with one custom system and one active AI role.</span></div>
+              <div class="fit-card"><strong>Not for you if</strong><span>The real pain is already living in the handoff between several workflows instead of one isolated bottleneck.</span></div>
+            </div>
+          </div>
+          <div class="boundary-card">
+            <span class="products-tag">Full Build boundary</span>
+            <p><strong>Pick Full Build when the handoffs between workflows are the real problem.</strong> Luxe Home is the example because lead intake, install coordination, schedule movement, and homeowner updates all need one connected layer and two active AI roles.</p>
+            <p><strong>Boundary question:</strong> would rebuilding one workflow still leave the team stuck because sales, ops, and customer updates are disconnected?</p>
+            <div class="fit-grid">
+              <div class="fit-card"><strong>Best fit</strong><span>The business already looks like Luxe Home: lead handling, scheduling, install coordination, and homeowner communication need one connected operating layer.</span></div>
+              <div class="fit-card"><strong>Not for you if</strong><span>You can still solve the problem honestly with one workflow build, or the scope has already grown into broader custom architecture.</span></div>
+            </div>
+          </div>
+          <div class="boundary-card">
+            <span class="products-tag">Custom boundary</span>
+            <p><strong>Pick Custom when the standard Full Build box stops being honest.</strong> If extra departments, deeper integrations, or unusual operating rules are shaping the work, the scope should be defined in discovery instead of squeezed into a preset tier.</p>
+            <p><strong>Boundary question:</strong> does the project need architecture decisions that depend on integrations, edge cases, or broader business coverage before the build can even be sized?</p>
+            <div class="fit-grid">
+              <div class="fit-card"><strong>Best fit</strong><span>You already know the build needs more workflows, more integrations, or special operating rules than a standard Full Build can reasonably hold.</span></div>
+              <div class="fit-card"><strong>Not for you if</strong><span>The scope still fits cleanly inside a connected Full Build without extra departments or discovery-heavy architecture.</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="products-note" style="margin-top:22px;">
+          <span class="products-tag">Luxe Home boundary check</span>
+          <p style="margin-top:14px;"><strong>Luxe Home is the page’s proof case for Full Build.</strong> The point is not that it is a larger logo or a nicer-looking business. The point is that the problem lives in the handoff between workflows.</p>
+          <div class="luxe-boundary-grid">
+            <div class="luxe-boundary-card">
+              <strong>Why it is not Business Update</strong>
+              <p>Business Update is still the right answer when one workflow can carry most of the fix. Luxe Home is already past that line because intake, scheduling, install coordination, and homeowner updates are all part of the same operating problem.</p>
+            </div>
+            <div class="luxe-boundary-card">
+              <strong>Why it lands in Full Build</strong>
+              <p>Full Build is the fit when several workflows need one connected layer and two active AI roles. That is exactly the Luxe Home pattern this page is using: front-edge response, follow-up, schedule movement, and customer communication all share one system.</p>
+            </div>
+            <div class="luxe-boundary-card">
+              <strong>Why it is not Custom yet</strong>
+              <p>The scope is still one connected operating layer for one business, not a broader architecture problem across extra departments, edge-case logic, or unusually deep integrations. That keeps it inside Full Build instead of pushing it into Custom.</p>
+            </div>
+          </div>
+          <p style="margin-top:18px;">See the <a href="./examples/luxe-home-services.html" class="matrix-link">Luxe Home example</a> to view how <a href="./ai-receptionist.html" class="matrix-link">AI Receptionist</a>, <a href="./lead-follow-up-system.html" class="matrix-link">Lead Follow-Up System</a>, and <a href="./scheduling-dispatch-system.html" class="matrix-link">Scheduling &amp; Dispatch System</a> stack into one Full Build operating layer.</p>
         </div>
       </div>
     </section>
 
     <section class="products-section">
       <div class="container">
-        <div class="package-stack">
-          <article class="package-shell">
-            <div class="package-top">
-              <div class="package-copy">
-                <span class="package-label mono">Starter</span>
-                <div class="package-price"><span class="package-price__amount">$3,500+</span><span class="package-price__term">Starting price</span></div>
+        <div class="tier-stack">
+          <article class="tier-shell">
+            <div class="tier-top">
+              <div class="tier-copy">
+                <span class="tier-label mono">Starter</span>
+                <div class="tier-price"><span class="tier-price__amount">$3,500+</span><span class="tier-price__term">Starting price</span></div>
                 <p><strong>You are buying a front-end upgrade.</strong> This is the move when your website is weak, your lead response is messy, and your systems are not talking to each other.</p>
-                <p><strong>Best for:</strong> owners who need the first serious upgrade without jumping into a full custom operating system yet.</p>
+                <p><strong>Decision rule:</strong> pick Starter when the front end and response layer are still the main problem, not one broken internal workflow.</p>
                 <p>Starter gives you a cleaner front end, better automations, and a more usable day-to-day setup without forcing you into a giant custom build before you are ready.</p>
-                <div class="package-points">
+                <div class="tier-points">
                   <div><strong>What it is:</strong><span>A basic website + basic integrations + call automations + daily updates.</span></div>
                   <div><strong>What it feels like:</strong><span>Your business finally looks organized, responsive, and easier to run.</span></div>
                 </div>
@@ -164,18 +261,18 @@
                   <div class="fit-card"><strong>Best fit</strong><span>You know the front end and basic automation layer need work, but the business is not ready for custom multi-workflow software yet.</span></div>
                   <div class="fit-card"><strong>Not for you if</strong><span>You already need multiple workflows, deeper integrations, or more than one AI role.</span></div>
                 </div>
-                <div class="package-actions">
+                <div class="tier-actions">
                   <a href="./examples/bluepeak-heating.html" class="btn btn--primary">View Design</a>
-                  <a href="https://cal.com/tektora/strategy-call" target="_blank" rel="noopener" class="btn btn--secondary">Book This Plan</a>
+                  <a href="https://cal.com/tektora/strategy-call" target="_blank" rel="noopener" class="btn btn--secondary">Book This Build</a>
                 </div>
               </div>
-              <div class="package-thumb">
+              <div class="tier-thumb">
                 <span class="thumb-badge mono">Example company — BluePeak Heating</span>
                 <div class="thumb-frame">
                   <div class="thumb-frame__top">
                     <div>
                       <div class="thumb-frame__name">BluePeak Heating</div>
-                      <div class="thumb-frame__sub">Starter package example</div>
+                      <div class="thumb-frame__sub">Starter tier example</div>
                     </div>
                     <span class="thumb-badge mono">Live ops</span>
                   </div>
@@ -188,8 +285,8 @@
                 </div>
               </div>
             </div>
-            <div class="package-graph">
-              <div class="package-graph__title mono">What you are actually getting</div>
+            <div class="tier-graph">
+              <div class="tier-graph__title mono">What you are actually getting</div>
               <div class="flow-core"><div class="flow-core__node">Starter system</div></div>
               <div class="flow-branches">
                 <div class="flow-node"><strong>Website refresh</strong><span>A real business-facing site that looks professional and helps convert attention into calls.</span></div>
@@ -200,28 +297,28 @@
             </div>
           </article>
 
-          <article class="package-shell package-shell--featured">
-            <div class="package-top">
-              <div class="package-copy">
-                <span class="package-label mono">Business Update</span>
-                <div class="package-price"><span class="package-price__amount">$7,500+</span><span class="package-price__term">Starting price</span></div>
+          <article class="tier-shell tier-shell--featured">
+            <div class="tier-top">
+              <div class="tier-copy">
+                <span class="tier-label mono">Business Update</span>
+                <div class="tier-price"><span class="tier-price__amount">$7,500+</span><span class="tier-price__term">Starting price</span></div>
                 <p><strong>You are buying one core workflow system.</strong> This is where we stop patching around the problem and build the actual system around how your company works.</p>
-                <p><strong>Best for:</strong> businesses with one major bottleneck that needs a real system built around it.</p>
-                <p>You are not just buying a better website here. You are buying a stronger operational tool, plus one AI agent that takes real work off your plate.</p>
-                <div class="package-points">
-                  <div><strong>What it is:</strong><span>Custom software built around your workflow + 1 AI bot (Agent).</span></div>
+                <p><strong>Decision rule:</strong> pick Business Update when one broken workflow still explains most of the pain and deserves its own custom system.</p>
+                <p>You are not just buying a better website here. You are buying a stronger operational tool, plus one AI role that takes real work off your plate.</p>
+                <div class="tier-points">
+                  <div><strong>What it is:</strong><span>Custom software built around your workflow + 1 AI role.</span></div>
                   <div><strong>What it feels like:</strong><span>Your business stops forcing itself into generic software and starts using a system that matches reality.</span></div>
                 </div>
                 <div class="fit-grid">
                   <div class="fit-card"><strong>Best fit</strong><span>You already know the bottleneck and need one custom system to replace the broken process, not another subscription layered on top.</span></div>
                   <div class="fit-card"><strong>Not for you if</strong><span>You only need a basic front-end upgrade, or you already need several workflows and multiple AI roles.</span></div>
                 </div>
-                <div class="package-actions">
+                <div class="tier-actions">
                   <a href="./examples/summit-flow-roofing.html" class="btn btn--primary">View Design</a>
-                  <a href="https://cal.com/tektora/strategy-call" target="_blank" rel="noopener" class="btn btn--secondary">Book This Plan</a>
+                  <a href="https://cal.com/tektora/strategy-call" target="_blank" rel="noopener" class="btn btn--secondary">Book This Build</a>
                 </div>
               </div>
-              <div class="package-thumb">
+              <div class="tier-thumb">
                 <span class="thumb-badge mono">Example company — Summit Flow Roofing</span>
                 <div class="thumb-frame">
                   <div class="thumb-frame__top">
@@ -233,47 +330,47 @@
                   </div>
                   <div class="thumb-grid">
                     <div class="thumb-card"><strong>Custom workflow</strong><span>Lead intake, quote path, and follow-up in one system.</span></div>
-                    <div class="thumb-card"><strong>1 AI agent</strong><span>Qualifies leads and moves the right jobs forward faster.</span></div>
+                    <div class="thumb-card"><strong>1 AI role</strong><span>Qualifies leads and moves the right jobs forward faster.</span></div>
                     <div class="thumb-card"><strong>Operations view</strong><span>Staff sees what matters without chasing updates everywhere.</span></div>
                     <div class="thumb-card"><strong>Client flow</strong><span>Cleaner handoff from inquiry to booked work.</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="package-graph">
-              <div class="package-graph__title mono">What you are actually getting</div>
+            <div class="tier-graph">
+              <div class="tier-graph__title mono">What you are actually getting</div>
               <div class="flow-core"><div class="flow-core__node">Business Update system</div></div>
               <div class="flow-branches">
                 <div class="flow-node"><strong>Custom software</strong><span>Built around the real way the business sells, books, updates, or delivers work.</span></div>
-                <div class="flow-node"><strong>1 AI agent</strong><span>A focused AI role that handles one meaningful job inside the workflow.</span></div>
+                <div class="flow-node"><strong>1 AI role</strong><span>A focused AI role that handles one meaningful job inside the workflow.</span></div>
                 <div class="flow-node"><strong>Cleaner handoffs</strong><span>Less dropped information between office, sales, and customer communication.</span></div>
                 <div class="flow-node"><strong>Better control</strong><span>The owner gets a system shaped to the business instead of adapting to off-the-shelf SaaS.</span></div>
               </div>
             </div>
           </article>
 
-          <article class="package-shell">
-            <div class="package-top">
-              <div class="package-copy">
-                <span class="package-label mono">Full Build</span>
-                <div class="package-price"><span class="package-price__amount">$12,000+</span><span class="package-price__term">Starting price</span></div>
+          <article class="tier-shell">
+            <div class="tier-top">
+              <div class="tier-copy">
+                <span class="tier-label mono">Full Build</span>
+                <div class="tier-price"><span class="tier-price__amount">$12,000+</span><span class="tier-price__term">Starting price</span></div>
                 <p><strong>You are buying a connected operating layer.</strong> This is for companies that need more than a patch, more than one workflow, and more than one AI role.</p>
-                <p><strong>Best for:</strong> businesses that need sales, scheduling, delivery, and customer communication to work together inside one stronger system.</p>
-                <p>Full Build gives you a broader custom software system plus two AI agents working inside the operation, so the business starts running through one connected layer instead of a chain of disconnected tools.</p>
-                <div class="package-points">
-                  <div><strong>What it is:</strong><span>Custom software across multiple workflows + 2 AI bots (Agents).</span></div>
+                <p><strong>Decision rule:</strong> pick Full Build when the pain lives in the handoff between workflows, not inside one isolated process.</p>
+                <p>Full Build gives you a broader custom software system plus two AI roles working inside the operation, so the business starts running through one connected layer instead of a chain of disconnected tools.</p>
+                <div class="tier-points">
+                  <div><strong>What it is:</strong><span>Custom software across multiple workflows + 2 AI roles.</span></div>
                   <div><strong>What it feels like:</strong><span>Leads, scheduling, project status, and customer updates stop living in separate places.</span></div>
                 </div>
                 <div class="fit-grid">
                   <div class="fit-card"><strong>Best fit</strong><span>You have several moving parts to connect across sales, operations, and customer communication, and one workflow alone will not solve it.</span></div>
                   <div class="fit-card"><strong>Not for you if</strong><span>You only need one workflow fixed, or your project has advanced scope that really belongs in Custom.</span></div>
                 </div>
-                <div class="package-actions">
+                <div class="tier-actions">
                   <a href="./examples/luxe-home-services.html" class="btn btn--primary">View Design</a>
-                  <a href="https://cal.com/tektora/strategy-call" target="_blank" rel="noopener" class="btn btn--secondary">Book This Plan</a>
+                  <a href="https://cal.com/tektora/strategy-call" target="_blank" rel="noopener" class="btn btn--secondary">Book This Build</a>
                 </div>
               </div>
-              <div class="package-thumb">
+              <div class="tier-thumb">
                 <span class="thumb-badge mono">Example company — Luxe Home Services</span>
                 <div class="thumb-frame">
                   <div class="thumb-frame__top">
@@ -286,68 +383,68 @@
                   <p style="margin:0 0 14px;color:rgba(226,232,240,.72);line-height:1.7;">This example sits in Full Build because lead handling, scheduling, install coordination, and homeowner updates all share the same operating layer.</p>
                   <div class="thumb-grid">
                     <div class="thumb-card"><strong>Sales to install</strong><span>Leads, scheduling, project status, and client updates stay in one operating layer.</span></div>
-                    <div class="thumb-card"><strong>Agent 1</strong><span>Qualifies inbound jobs and routes the right opportunities faster.</span></div>
-                    <div class="thumb-card"><strong>Agent 2</strong><span>Keeps homeowners updated while internal follow-up keeps moving.</span></div>
+                    <div class="thumb-card"><strong>AI intake role</strong><span>Qualifies inbound jobs and routes the right opportunities faster.</span></div>
+                    <div class="thumb-card"><strong>AI homeowner role</strong><span>Keeps homeowners updated while internal follow-up keeps moving.</span></div>
                     <div class="thumb-card"><strong>Ops visibility</strong><span>Leadership sees pipeline, handoffs, and stalled jobs without chasing the team.</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="package-graph">
-              <div class="package-graph__title mono">What you are actually getting</div>
+            <div class="tier-graph">
+              <div class="tier-graph__title mono">What you are actually getting</div>
               <div class="flow-core"><div class="flow-core__node">Full Build system</div></div>
               <div class="flow-branches">
                 <div class="flow-node"><strong>Custom software layer</strong><span>A broader system that covers more of the day-to-day business workflow.</span></div>
-                <div class="flow-node"><strong>2 AI agents</strong><span>Two distinct AI roles helping carry real operational load inside the company.</span></div>
+                <div class="flow-node"><strong>2 AI roles</strong><span>Two distinct AI roles helping carry real operational load inside the company.</span></div>
                 <div class="flow-node"><strong>Client-facing experience</strong><span>Cleaner communication, better updates, and a stronger front-end for customers.</span></div>
                 <div class="flow-node"><strong>Internal control</strong><span>The business gains a tighter operating layer instead of more disconnected tools.</span></div>
               </div>
             </div>
           </article>
 
-          <article class="package-shell">
-            <div class="package-top">
-              <div class="package-copy">
-                <span class="package-label mono">Custom Plan</span>
-                <div class="package-price"><span class="package-price__amount">Custom</span><span class="package-price__term">Scoped to requirements</span></div>
+          <article class="tier-shell">
+            <div class="tier-top">
+              <div class="tier-copy">
+                <span class="tier-label mono">Custom</span>
+                <div class="tier-price"><span class="tier-price__amount">Custom</span><span class="tier-price__term">Scoped to requirements</span></div>
                 <p><strong>You are buying advanced architecture.</strong> If you need extra workflows, deeper integrations, or a system that does not fit a neat box, this is where we build around that reality.</p>
-                <p><strong>Best for:</strong> larger scopes, multi-team workflows, deeper integrations, and edge-case requirements.</p>
+                <p><strong>Decision rule:</strong> pick Custom when the standard tier boundaries stop being honest because the scope, integrations, or operating rules are larger than the box.</p>
                 <p>Custom means we scope the project around what the business actually needs instead of forcing it into an offer that is too small.</p>
-                <div class="package-points">
+                <div class="tier-points">
                   <div><strong>What it is:</strong><span>Everything the user requires.</span></div>
-                  <div><strong>What it feels like:</strong><span>A project shaped around the business itself, not around a package label.</span></div>
+                  <div><strong>What it feels like:</strong><span>A project shaped around the business itself, not around a forced tier label.</span></div>
                 </div>
                 <div class="fit-grid">
-                  <div class="fit-card"><strong>Best fit</strong><span>You need more integrations, more workflows, more agents, or a larger operational buildout than the standard packages can reasonably hold.</span></div>
+                  <div class="fit-card"><strong>Best fit</strong><span>You need more integrations, more workflows, more AI roles, or a larger operational buildout than the standard tiers can reasonably hold.</span></div>
                   <div class="fit-card"><strong>Not for you if</strong><span>Your need is still narrow enough to fit inside Starter, Business Update, or Full Build.</span></div>
                 </div>
-                <div class="package-actions">
+                <div class="tier-actions">
                   <a href="./examples/northstar-contractor-group.html" class="btn btn--primary">View Design</a>
                   <a href="https://cal.com/tektora/strategy-call" target="_blank" rel="noopener" class="btn btn--secondary">Talk Through Scope</a>
                 </div>
               </div>
-              <div class="package-thumb">
+              <div class="tier-thumb">
                 <span class="thumb-badge mono">Example company — Northstar Contractor Group</span>
                 <div class="thumb-frame">
                   <div class="thumb-frame__top">
                     <div>
                       <div class="thumb-frame__name">Northstar Contractor Group</div>
-                      <div class="thumb-frame__sub">Custom plan example</div>
+                      <div class="thumb-frame__sub">Custom example</div>
                     </div>
                     <span class="thumb-badge mono">Custom scope</span>
                   </div>
                   <div class="thumb-grid">
                     <div class="thumb-card"><strong>Multi-system build</strong><span>Sales, ops, customer updates, and reporting tied together.</span></div>
                     <div class="thumb-card"><strong>Advanced integrations</strong><span>Special software, custom logic, and deeper workflow control.</span></div>
-                    <div class="thumb-card"><strong>Extra AI roles</strong><span>More than one or two agents depending on scope.</span></div>
+                    <div class="thumb-card"><strong>Extra AI roles</strong><span>More than one or two AI roles depending on scope.</span></div>
                     <div class="thumb-card"><strong>Executive view</strong><span>A higher-level operating system for a more complex business.</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="package-graph">
-              <div class="package-graph__title mono">What you are actually getting</div>
-              <div class="flow-core"><div class="flow-core__node">Custom plan architecture</div></div>
+            <div class="tier-graph">
+              <div class="tier-graph__title mono">What you are actually getting</div>
+              <div class="flow-core"><div class="flow-core__node">Custom architecture</div></div>
               <div class="flow-branches">
                 <div class="flow-node"><strong>Broader scope</strong><span>Multiple systems, more departments, or a larger business workflow to support.</span></div>
                 <div class="flow-node"><strong>Deeper integrations</strong><span>Special connections, edge cases, and more custom operational logic.</span></div>
@@ -363,12 +460,38 @@
     <section class="products-section">
       <div class="container">
         <div class="products-note">
-          <span class="products-tag">Quick comparison</span>
-          <div class="comparison-row" style="margin-top:18px;">
-            <div class="comparison-card"><strong>Starter</strong><span>Best when you need the first strong upgrade and a tighter front-end system.</span></div>
-            <div class="comparison-card"><strong>Business Update</strong><span>Best when you need custom software around your workflow and one AI role.</span></div>
-            <div class="comparison-card"><strong>Full Build</strong><span>Best when you want a broader custom system with two AI roles and deeper operational coverage.</span></div>
-            <div class="comparison-card"><strong>Custom</strong><span>Best when the business needs something bigger or more specialized than a standard package.</span></div>
+          <span class="products-tag">Tier differentiation</span>
+          <p style="margin-top:14px;"><strong>If someone is stuck between two neighboring tiers, the boundary should decide it.</strong> These checkpoints keep the tier flow anchored to real scope instead of drifting back into vague offer language.</p>
+          <p>Use one rule all the way through the tier flow: if one workflow is still the honest answer, stay in Business Update. If the real pain is the handoff between workflows, move to Full Build. If Full Build starts feeling like a squeeze, scope it as Custom.</p>
+          <div class="threshold-grid">
+            <div class="threshold-card">
+              <strong>Starter to Business Update</strong>
+              <p>Move up when a cleaner website and basic automations will not solve the actual problem anymore, and one broken workflow now needs custom software behind it.</p>
+              <p>The front end can still matter, but it is no longer the main thing the client is buying.</p>
+              <div class="fit-grid">
+                <div class="fit-card"><strong>Best fit</strong><span>You still mainly need the front-end and response layer to look and work better, with only light automation behind it.</span></div>
+                <div class="fit-card"><strong>Not for you if</strong><span>One broken workflow now needs its own real operating system instead of a website-first refresh.</span></div>
+              </div>
+            </div>
+            <div class="threshold-card">
+              <strong>Business Update to Full Build</strong>
+              <p>Move up when the handoffs between workflows are what keep breaking. One workflow alone will not fix the business once sales, scheduling, install coordination, and customer updates need to share one layer.</p>
+              <p>Luxe Home sits here because it is the clearest example of a business that is no longer fighting one workflow problem. It is fighting the space between workflows.</p>
+              <p>If one rebuilt workflow would still remove most of the pain, the honest answer is still Business Update, even when several teams touch the process.</p>
+              <div class="fit-grid">
+                <div class="fit-card"><strong>Best fit</strong><span>The main problem is no longer one workflow. The business needs sales, scheduling, install coordination, and customer updates to stay connected.</span></div>
+                <div class="fit-card"><strong>Not for you if</strong><span>You can still point to one bottleneck and solve it honestly with a single workflow build and one AI role.</span></div>
+              </div>
+            </div>
+            <div class="threshold-card">
+              <strong>Full Build to Custom</strong>
+              <p>Move up when the standard Full Build box stops holding the real scope because extra departments, deeper integrations, or special operational rules are shaping the project.</p>
+              <p>That is the point where a fixed tier stops being honest and the build needs custom architecture.</p>
+              <div class="fit-grid">
+                <div class="fit-card"><strong>Best fit</strong><span>The project needs broader business coverage, deeper integrations, or special operating rules than a standard Full Build can hold.</span></div>
+                <div class="fit-card"><strong>Not for you if</strong><span>The scope still cleanly fits inside a multi-workflow Full Build without extra departments or edge-case architecture.</span></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

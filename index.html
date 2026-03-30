@@ -269,50 +269,69 @@
     </div>
   </section>
 
-  <!-- ============ SECTION 4: PACKAGE SNAPSHOT ============ -->
+  <!-- ============ SECTION 4: BUILD TIER SNAPSHOT ============ -->
   <style>
-    .package-glimpse-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
-    @media (max-width: 980px){.package-glimpse-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media (max-width: 640px){.package-glimpse-grid{grid-template-columns:1fr}}
+    .tier-glimpse-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+    .tier-glimpse-note{margin-top:14px;padding:14px 16px;border-radius:16px;border:1px solid rgba(255,255,255,0.08);background:rgba(2,8,23,0.34)}
+    .tier-glimpse-note strong{display:block;color:#f8fafc;font-size:0.8rem;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:6px}
+    .tier-glimpse-note span{display:block;color:rgba(226,232,240,0.74);line-height:1.55}
+    .tier-glimpse-boundary{max-width:960px;margin:24px auto 0;padding:18px 22px;border:1px solid rgba(255,255,255,0.08);border-radius:20px;background:rgba(2,8,23,0.36);color:rgba(226,232,240,0.8);line-height:1.7}
+    .pricing__boundary-note{margin:0 auto 28px;max-width:920px;padding:18px 22px;border:1px solid rgba(255,255,255,0.08);border-radius:20px;background:rgba(2,8,23,0.36);color:rgba(226,232,240,0.8);line-height:1.7}
+    .pricing__fit{display:grid;gap:10px;margin-top:18px}
+    .pricing__fit-card{border:1px solid rgba(255,255,255,0.08);border-radius:18px;background:rgba(2,8,23,0.34);padding:14px}
+    .pricing__fit-card strong{display:block;color:#f8fafc;margin-bottom:6px;font-size:0.84rem}
+    .pricing__fit-card span{display:block;color:rgba(226,232,240,0.74);font-size:0.92rem;line-height:1.55}
+    @media (max-width: 980px){.tier-glimpse-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width: 640px){.tier-glimpse-grid{grid-template-columns:1fr}}
   </style>
-  <section class="tools" id="package-glimpse" style="padding-top:0;">
+  <section class="tools" id="tier-glimpse" style="padding-top:0;">
     <div class="container">
       <div class="tools__header">
-        <span class="section-tag reveal mono">CHOOSE YOUR PACKAGE</span>
+        <!-- Lovable unblock proof-of-control: homepage tier flow mirrors /products boundaries and keeps Luxe Home positioned inside Full Build. -->
+        <span class="section-tag reveal mono">CHOOSE YOUR BUILD TIER</span>
         <h2 class="section-title reveal">
           Four ways to build your <span class="gradient-text">owned system</span>
         </h2>
         <p class="section-body reveal" style="margin:0 auto 24px; max-width: 860px;">
-          We no longer split this offer into a separate Digital Workforce page. Everything lives inside four clear plans so a client can quickly understand what level of build they actually need.
+          Everything now lives inside four clear build tiers so a client can quickly understand whether they need a front-end upgrade, one custom workflow, a connected operating layer, or a deeper custom scope.
+        </p>
+        <p class="section-body reveal" style="margin:0 auto 24px; max-width: 860px;">
+          This flow stays locked to Starter, Business Update, Full Build, and Custom. There is no separate Growth package label in the tier path anymore.
         </p>
       </div>
 
-      <div class="package-glimpse-grid">
+      <div class="tier-glimpse-grid">
         <div class="tool-card reveal" data-delay="0">
           <h3 class="tool-card__title">Starter — $3,500+</h3>
           <p class="tool-card__desc">Basic website, basic integrations, call automations, and daily visibility.</p>
-          <p class="tool-card__desc"><strong>Best for:</strong> the first serious upgrade.</p>
+          <div class="tier-glimpse-note"><strong>Best fit</strong><span>The front end and response layer need a real upgrade, but you are not ready for custom multi-workflow software.</span></div>
+          <div class="tier-glimpse-note"><strong>Not for you if</strong><span>You already need custom multi-workflow software.</span></div>
         </div>
         <div class="tool-card reveal" data-delay="80">
           <h3 class="tool-card__title">Business Update — $7,500+</h3>
-          <p class="tool-card__desc">Custom software according to your business needs plus 1 AI bot.</p>
-          <p class="tool-card__desc"><strong>Best for:</strong> replacing generic software with a real custom workflow.</p>
+          <p class="tool-card__desc">One custom workflow system with 1 AI role built around how the business already runs.</p>
+          <div class="tier-glimpse-note"><strong>Best fit</strong><span>One bottleneck like intake, quoting, follow-up, or dispatch needs a real system instead of another patch.</span></div>
+          <div class="tier-glimpse-note"><strong>Not for you if</strong><span>You only need a website refresh, or you already need several workflows working together.</span></div>
         </div>
         <div class="tool-card reveal" data-delay="160">
           <h3 class="tool-card__title">Full Build — $12,000+</h3>
-          <p class="tool-card__desc">A broader custom system with more moving parts covered and 2 AI bots included.</p>
-          <p class="tool-card__desc"><strong>Best for:</strong> businesses that want the full thing done right.</p>
+          <p class="tool-card__desc">A connected operating layer across multiple workflows with 2 AI roles included.</p>
+          <div class="tier-glimpse-note"><strong>Best fit</strong><span>Several workflows need to run together, like the Luxe Home pattern of lead handling, scheduling, install coordination, and homeowner updates.</span></div>
+          <div class="tier-glimpse-note"><strong>Not for you if</strong><span>You only need one workflow fixed, or the scope already belongs in a custom architecture conversation.</span></div>
         </div>
         <div class="tool-card reveal" data-delay="240">
-          <h3 class="tool-card__title">Custom Plan</h3>
-          <p class="tool-card__desc">Built around whatever the business actually requires when the standard packages are too narrow.</p>
-          <p class="tool-card__desc"><strong>Best for:</strong> larger scopes, deeper integrations, and special requirements.</p>
+          <h3 class="tool-card__title">Custom</h3>
+          <p class="tool-card__desc">Built around whatever the business actually requires when the standard tiers are too narrow.</p>
+          <div class="tier-glimpse-note"><strong>Best fit</strong><span>The business needs more integrations, more workflows, or more custom logic than the standard tiers can reasonably hold.</span></div>
+          <div class="tier-glimpse-note"><strong>Not for you if</strong><span>Your scope still fits cleanly inside Starter, Business Update, or Full Build.</span></div>
         </div>
       </div>
 
       <div style="text-align:center;margin-top:32px;">
-        <a href="/products/" class="btn btn--primary">Explore All Packages</a>
+        <a href="/products/" class="btn btn--primary">Explore All Build Tiers</a>
       </div>
+
+      <p class="tier-glimpse-boundary reveal"><strong>Boundary check:</strong> Business Update is still the right call when one workflow is the real bottleneck. Full Build starts when the pain looks like Luxe Home and lives in the handoff between lead handling, scheduling, install coordination, and homeowner updates. The tier path stays Starter, Business Update, Full Build, then Custom.</p>
 
     </div>
   </section>
@@ -469,8 +488,9 @@
         One Price. <span class="gradient-text">Total Ownership.</span>
       </h2>
       <p class="section-body reveal" style="text-align:center;margin:0 auto 64px;">
-        Choose the build level that matches what your business needs now. Every system is custom, every handoff is clean, and custom plans are available when your scope goes beyond the standard tiers.
+        Choose the build level that matches what your business needs now. Every system is custom, every handoff is clean, and Custom is there when your scope goes beyond the standard tiers.
       </p>
+      <p class="pricing__boundary-note reveal"><strong>Boundary check:</strong> Business Update is for one core workflow. Full Build starts when several workflows need to run through one operating layer. Luxe Home stays mapped to Full Build for exactly that reason, and this pricing flow does not branch into a separate Growth package.</p>
 
       <div class="pricing__grid">
         <!-- Starter -->
@@ -478,7 +498,7 @@
           <div class="pricing__card-glow" aria-hidden="true"></div>
           <div class="pricing__card-header">
             <span class="mono pricing__card-tag">STARTER</span>
-            <p style="margin:8px 0 0;color:rgba(226,232,240,0.72);font-size:0.92rem;">Basic website + core automation stack.</p>
+            <p style="margin:8px 0 0;color:rgba(226,232,240,0.72);font-size:0.92rem;">Front-end upgrade with light automation.</p>
             <div class="pricing__card-price">
               <span class="pricing__card-currency mono">$</span>
               <span class="pricing__card-amount">3,500+</span>
@@ -500,6 +520,10 @@
               Code transferred via GitHub
             </li>
           </ul>
+          <div class="pricing__fit">
+            <div class="pricing__fit-card"><strong>Best fit</strong><span>Your website and response layer need a real upgrade, but you are not ready for custom multi-workflow software yet.</span></div>
+            <div class="pricing__fit-card"><strong>Not for you if</strong><span>You already need several workflows, deeper integrations, or more than one AI role.</span></div>
+          </div>
           <a href="https://cal.com/tektora/strategy-call" target="_blank" rel="noopener" class="btn btn--secondary btn--full">Book Your Build Call</a>
         </div>
 
@@ -509,7 +533,7 @@
           <div class="pricing__card-popular mono">MOST POPULAR</div>
           <div class="pricing__card-header">
             <span class="mono pricing__card-tag">BUSINESS UPDATE</span>
-            <p style="margin:8px 0 0;color:rgba(226,232,240,0.72);font-size:0.92rem;">Custom software for the way your business already runs.</p>
+            <p style="margin:8px 0 0;color:rgba(226,232,240,0.72);font-size:0.92rem;">One custom workflow system with 1 AI role.</p>
             <div class="pricing__card-price">
               <span class="pricing__card-currency mono">$</span>
               <span class="pricing__card-amount">7,500+</span>
@@ -520,13 +544,17 @@
           <ul class="pricing__card-features">
             <li>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 5" stroke="#0D9488" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Custom software according to your business needs
+              One core workflow rebuilt around your real process
             </li>
             <li>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 5" stroke="#0D9488" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              1 AI bot (Agent)
+              1 AI role working inside that workflow
             </li>
           </ul>
+          <div class="pricing__fit">
+            <div class="pricing__fit-card"><strong>Best fit</strong><span>One bottleneck like intake, quoting, follow-up, or dispatch needs a real system instead of another SaaS patch.</span></div>
+            <div class="pricing__fit-card"><strong>Not for you if</strong><span>You only need a website refresh, or you already need several workflows and multiple AI roles.</span></div>
+          </div>
           <a href="#contact" class="btn btn--primary btn--full">Book Your Build Call</a>
         </div>
 
@@ -535,7 +563,7 @@
           <div class="pricing__card-glow" aria-hidden="true"></div>
           <div class="pricing__card-header">
             <span class="mono pricing__card-tag">FULL BUILD</span>
-            <p style="margin:8px 0 0;color:rgba(226,232,240,0.72);font-size:0.92rem;">For businesses that need the whole operating stack built out.</p>
+            <p style="margin:8px 0 0;color:rgba(226,232,240,0.72);font-size:0.92rem;">Connected operating layer across multiple workflows.</p>
             <div class="pricing__card-price">
               <span class="pricing__card-currency mono">$</span>
               <span class="pricing__card-amount">12,000+</span>
@@ -546,34 +574,42 @@
           <ul class="pricing__card-features">
             <li>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 5" stroke="#0D9488" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Custom software with everything included that your business demands
+              Multi-workflow system across sales, scheduling, ops, and customer updates
             </li>
             <li>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 5" stroke="#0D9488" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              2 AI bots (Agents)
+              2 AI roles carrying real operational load
             </li>
           </ul>
+          <div class="pricing__fit">
+            <div class="pricing__fit-card"><strong>Best fit</strong><span>Several workflows need to run together, like the Luxe Home pattern of lead handling, scheduling, install coordination, and homeowner updates.</span></div>
+            <div class="pricing__fit-card"><strong>Not for you if</strong><span>You only need one workflow fixed, or the project is advanced enough that it really belongs in Custom.</span></div>
+          </div>
           <a href="https://cal.com/tektora/strategy-call" target="_blank" rel="noopener" class="btn btn--secondary btn--full">Book Your Build Call</a>
         </div>
 
-        <!-- Custom Plan -->
+        <!-- Custom -->
         <div class="pricing__card reveal" data-delay="300">
           <div class="pricing__card-glow" aria-hidden="true"></div>
           <div class="pricing__card-header">
-            <span class="mono pricing__card-tag">CUSTOM PLAN</span>
-            <p style="margin:8px 0 0;color:rgba(226,232,240,0.72);font-size:0.92rem;">For larger scopes and special requirements.</p>
+            <span class="mono pricing__card-tag">CUSTOM</span>
+            <p style="margin:8px 0 0;color:rgba(226,232,240,0.72);font-size:0.92rem;">Architecture for broader scopes and special requirements.</p>
             <div class="pricing__card-price">
               <span class="pricing__card-amount">Custom</span>
             </div>
-            <span class="pricing__card-term">Everything that the user requires.</span>
+            <span class="pricing__card-term">Scoped to the actual requirements.</span>
           </div>
           <div class="pricing__card-divider" aria-hidden="true"></div>
           <ul class="pricing__card-features">
             <li>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 5" stroke="#0D9488" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Everything that the user requires
+              Scope built around the business, not forced into a fixed tier
             </li>
           </ul>
+          <div class="pricing__fit">
+            <div class="pricing__fit-card"><strong>Best fit</strong><span>You need more integrations, more workflows, more AI roles, or more custom logic than the standard tiers can reasonably hold.</span></div>
+            <div class="pricing__fit-card"><strong>Not for you if</strong><span>Your scope still fits cleanly inside Starter, Business Update, or Full Build.</span></div>
+          </div>
           <a href="https://cal.com/tektora/strategy-call" target="_blank" rel="noopener" class="btn btn--secondary btn--full">Talk Through Scope</a>
         </div>
       </div>
