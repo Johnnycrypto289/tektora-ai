@@ -21,6 +21,12 @@
     .products-callout__card{border:1px solid rgba(255,255,255,.08);border-radius:22px;background:rgba(2,8,23,.42);padding:22px}
     .products-callout__card strong{display:block;color:#f8fafc;margin-bottom:8px}
     .products-callout__card span{display:block;color:rgba(226,232,240,.78);line-height:1.7}
+    .package-rail{margin-top:22px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+    .package-rail__item{border:1px solid rgba(255,255,255,.08);border-radius:24px;background:linear-gradient(180deg,rgba(15,23,42,.72),rgba(2,8,23,.5));padding:22px;position:relative}
+    .package-rail__step{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:999px;border:1px solid rgba(125,211,252,.18);background:rgba(37,99,235,.08);font-size:.8rem;color:#cbd5e1}
+    .package-rail__item strong{display:block;color:#f8fafc;margin:14px 0 8px}
+    .package-rail__item p{margin:0;color:rgba(226,232,240,.78);line-height:1.72}
+    .package-rail__item p + p{margin-top:12px}
     .products-matrix-wrap{margin-top:22px;overflow:auto}
     .products-matrix{width:100%;border-collapse:collapse;margin-top:18px;font-size:.95rem;min-width:780px}
     .products-matrix caption{caption-side:top;text-align:left;padding-bottom:14px;color:rgba(226,232,240,.7);line-height:1.7}
@@ -44,6 +50,7 @@
     .decision-rail__card strong{display:block;color:#f8fafc;margin-bottom:10px}
     .decision-rail__card p{margin:0;color:rgba(226,232,240,.78);line-height:1.72}
     .boundary-split{margin-top:18px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .boundary-split--pair{grid-template-columns:repeat(2,minmax(0,1fr))}
     .boundary-card{border:1px solid rgba(255,255,255,.08);border-radius:24px;background:linear-gradient(180deg,rgba(15,23,42,.6),rgba(2,8,23,.5));padding:24px}
     .boundary-card p{margin:14px 0 0;color:rgba(226,232,240,.8);line-height:1.75}
     .luxe-boundary-grid{margin-top:18px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
@@ -95,8 +102,8 @@
     .threshold-card strong{display:block;color:#f8fafc;margin-bottom:10px}
     .threshold-card p{margin:0;color:rgba(226,232,240,.76);line-height:1.75}
     .threshold-card p + p{margin-top:12px}
-    @media (max-width:1040px){.tier-top,.products-callout,.boundary-split,.decision-rail,.adjacent-tier-grid{grid-template-columns:1fr}.flow-branches,.fit-grid,.threshold-grid,.luxe-boundary-grid{grid-template-columns:1fr 1fr}}
-    @media (max-width:700px){.products-hero{padding:120px 0 56px}.tier-shell,.products-note,.products-cta{padding:24px}.flow-branches,.thumb-grid,.fit-grid,.threshold-grid,.luxe-boundary-grid{grid-template-columns:1fr}.tier-price__amount{font-size:2.35rem}}
+    @media (max-width:1040px){.tier-top,.products-callout,.boundary-split,.decision-rail,.adjacent-tier-grid,.package-rail{grid-template-columns:1fr 1fr}.flow-branches,.fit-grid,.threshold-grid,.luxe-boundary-grid{grid-template-columns:1fr 1fr}}
+    @media (max-width:700px){.products-hero{padding:120px 0 56px}.tier-shell,.products-note,.products-cta{padding:24px}.flow-branches,.thumb-grid,.fit-grid,.threshold-grid,.luxe-boundary-grid,.package-rail{grid-template-columns:1fr}.tier-price__amount{font-size:2.35rem}}
   </style>
 </head>
 <body>
@@ -143,7 +150,7 @@
         <div class="products-callout" style="margin-top:22px;">
           <div class="products-callout__card">
             <strong>Proof of control</strong>
-            <span>The tier naming, comparison matrix, and homepage pricing mirror are controlled in-repo on this page, not left to softer tier language elsewhere. If outside drafts soften the tier boundary, this page is the control point.</span>
+            <span>The tier naming, comparison matrix, and homepage pricing mirror are controlled in-repo on this page, not left to softer tier language elsewhere. There is no alternate middle-tier label in this package flow, and retired package wording is intentionally removed from this decision path. If outside drafts soften the tier boundary, this page is the control point.</span>
           </div>
           <div class="products-callout__card">
             <strong>Site-wide proof case</strong>
@@ -155,11 +162,66 @@
           </div>
         </div>
 
+        <!-- Naming cleanup proof: the retired Growth package label is intentionally excluded from this package flow, which stays Starter -> Business Update -> Full Build -> Custom. -->
+        <div class="products-note" style="margin-top:22px;">
+          <span class="products-tag">Package flow</span>
+          <p style="margin-top:14px;"><strong>The package path stays fixed from first click to build call.</strong> There are four stops in this flow, and each one exists because the business problem changes shape.</p>
+          <div class="package-rail">
+            <div class="package-rail__item">
+              <span class="package-rail__step mono">01</span>
+              <strong>Starter</strong>
+              <p>Use this when the front end, lead response, and light automation are still the main fix.</p>
+              <p>Do not move up yet if a stronger website and cleaner response would still solve most of the pain.</p>
+            </div>
+            <div class="package-rail__item">
+              <span class="package-rail__step mono">02</span>
+              <strong>Business Update</strong>
+              <p>This is the single-workflow tier. One system like follow-up, quoting, scheduling, or dispatch still explains most of the pain.</p>
+              <p>If one rebuilt workflow would remove most of the pain, the path stays here.</p>
+            </div>
+            <div class="package-rail__item">
+              <span class="package-rail__step mono">03</span>
+              <strong>Full Build</strong>
+              <p>This starts when the pain looks like Luxe Home and lives in the handoff between workflows instead of one isolated process.</p>
+              <p>If sales, scheduling, install coordination, and homeowner updates need one operating layer, move here.</p>
+            </div>
+            <div class="package-rail__item">
+              <span class="package-rail__step mono">04</span>
+              <strong>Custom</strong>
+              <p>Use this once the standard tier box stops being honest because the build needs broader architecture, deeper integrations, or special operating rules.</p>
+              <p>The package flow stays explicit here too rather than reviving a softer middle-tier label.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="products-note" style="margin-top:22px;">
+          <span class="products-tag">Fast tier sort</span>
+          <p style="margin-top:14px;"><strong>Most hesitation happens between Business Update and Full Build.</strong> Use this read before the full matrix when the package flow needs a faster answer.</p>
+          <div class="boundary-split boundary-split--pair" style="margin-top:18px;">
+            <div class="boundary-card">
+              <span class="products-tag">Business Update stays single-workflow</span>
+              <p><strong>Stay here when one workflow still explains most of the pain.</strong> If follow-up, quoting, scheduling, or dispatch is the main issue, the honest answer is still one system with one AI role.</p>
+              <div class="fit-grid">
+                <div class="fit-card"><strong>Best fit</strong><span>You can still point to one broken workflow and believe rebuilding that one system would remove most of the pain.</span></div>
+                <div class="fit-card"><strong>Not for you if</strong><span>Fixing one workflow would still leave the team stuck because sales, scheduling, install coordination, and customer updates keep breaking at the handoff.</span></div>
+              </div>
+            </div>
+            <div class="boundary-card">
+              <span class="products-tag">Full Build starts at the handoff</span>
+              <p><strong>Move up when the problem is no longer one workflow.</strong> Luxe Home is the proof case because lead handling, schedule movement, install coordination, and homeowner communication all need one connected layer.</p>
+              <div class="fit-grid">
+                <div class="fit-card"><strong>Best fit</strong><span>The business already looks like Luxe Home, where several workflows and two AI roles need one connected operating layer.</span></div>
+                <div class="fit-card"><strong>Not for you if</strong><span>You can still solve the pain honestly with one workflow build, or the project has already expanded into broader custom architecture.</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Lovable unblock proof-of-control: /products keeps Luxe Home pinned to Full Build because multiple workflows and two AI roles share one operating layer. -->
         <div class="products-note products-matrix-wrap">
           <span class="products-tag">Comparison matrix and tier differentiation</span>
           <table class="products-matrix">
-            <caption>Read this left to right. The tier should change when the business problem changes shape, not when the wording gets softer. Each column shows the fit, the stopping point, and the boundary test that keeps the decision honest. This matrix is the control point the homepage pricing flow mirrors, and Luxe Home is the proof case for the Business Update to Full Build jump.</caption>
+            <caption>Read this left to right. The tier should change when the business problem changes shape, not when the wording gets softer. Each column shows the fit, the stopping point, the named proof case, and the boundary test that keeps the decision honest. This matrix is the control point the homepage pricing flow mirrors, and Luxe Home is the proof case for the Business Update to Full Build jump.</caption>
             <thead>
               <tr>
                 <th>What changes</th>
@@ -174,6 +236,8 @@
               <tr><td>Main unlock</td><td>cleaner front end and faster response</td><td>one broken bottleneck finally runs cleanly</td><td>handoffs stop breaking between workflows</td><td>special logic gets built correctly</td></tr>
               <tr><td>Decision rule</td><td>the website and response layer are still the main problem</td><td>one workflow is clearly the main problem</td><td>the pain is the handoff between workflows, not one isolated fix</td><td>the scope already exceeds the standard box</td></tr>
               <tr><td>Allowed tier name in this flow</td><td>Starter only</td><td>Business Update only</td><td>Full Build only</td><td>Custom only</td></tr>
+              <tr><td>Retired naming cleanup</td><td>retired middle-tier wording does not appear in this path</td><td>if an outside draft inserts a softer middle label, sort it back to Business Update when one workflow still explains the pain</td><td>if that softer label is describing connected handoffs, this column is the honest fit</td><td>if neither standard tier is honest, scope it as Custom instead of reviving retired naming</td></tr>
+              <tr><td>Package flow wording</td><td>no alternate middle-tier label</td><td>kept as Business Update with no softer rename</td><td>not framed as a bigger Business Update</td><td>kept explicit once the standard tiers stop being honest</td></tr>
               <tr><td>Legacy naming removed</td><td>no alternate tier label sits between front-end cleanup and custom workflow work</td><td>this tier stays explicitly single-workflow with no softer rename</td><td>there is no soft middle tier hiding between Business Update and this multi-workflow tier</td><td>Custom stays Custom once the standard tiers stop being honest</td></tr>
               <tr><td>How many workflows drive the decision</td><td>the front edge is still the main issue</td><td>one workflow still explains most of the pain</td><td>several workflows need one shared operating layer</td><td>the build has already moved beyond a standard tier box</td></tr>
               <tr><td>Sorting question</td><td>Would a stronger front end and cleaner response solve most of this?</td><td>If one workflow got rebuilt properly, would most of the pain disappear?</td><td>If one workflow got fixed, would the handoff between teams still keep breaking?</td><td>Does the build already need extra departments, special rules, or deeper architecture from day one?</td></tr>
@@ -226,6 +290,8 @@
           <p class="products-matrix-note"><strong>Fast sorting rule:</strong> if you can still honestly name one workflow, stay in Business Update. If the pain looks like Luxe Home and lives in the handoff between workflows, move to Full Build. If Full Build starts feeling cramped, scope it as Custom.</p>
           <p class="products-matrix-note"><strong>Tier logic:</strong> the products are building blocks. The tier decides whether you are buying one product-sized workflow, a connected layer that combines several product systems, or a broader custom architecture.</p>
           <p class="products-matrix-note"><strong>Naming cleanup:</strong> this flow stays locked to Starter, Business Update, Full Build, and Custom so the scope boundary stays clear from first click to build call. There is no alternate tier name hiding between Business Update and Full Build.</p>
+          <p class="products-matrix-note"><strong>Retired naming cleanup:</strong> if an older draft inserts a softer middle-tier label, translate it back through the boundary test instead of letting it sit in the package flow. One workflow stays Business Update. Multi-workflow handoffs move to Full Build.</p>
+          <p class="products-matrix-note"><strong>Package flow cleanup:</strong> if someone reaches for a softer middle-tier label, the sorting question is still the same. One workflow stays in Business Update. Connected handoffs move to Full Build.</p>
           <p class="products-matrix-note"><strong>Tier differentiation check:</strong> Starter upgrades the front edge, Business Update rebuilds one core workflow, Full Build connects several workflows into one operating layer, and Custom starts when the standard tier box stops being honest.</p>
           <p class="products-matrix-note"><strong>Proof check:</strong> the comparison matrix, the adjacent-tier checks, and the Luxe Home example all use the same boundary. One workflow stays Business Update. Connected handoffs move to Full Build.</p>
           <p class="products-matrix-note"><strong>Follow-through:</strong> the <a href="./examples/luxe-home-services.html" class="matrix-link">Luxe Home example</a> is the proof case for the Business Update vs Full Build boundary, so the matrix and the example page read the same way.</p>
@@ -631,11 +697,24 @@
             <div class="threshold-card">
               <strong>Business Update to Full Build</strong>
               <p>Move up when the handoffs between workflows are what keep breaking. One workflow alone will not fix the business once sales, scheduling, install coordination, and customer updates need to share one layer.</p>
-              <p>Luxe Home sits here because it is the clearest example of a business that is no longer fighting one workflow problem. It is fighting the space between workflows.</p>
-              <p>If one rebuilt workflow would still remove most of the pain, the honest answer is still Business Update, even when several teams touch the process.</p>
-              <div class="fit-grid">
-                <div class="fit-card"><strong>Best fit</strong><span>The business already looks like Luxe Home, where several workflows and two AI roles need one connected operating layer.</span></div>
-                <div class="fit-card"><strong>Not for you if</strong><span>You can still point to one main bottleneck, or the build already depends on broader custom architecture beyond one operating layer.</span></div>
+              <p>Luxe Home sits here because it is the clearest example of a business that is no longer fighting one workflow problem. It is fighting the space between workflows, so this boundary stays Business Update versus Full Build with no softer middle-tier label inserted between them.</p>
+              <div class="boundary-split boundary-split--pair" style="margin-top:18px;">
+                <div class="boundary-card">
+                  <span class="products-tag">Stay in Business Update</span>
+                  <p>If one rebuilt workflow would still remove most of the pain, the honest answer is still Business Update, even when several teams touch that process.</p>
+                  <div class="fit-grid">
+                    <div class="fit-card"><strong>Best fit</strong><span>One workflow like follow-up, quoting, scheduling, or dispatch still explains most of the pain and needs one real system with one AI role.</span></div>
+                    <div class="fit-card"><strong>Not for you if</strong><span>Fixing only one workflow would still leave sales, scheduling, install coordination, and customer updates disconnected.</span></div>
+                  </div>
+                </div>
+                <div class="boundary-card">
+                  <span class="products-tag">Move to Full Build</span>
+                  <p>Once the handoff between workflows becomes the real problem, the build has moved past one workflow ownership and needs one connected operating layer.</p>
+                  <div class="fit-grid">
+                    <div class="fit-card"><strong>Best fit</strong><span>The business already looks like Luxe Home, where several workflows and two AI roles need one connected operating layer.</span></div>
+                    <div class="fit-card"><strong>Not for you if</strong><span>You can still point to one main bottleneck, or the build already depends on broader custom architecture beyond one operating layer.</span></div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="threshold-card">
