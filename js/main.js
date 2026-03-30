@@ -325,10 +325,20 @@
       var rect = button.getBoundingClientRect();
       var x = ((e.clientX - rect.left) / rect.width - 0.5) * 12;
       var y = ((e.clientY - rect.top) / rect.height - 0.5) * 10;
+      button.style.setProperty('--mx', ((e.clientX - rect.left) / rect.width * 100) + '%');
+      button.style.setProperty('--my', ((e.clientY - rect.top) / rect.height * 100) + '%');
       button.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
     });
     button.addEventListener('mouseleave', function () {
       button.style.transform = '';
+    });
+  });
+
+  document.querySelectorAll('.btn--secondary').forEach(function (button) {
+    button.addEventListener('mousemove', function (e) {
+      var rect = button.getBoundingClientRect();
+      button.style.setProperty('--mx', ((e.clientX - rect.left) / rect.width * 100) + '%');
+      button.style.setProperty('--my', ((e.clientY - rect.top) / rect.height * 100) + '%');
     });
   });
 
@@ -340,6 +350,8 @@
       var y = (e.clientY - rect.top) / rect.height;
       var rotateY = (x - 0.5) * 10;
       var rotateX = (0.5 - y) * 8;
+      card.style.setProperty('--spot-x', (x * 100) + '%');
+      card.style.setProperty('--spot-y', (y * 100) + '%');
       card.style.transform = 'perspective(1200px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) translateY(-6px)';
       card.style.boxShadow = '0 28px 60px rgba(2, 8, 23, 0.35)';
     });
@@ -370,6 +382,17 @@
     }
     setTimeout(tick, 400);
   });
+
+  var hero = document.getElementById('hero');
+  if (hero) {
+    hero.addEventListener('mousemove', function (e) {
+      var rect = hero.getBoundingClientRect();
+      var x = ((e.clientX - rect.left) / rect.width - 0.5) * 10;
+      var y = ((e.clientY - rect.top) / rect.height - 0.5) * 8;
+      hero.style.setProperty('--hero-parallax-x', x + 'px');
+      hero.style.setProperty('--hero-parallax-y', y + 'px');
+    });
+  }
 
   // ============================================
   // SCROLL-DRIVEN FRAME ANIMATION
